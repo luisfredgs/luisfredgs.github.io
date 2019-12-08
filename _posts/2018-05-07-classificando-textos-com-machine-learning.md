@@ -5,7 +5,7 @@ resume: "A classificação de textos é uma das mais importantes aplicações do
 date:   2018-05-07 11:50:00
 categories: [nlp, machine-learning]
 tags: [nlp, machine-learning]
-permalink: /blog/machine-learning/classificando-textos-com-machine-learning
+permalink: /machine-learning/classificando-textos-com-machine-learning
 ---
 
 <div class="video-container">
