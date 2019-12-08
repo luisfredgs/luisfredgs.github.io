@@ -1,0 +1,86 @@
+I"=(<p class="image"><img src="/blog/assets/img/reconhecimento-de-escrita-manual-com-redes-neurais-convolucionais.png" alt="" /></p>
+
+<p class="intro"><em>No final deste post (vídeo no final) você terá uma visão geral sobre o funcionamento das redes neurais convolucionais e saberá como usá-las para criar um modelo capaz de fazer o reconhecimento de escrita manual, mais particularmente reconhecer dígitos escritos à mão em imagens.</em></p>
+
+<p>O reconhecimento de escrita manual — também conhecido como <em>handwriting recognition</em>, do inglês — é uma aplicação de software que ainda encontra bastante demanda hoje em dia. Se você já usou o <a href="http://www.goodnotesapp.com/user-guide/handwriting-recognition.html">GoodNotes</a> no iPad, então sabe do que eu estou falando. O reconhecimento de assinaturas escritas à mão a partir de documentos digitalizados/escaneados, a captura de endereços postais escritos em envelopes, ou informações monetárias escritas em cheques bancários estão entre as aplicações mais comuns desta técnica.</p>
+
+<p>De um modo geral, há duas situações nas quais isto pode ser feito:</p>
+
+<p><strong>On-line:</strong> Conforme o texto estiver sendo escrito, ocorrerá a conversão do sinal obtido a partir do traçado para códigos que correspondem às letras, os quais poderão ser utilizados no computador e em aplicativos de processamento de texto. Isto corre, por exemplo, no aplicativo <a href="http://www.goodnotesapp.com/user-guide/handwriting-recognition.html">GoodNotes</a>.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*IS2pA0hWLdH4fi_7.png" alt="" /></p>
+
+<p><strong>Off-line:</strong> O cerne deste tipo de tarefa está em transcrever para dados eletrônicos as informações escritas à mão em qualquer folha de papel que tenha sido digitalizada, ou mesmo textos presentes em imagens naturais.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2048/0*TTb25AF_JbJ70SnZ.jpg" alt="" /></p>
+
+<p>Sem dúvidas, este último cenário é talvez o que mais pode se beneficiar desta técnica, pois há muitos documentos impressos com dados escritos à mão cujas informações podem possuir grande valor, inclusive estratégico. Meu objetivo neste post é abordar justamente a aplicação do reconhecimento de escrita manual neste cenário, fazendo uso de um modelo gerado a partir de uma rede neural convolucional, com base em um conjunto de dados de treino, para reconhecer caracteres numéricos presentes em imagens ainda não vistas pelo modelo. Nós utilizaremos o <a href="http://yann.lecun.com/exdb/mnist/">dataset MNIST</a>, que já é bem conhecido, e o framework <a href="https://keras.io/">Keras</a>. O dataset MNIST possui 60k exemplos de treino e 10k exemplos de teste, sendo que todos estes dados correspondem a dígitos no intervalo 0–9, escritos à mão e digitalizados. Cada dígito é representado por uma imagem monocromática com 28x28 pixels.</p>
+
+<p>Uma vez que nosso tutorial se baseia no uso de redes neurais convolucionais, é útil ter um certo conhecimento sobre como funciona esta arquitetura. Por este motivo, irei resumir um pouco deste funcionamento, mas é importante que você tenha uma visão mais completa em torno deste assunto. Por isso, eu recomendo que você <a href="https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/">leia este post</a>.</p>
+
+<p>Leia também — <a href="/machine-learning/machine-learning-a-matematica-da-aprendizagem-supervisionada">Machine Learning e a matemática da aprendizagem supervisionada</a></p>
+
+<h2 id="uma-visão-geral-das-redes-neurais-convolucionais">Uma visão geral das Redes neurais convolucionais</h2>
+
+<p>Não há muita diferença entre um rede neural regular e uma convolucional (doravante denominada ConvNet). O que difere estas arquiteturas é que as ConvNets basicamente foram concebidas para extrair features a partir de dados brutos presentes nos pixels de uma imagem. Elas possuem camadas com neurônios arranjados em três dimensões: largura, altura e profundidade. Normalmente, utiliza-se um stack de três tipos de camadas principais (lembre-se de que isto não é uma regra):</p>
+
+<p><strong>Convolutional Layer :</strong> (Camada Convolucional) — Para cada sub-região presente na imagem, esta camada aplica um conjunto de operações matemáticas (transformações lineares) para produzir um simples valor no mapa de features que é gerado como saída da camada (cada convolução pode gerar um ou mais mapas de features). Uma <a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">função de ativação do tipo ReLU</a> (Rectified Linear Unit) é comumente aplicada com o objetivo de promover a não linearidade ao modelo, uma das funções mais populares para esta finalidade. A camada convolucional pode gerar um ou mais mapas de features como saída.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*UWaRHLnfmmzKOUMg.gif" alt="Uma animação que ilustra como uma convolução acontece" /><em>Uma animação que ilustra como uma convolução acontece</em></p>
+
+<p><strong>Pooling Layer :</strong> (Camada de subamostragem): A camada Pooling computa o máximo de valores obtidos em cada filtro da camada convolucional, só que o resultado desta operação é apenas uma pequena amostra do que a camada recebeu como entrada (uma pequena amostra com as informações mais representativas obtidas com cada filtro na camada convolucional). Uma vantagem desta camada é que ela reduz a dimensionalidade ao mesmo tempo em que consegue manter as informações mais úteis. É um dos motivos por trás da eficiência computacional das ConvNets</p>
+
+<p><strong>Fully-Connected Layer :</strong> (Camada densamente conectada) é a camada final de uma ConvNet, onde se coloca o classificador. Trata-se de uma camada densamente conectada, na qual cada neurônio conectado a todos os outros de uma camada anterior e posterior. Basicamente, a FCL recebe uma entrada (que pode ser a saída de uma camada convolucional, ReLU ou Pooling) e gera como saída um vetor de dimensionalidade N, onde N é o número de classes que o modelo precisa predizer.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2048/0*QilofsgLEudcoSyA.png" alt="" /></p>
+
+<p>A camada final de uma ConvNet terá reduzido todos os dados brutos da imagem a um simples vetor com os scores atribuídos às classes. Assim, esta arquitetura transforma a imagem original, camada por camada a partir dos valores dos pixels originais em scores de classes (em nosso caso, scores que representam os dígitos 0–9).</p>
+
+<h2 id="exemplo-de-aplicação-reconhecendo-escrita-manual">Exemplo de aplicação: Reconhecendo escrita manual</h2>
+
+<p>Será preciso que as seguintes bibliotecas estejam instaladas na sua máquina. Mas você nem precisa se preocupar com isto caso use o <a href="https://colab.research.google.com">Google Colab</a>, que já vem com tudo isso instalado (e mais um monte de outras bibliotecas essenciais) e ainda tem GPU gratuita, com um máximo de 12 horas de uso à sua disposição:</p>
+
+<ul>
+  <li>
+    <p><strong>Anaconda</strong> — O Anaconda é o ambiente ideal para quem trabalha com ciência de dados e Machine Learning em Python. Baixe o ambiente clicando <a href="https://www.anaconda.com/download/">aqui</a>.</p>
+  </li>
+  <li>
+    <p><strong>OpenCV</strong> — Library voltada para o desenvolvimento de aplicações em visão computacional. Neste caso, você precisa ter instalada a implementação em Python. Se tiver o Anaconda instalado, basta rodar este comando: $ conda install -c conda-forge opencv ou $ conda install -c conda-forge opencv=3.2.0</p>
+  </li>
+  <li>
+    <p><strong>Keras</strong> — Uma library minimalista que usa a linguagem Python para nos permitir criar uma grande variedade de modelos de deep learning em cima dos frameworks <a href="https://www.tensorflow.org/">TensorFlow</a> e <a href="http://www.deeplearning.net/software/theano/">Theano</a>, abstraindo a maior parte da complexidade envolvida no processo de criar modelos puramente nestes dois frameworks. Para instalar, siga as instruções presentes no próprio <a href="https://keras.io/">site da ferramenta</a>.</p>
+  </li>
+</ul>
+
+<p>Além disso, irei supor que você já saiba programar em Python e que conheça ao menos o básico do Keras.</p>
+
+<h2 id="montando-a-rede-neural">Montando a rede neural</h2>
+
+<p>Você pode <a href="https://github.com/luisfredgs/keras-cnn-handwriting-mnist">baixar o código</a> <strong>atualizado</strong>, que foi criado como um notebook na ferramenta Jupyter (você pode baixar o Jupyter diretamente pelo ambiente Anaconda). O código foi desenvolvido durante o vídeo abaixo, mas foi atualizado algum tempo depois, com algumas falhas corrigidas. Uma outra coisa que você pode fazer é copiar este código para um notebook na <a href="https://www.kaagle.com">Kaggle</a> ou no <a href="https://colab.research.google.com/">Google Colab</a>.</p>
+
+<p>O vídeo, que começa com uma breve introdução às redes convolucionais, abordando as classes do Keras que são necessárias para criar a rede, mostra em detalhes como montar uma ConvNet para reconhecer dígitos escritos à mão</p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FhwzOaEMk6Y" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<h2 id="referências">Referências</h2>
+
+<ul>
+  <li>
+    <p><a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Conv Nets: A Modular Perspective</a></p>
+  </li>
+  <li>
+    <p><a href="http://cs231n.github.io/convolutional-networks/">CS231n Convolutional Neural Networks for Visual Recognition</a></p>
+  </li>
+  <li>
+    <p><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">ImageNet Classification with Deep Convolutional Neural Networks</a></p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/pdf/1603.07285.pdf">A guide to convolution arithmetic for deep learning — Vincent Dumoulin and Francesco Visin</a></p>
+  </li>
+  <li>
+    <p><a href="http://amzn.to/2DqqiVA">Deep Learning — <em>Ian Goodfellow</em> and Yoshua Bengio and Aaron Courville</a></p>
+  </li>
+</ul>
+:ET

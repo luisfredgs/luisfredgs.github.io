@@ -1,0 +1,218 @@
+I"څ<p><small><em>Atualização mais recente: 23/06/2019</em></small></p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/WgUrONLhons" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<p class="intro"><em>O que torna possível o Machine Learning? Como é que uma máquina consegue aprender a partir de um conjunto de dados e ainda usar esse conhecimento para tomar decisões sobre coisas que ela nunca viu?</em></p>
+
+<p>O Machine Learning é uma realidade agora e muitas pessoas, gestores ou não, já tomaram consciência do papel que a inteligência artificial terá na sociedade e na sobrevivência de muitos negócios pelo mundo, a partir de agora. Colossos da tecnologia, tais como a Microsoft, Google, Facebook, IBM, Oracle e Nvidia têm investido crescentes somas de dinheiro em P&amp;D com foco nesta área. É fácil notar que esses esforços estão tornando o uso da inteligência artificial cada vez mais acessível para nós. Exemplos são o desenvolvimento de ferramentas como o <a href="https://www.tensorflow.org/">Tensorflow</a>, ou o <a href="https://pytorch.org/">Pytorch</a>, que abstraem uma parte expressiva da complexidade de criar modelos de machine learning com redes neurais. Há, ainda, diversas APIs prontas que disponibilizam modelos pré-treinados para diversas finalidades e você só precisa chamar um endpoint a partir do seu aplicativo.</p>
+
+<p>São iniciativas que tiveram início tempos atrás, preparando o terreno para o que estamos vivenciando hoje, na era da inteligência artificial. Carros que dirigem sozinhos; câmeras inteligentes que monitoram gôndolas em supermercados e alertam os gestores quando chega o momento ideal para repor os produtos; robôs que interpretam peças judiciais e agilizam o trabalho dos profissionais da área jurídica; robôs que analisam milhares de perfis de candidatos à vagas de emprego, cruzam diversas informações e encontram o melhor candidato para uma vaga específica, agilizando o trabalho dos profissionais de RH. Estamos falando de algo que está revolucionando mercados, tendo impulsionado a criação de diversos produtos inovadores e competitivos. Agora, te faço uma simples pergunta: Você já parou para pensar sobre o que torna tudo isso possível? A verdade é que tudo isso seria pouco tangível sem a ajuda da <strong>MATEMÁTICA</strong>!</p>
+
+<p>O objetivo desse post é apresentar a você os princípios que governam o funcionamento de alguns algoritmos de machine learning amplamente usados na indústria, numa categoria de aprendizagem específica. Deixo as referências no final para que você possa se aprofundar.</p>
+
+<h1 id="quais-são-os-princípios-básicos-do-machine-learning">Quais são os princípios básicos do Machine Learning?</h1>
+
+<p>Machine Learning é um subcampo da inteligência artificial, que se vale de conceitos matemáticos amplos com o objetivo de fazer com que algoritmos “aprendam” a partir de dados. Trata-se de usar dados para encontrar e ajustar uma função ótima em um conjunto de parâmetros dentro de um grande espaço de funções possíveis. Uma vez encontrada esta função ótima, ela poderá ser utilizada para fazer extrapolações diante de situações variadas. Em outras palavras, uma função deste tipo poderá ser utilizada para fazer diversas análises preditivas. Exemplos são: predizer quando um equipamento irá falhar, quando conceder crédito a um cliente de banco, qual é o limite ideal para liberar no cartão de crédito dele, como encontrar a melhor rota de tráfego em dias de engarrafamento, identificar determinados objetos em cenas em tempo real ou identificar cenas de violência (útil em monitoramente de imagens urbanas), identificar automaticamente o assunto de um post no twitter, identificar conteúdos ofensivos pela web, etc….</p>
+
+<blockquote>
+  <p>Machine learning não se trata de programar a máquina para executar uma sequência de instruções, mas de ensiná-la a partir de dados</p>
+</blockquote>
+
+<p>De um modo geral, o ML é uma junção de <strong>matemática</strong> (álgebra linear, cálculo, estatística, teoria da probabilidade, teoria da informação, etc), <strong>software</strong> e <strong>dados</strong> (estruturados ou semi-estruturados). Assim, tal combinação permite que as máquinas “aprendam” e desempenhem tarefas específicas sem serem explicitamente programadas para isto. Portanto, não estamos falando daquela abordagem determinística tradicional, normalmente baseada em regras, onde a máquina segue um “roteiro” que orienta todos os passos a serem seguidos e cada resultado é previamente determinado. O ML, pelo contrário, atua em um ambiente onde a incerteza é um conceito chave. Ao ser exposto a uma certa quantidade de dados (dados de treino), o algoritmo de ML consegue identificar padrões e aprender com eles, gerando modelos capazes de obter generalizações (predição) em dados completamente novos.</p>
+
+<p>Atualmente, as quatro formas de aprendizado de máquina mais utilizadas são:</p>
+
+<ul>
+  <li>
+    <p><strong>Supervisionada</strong> — normalmente usado em tarefas de classificação, onde os dados de treino são totalmente rotulados (a saída desejada é conhecida) e orientam o aprendizado da máquina. É como se um professor estivesse presente o tempo inteiro durante a fase de aprendizado. É o método de aprendizagem mais utilizado hoje em dia;</p>
+  </li>
+  <li>
+    <p><strong>Semi-supervisionada</strong> — apenas parte dos dados possui rótulos e o restante não possui uma saída conhecida. Neste caso, o algoritmo baseia-se nos dados rotulados para formar agrupamentos daqueles que não foram rotulados, normalmente agrupando aquelas informações que possuem alguma similaridade entre elas;</p>
+  </li>
+  <li>
+    <p><strong>Não supervisionada</strong> — frequentemente utiliza-se este método de aprendizado em análises exploratórias, onde o algoritmo não conhece a saída dos dados e precisa identificar estruturas, regularidades e relacionamentos nos dados para, então, apresentar uma saída.</p>
+  </li>
+  <li>
+    <p><strong>Aprendizagem por reforço</strong> - Trata-se de otimizar a assertividade de um agente com base em feedbacks que ele recebe do meio onde está inserido. Você tem o agente, um espaço de estados e um conjunto de ações que ele precisa tomar. Cada ação tomada pelo agente promove uma mudança de estado (mover para frente, tira o agente de uma posição inicial) e o resultado pode ser o desejado ou não. Se o resultado por tomar uma ação específica for o desejado, o agente recebe uma recompensa, como um incentivo por ter agido corretamente. Do contrário, ele recebe uma penalidade (para desencorajá-lo a repetir uma ação que levou a um resultado ruim). O objetivo é encontrar o melhor conjunto de ações que permita alcançar um objetivo específico. Este método é muito utilizado na área da robótica e, recentemente, tem sido usado com redes neurais para treinar carros autônomos baseado no feedback de um conjunto de sensores em torno do veículo, que o ajudam a tomar decisões ótimas. Foi também o método que a DeepMind usou para treinar o seu famoso <a href="https://deepmind.com/research/alphago/">algoritmo campeão</a> de <em>Go</em>.</p>
+  </li>
+</ul>
+
+<p>A <em>aprendizagem supervisionada</em> é, de longe, a mais comum, onde a relação entre a entrada e a saída $f(x) = y$ dos dados de treino já é conhecida e o algoritmo não precisa tentar encontrar esta relação sozinho. Neste texto, nós vamos focar em aprendizagem supervisionada.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2038/0*5kc8YLeJhDTqK73X.png" alt="" /></p>
+
+<p>Para que a <em>aprendizagem supervisionada</em> possa gerar modelos capazes de fazer boas predições, é preciso tomar alguns cuidados, tais como conhecer bem o problema a ser resolvido, ter dados representativos no domínio da tarefa e <strong>escolher o algoritmo mais adequado</strong> para cada situação. Para que isto seja possível, é necessário que você conheça estes algoritmos e saiba quando usar cada um deles (ou quando não usar). Mas, que algoritmos são esses? Já é o momento de apresentá-los:</p>
+
+<h2 id="qual-é-a-matemática-por-trás-da-aprendizagem-supervisionada">Qual é a matemática por trás da aprendizagem supervisionada?</h2>
+
+<h3 id="k-nearest-neighbors">k-Nearest Neighbors</h3>
+
+<p>Frequentemente aplicado em mineração de dados, este é um dos mais básicos no leque de ferramentas de um Engenheiro de Machine Learning (e é também um algoritmo bem legal). O <em>k-Nearest-Neighbor</em> (<em>K</em> vizinhos mais próximos) é muito adotado em problemas de classificação e regressão. A predição em cima de novos dados é feita quando o <em>KNN</em> consegue encontrar os pontos de dados mais próximos a estes no conjunto de dados de exemplo.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*qKsLIWj0t9wx7fzx.png" alt="" /></p>
+
+<p>Na ilustração acima, os pontos em formato circular representam os dados de exemplo (ou de treino), ao passo em que os pontos em formato de <strong>x</strong> representam dados ainda não “vistos” pelo modelo. Dado um $k$ inteiro positivo e uma observação $x$ (como mostrado na figura), o classificador <em>KNN</em> primeiro identifica os $k$ pontos no conjunto de treino que são mais próximos de $x$ (na figura, <em>k=1</em>). Em seguida, o modelo estima a probabilidade condicional para uma classe $j$ com base na fração dos pontos de dados de treino cujos valores de classe (o $y$ da função) são iguais a $j$. Para compor a saída, o modelo aplica a regra de Bayes e classifica a observação de teste <em>x</em> com a classe que possuir a maior probabilidade de ser a correta (considerando as classes dos pontos na vizinhança). Trazendo isto para dentro de um contexto mais matemático, o <em>KNN</em> funciona assim:</p>
+
+<script type="math/tex; mode=display">\text{Pr}(Y=j | X=x_0) = \frac{1}{K}\sum_{i \in \mathcal{N}_0}I(y_i=j)</script>
+
+<p>Como você já deve ter notado, o KNN não é daqueles algoritmos que você precisa treinar para obter um modelo, visto que basta ter um conjunto de dados armazenado e rodar o algoritmo. Considerando que o algoritmo vai classificar um ponto de consulta novo com base na vizinhança dele, é importante escolher com sabedoria a quantidade de vizinhos deste ponto a ser levada em conta durante o cálculo. Aliás, este um ponto extremamente importante, pois uma escolha ruim para este parâmetro pode fazer dele um algoritmo inútil. Além disso, como ele faz uso de métricas de distâncias, como a Euclidiana, os resultados que você vai obter estarão sob influência disso também. Uma estratégia comum é ponderar os pontos de dados da vizinhança com base no valor inverso das distâncias. Assim, os vizinhos que estão mais próximos do ponto de consulta têm mais influência no resultado do que aqueles que estão mais afastados.</p>
+
+<p>O KNN tem a evidente desvantágem de consumir bastante recurso computacional quando você possui um conjunto de dados muito grande. O custo é proporcional ao tamanho da sua base.</p>
+
+<h3 id="regressão-linear">Regressão Linear</h3>
+
+<p>A regressão linear é uma outra abordagem que está entre as mais simples, sendo amplamente utilizada por cientistas de dados. Foi desenvolvida no campo da estatística e é tratada como um método útil para entender o relacionamento entre valores numéricos de entrada e saída. O ML a “tomou emprestado” e, assim, a regressão linear se tornou uma das ferramentas mais úteis neste campo. Torna-se uma abordagem útil, por exemplo, sempre que o seu objetivo é identificar relacionamentos entre variáveis e estimar o impacto que uma ou mais variáveis independentes causam em uma variável alvo. Por exemplo: Será que o número de quartos de uma casa, a latitude/longitude e o fato de ter ou não uma garagem influencia no nível de renda de uma pessoa? Qual a influência de cada uma destas variáveis na renda do indivíduo, caso exista alguma relação entre elas? Trata-se de um método largamente utilizado e é importante que você tenha um bom entendimento em torno dos princípios da regressão linear, considerando que algumas metodologias de aprendizado mais complexas costumam ser vistas como generalizações ou extensões dela.</p>
+
+<p>Resumidamente, o objetivo é estimar uma variável quantitativa <strong><em>Y</em></strong> com base em preditor(res) <strong><em>X</em></strong> e assume-se que haja um relacionamento linear entre <strong><em>X</em></strong> e <strong><em>Y</em></strong>. Matematicamente, nós podemos descrever a regressão linear assim:</p>
+
+<script type="math/tex; mode=display">Y \approx \beta_0 + \beta_1X</script>
+
+<p><script type="math/tex">\beta_0</script> e <script type="math/tex">\beta_1</script> são coeficientes (também chamados de parâmetros) cujos valores não se conhece e serão estimados com base nos dados de treino.</p>
+
+<p>Uma vez obtidos os valores aproximados destes parâmetros, seria possível, por exemplo, estimar um valor em vendas <script type="math/tex">Y</script> com base no quanto se está investindo em anúncios de Facebook <script type="math/tex">X</script>. Isto ajuda a responder perguntas como: Qual plataforma de anúncios contribui mais para as vendas (qual variável de entrada afeta mais o valor da saída)? A regressão linear tem algumas suposições que não podem ser violadas, para que você possa obter um modelo que preste. Uma dessas suposições é a de que a variável dependente <script type="math/tex">Y</script> precisa ter uma distribuição normal. Caso a suposição de normalidade seja violada, o ideal é você partir para os <a href="https://en.wikipedia.org/wiki/Generalized_linear_model">Modelos Lineares Generalizados</a>. Um post interessante sobre regressão linear pode ser encontrado <a href="https://machinelearningmastery.com/linear-regression-for-machine-learning/">aqui</a>.</p>
+
+<h3 id="regressão-logística">Regressão Logística</h3>
+
+<p>A regressão logística é a análise de regressão utilizada quando a variável dependente é categórica, normalmente assumindo valores binários (como <strong>0</strong> ou <strong>1</strong>). Ao ser utilizada em problemas de classificação, ela pode estimar a probabilidade de ocorrência de uma classe específica com base nos valores das variáveis de entrada. Não tão diferente da <em>regressão linear</em>, a <em>regressão logística</em> torna-se um pouco diferente basicamente pelo uso da função que dá o nome a esta modelagem: <em>função logística</em>.</p>
+
+<p>Considerando que o interesse aqui é obter a probabilidade de ocorrência de um determinado evento (classe), dadas as variáveis de entrada, os valores de saída deverão, assim, está contidos no intervalo [0,1]. Desta forma, para qualquer variável de entrada <script type="math/tex">X</script>, a função logística garantirá que a saída seja um valor compreendido entre 0 e 1. Isto acontece porque a função logística satura diante de valores abaixo de <strong>0</strong> e acima de <strong>1</strong>. Veja:</p>
+
+<script type="math/tex; mode=display">p(x) = \frac{e^{\beta_0 + \beta_1X}}{1 + e^{\beta_0 + \beta_1X} }</script>
+
+<p>A <em>função logística</em> é representada pela seguinte curva:</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*i1Fn-E-p5nFqL1aJ.png" alt="" /></p>
+
+<p>Eu recomendo o livro de <em>James, Gareth (et al.)</em>, que traz uma ótima explicação sobre este assunto, e pode ser encontrado <a href="http://amzn.to/2zsQQmk">neste link</a>.</p>
+
+<h3 id="support-vector-machines-svms">Support Vector Machines (SVMs)</h3>
+
+<p>O <em>SVM (Máquina de Vetores de Suporte)</em> funciona tanto para regressão quanto para classificação. No caso da classificação, o algoritmo toma como entrada um conjunto de observações e estima, para cada valor dado, a classe à qual pertence este valor. O SVM consegue obter um <em>hiperplano</em> capaz de separar os dados em classes distintas. Pode ser usado tanto para classificar dados que sejam linearmente separáveis quanto aqueles que não são linearmente separáveis por um <em>hiperplano</em>. É essencialmente um classificador binário e linear, mas pode ser estendido para classificar dados em mais de duas classes e que não possam ser separados linearmente. Para isto, o algoritmo conta com uma técnica chamada <em>Kernel Trick</em>, a qual constitui-se numa ponte entre a linearidade e a não-linearidade<em>. Um *kernel</em> é uma função que quantifica a similaridade entre duas observações em um espaço de maior dimensionalidade.</p>
+
+<p>Exemplo de um <em>kernel</em> polinomial não linear, quando <em>d &gt; 1</em>:</p>
+
+<script type="math/tex; mode=display">K(x_i,x_{i'}) = (1 + \sum_{j=1}^px_{ij}x_{i'j})^d</script>
+
+<p>A equação acima representa um tipo de kernel utilizado no SVM (não é o único), sendo conhecido como <em>kernel polinomial</em> de grau <em>d</em>, onde <em>d</em> é um número inteiro e positivo. Quando <em>d = 1</em>, a equação torna-se linear. Há outras funções de kernel que podem ser utilizadas, como a Radial Basis Function - RBF, que é amplamente utilizada. Mas também você pode fornecer suas próprias matrizes de kernel em situações específicas. Há algum tempo eu gravei um vídeo explicando o algoritmo SVM em detalhes (tem código em Python). Veja só:</p>
+
+<div class="video-container">
+	<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/b8nP9g0p8X4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+	</center>
+</div>
+
+<h3 id="árvores-de-decisão-e-random-forests">Árvores de decisão e <em>Random Forests</em></h3>
+
+<p>Estão entre os modelos de ML mais populares. As árvores de decisão dividem todo o espaço de decisão em subregiões, com o objetivo de simplificar o processo de predição. São algoritmos bastante úteis e de fácil interpretação. Uma abordagem bem comum é produzir multiplas árvores e combinar suas predições, visando obter um único modelo que consolida as decisões de vários modelos obtidos individualmente - <em>costumamos referenciar isto como um Ensemble</em>. Isso geralmente resulta em uma melhoria expressiva na acurácia do modelo final e é uma técnica bastante utilizada em diversas situações práticas. Apenas para citar um exemplo, o sensor de movimentos do <a href="https://pt.wikipedia.org/wiki/Kinect">Kinect </a>(o famoso acessório do console Xbox, da Microsoft), utiliza um modelo classificador baseado em um <a href="https://en.wikipedia.org/wiki/Ensemble_learning">ensemble</a> de árvores de decisão. Trata-se de um conjunto de modelos em árvore chamado <em>Random Forests.</em> Lembre-se deste detalhe quanto estiver jogando <em>Just Dance</em> no Xbox One ;-).</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2048/0*afZyTZPv8WVw3rbq.jpg" alt="" /></p>
+
+<p>No contexto destes modelos baseados em árvore, o <em>Random Forests</em> é um dos mais populares. Trata-se de um <strong>conjunto</strong> de múltiplas árvores de decisão que operam em subdivisões do espaço de entrada, onde uma quantidade aleatória de árvores é treinada em partes específica do conjunto de aprendizagem. As predições destas árvores individuais são, então, combindas pela média para obter um modelo final que é significativamente mais robusto do que o melhor modelo obtido individualmente. Quando eu digo <em>combinadas pela média</em>, quero dizer que acontece o seguinte:</p>
+
+<script type="math/tex; mode=display">\hat{f}_{\rm avg}(x) = \frac{1}{B}\sum_{b=1}^B\hat{f^b}(x)</script>
+
+<p>Ou seja, nós calculamos várias predições $\hat{f^1},\hat{f^2},\hat{f^3},…,\hat{f^B}$ individualmente, em $B$ partes diferentes do conjunto de aprendizagem e depois juntamos essas predições pela média. Trata-se de um princípio que já é usado em um outro método chamado <a href="https://en.wikipedia.org/wiki/Bootstrap_aggregating"><em>bagging</em></a>, a partir do qual o Random Forest é extendido.</p>
+
+<p>Ao ser usado em tarefas de classificação, por exemplo, o <em>random forest</em> vai considerar a estimativa (o voto) de cada árvore do conjunto para obter a classificação com base na classe que foi mais votada. O parâmetro mais importante a ser escolhido durante a modelagem com Random Forest é o número de árvores de decisão usado pelo Ensemble. Deve ser escolhido com parcimônia, pois se o número de árvores for grande, seu modelo entrará em overfitting rapidamente.</p>
+
+<p>A figura abaixo ilustra bem o funcionamento deste algoritmo.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*p2xObVSbK8WBxb77.png" alt="" /></p>
+
+<p>Da próxima vez em que você ouvir alguém falar a frase “várias cabeças pensam melhor do que uma”, lembre de que o <em>Random Forest</em> baseia-se exatamente neste princípio.</p>
+
+<h3 id="redes-neurais-artificiais">Redes Neurais Artificiais</h3>
+
+<p>As redes neurais artificiais são algoritmos de Machine Learning que se baseiam no funcionamento do cérebro biológico e suas conexões sinápticas. Aliás, é por conta delas que cunhou-se o termo <a href="https://pt.wikipedia.org/wiki/Aprendizagem_profunda"><em>deep learning</em></a> (aprendizagem profunda), o qual envolve o uso de redes neurais com várias camadas. Por muitos anos, o uso de RNAs se manteve inviável, dado que sempre exigiram tempo e capacidade computacional consideráveis. Mas este panorama mudou a partir do momento em que a <a href="https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_paralela">computação paralela</a> ganhou um novo impulso, graças ao surgimento de GPUs (Unidades de Processamento Gráfico) cada vez mais poderosas, ao mesmo tempo em que o custo de aquisição destes hardwares se tornou bem mais acessível. De fato, o poder de processamento paralelo oferecido pelas GPUs melhora significativamente a performance de treino de uma rede neural, reduzindo o tempo de ajuste do modelo de maneira expressiva. Por tal motivo, estes dispositivos se tornaram essenciais para os processos de criação de inteligências artificiais com <em>deep learning</em>. Atualmente já existem serviços de Cloud Computing com GPUs dedicadas e especialmente dimensionados para tarefas de <em>aprendizagem profunda</em>, como o <a href="https://www.nvidia.com/en-us/data-center/gpu-cloud-computing/">GPU Cloud Computing</a>, da Nvidia, o <a href="https://aws.amazon.com/pt/ec2/elastic-gpus/">Amazon EC2 Elastic GPUs</a>, <a href="https://docs.microsoft.com/pt-br/azure/virtual-machines/windows/sizes-gpu#nd-series">Microsoft (Azure)</a> e <a href="https://cloud.google.com/deep-learning-vm/?hl=pt-br">Google (Google Cloud)</a>.</p>
+
+<p>As RNA’s tornam-se bastante úteis a partir do momento em que passa a ser difícil resolver problemas com as abordagens mais tradicionais de aprendizado de máquina. Elas podem ser empregadas em tarefas como:</p>
+
+<ul>
+  <li>
+    <p>Reconhecimento facial</p>
+  </li>
+  <li>
+    <p>Detecção de objetos em cenas</p>
+  </li>
+  <li>
+    <p>Análise de imagens médicas</p>
+  </li>
+  <li>
+    <p>Análise de séries temporais</p>
+  </li>
+  <li>
+    <p>Processamento de sinais</p>
+  </li>
+  <li>
+    <p>etc</p>
+  </li>
+</ul>
+
+<p>Uma RNA é composta por neurônios artificiais interligados e organizados em camadas. Cada neurônio artificial é representado por uma função matemática que computa os pesos sinápticos (parâmetros) da rede. O ajuste destes parâmetros é feito automaticamente e em diversas iterações e determina o aprendizado da rede. Uma rede neural clássica consiste de basicamente três camadas: <strong>1)</strong> Camada de entrada, <strong>2)</strong> camada intermediária (também chamada de camada oculta) e <strong>3)</strong> camada de saída. Todas elas são interligadas por funções de ativação não lineares.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2048/0*TNp6H_4irvEyxUMu.jpg" alt="" /></p>
+
+<p>A figura acima ilustra um modelo de neurônio artificial chamado <strong><em>Perceptron</em></strong> (lado direito), que é a base para as redes neurais multicamadas, comparando-o com um neurônio biológico (lado esquerdo). Os dendritos, que correspondem aos dados de entrada <script type="math/tex">\{x_1, x_2, ..., x_m\}</script>, também chamados de <em>features</em>, estão associados ao neurônio artificial por meio dos pesos sinápticos <script type="math/tex">\{w_1, w_2,.., w_m\}</script>. Opcionalmente, um neurônio Perceptron pode ter uma entrada extra como sendo uma constante chamada <em>bias</em>, cujo valor (também chamado de valor de ativação) é sempre 1 e cujo peso associado é denotado por <em>w0</em>. O núcleo do corpo celular é representado por uma função somatória que combina as entradas do neurônio (eu prefiro chamar de combinador linear).</p>
+
+<p>Uma função de ativação, por sua vez, é aplicada ao resultado do somatório, gerando um valor de saída no axônio. A ideia central é extrair combinações lineares das entradas e, então, modelar a saída como uma função não linear. Para isto, costuma-se utilizar uma função de ativação não-linear, como a <a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)"><em>ReLU</em></a>.</p>
+
+<p>Há uma grande variedade de arquiteturas de RNA disponíveis atualmente, com alguma arquitetura nova surgindo praticamente toda semana. A mais comum e básica RNA multicamadas é um agrupamento de vários <em>Perceptrons</em> interligados, também chamado de <em>Perceptron Multicamadas</em>. Durante o treino, o algoritmo recebe um conjunto de dados como entrada <script type="math/tex">x_n</script>, ajusta os pesos <script type="math/tex">w_m</script> e produz uma saída <script type="math/tex">y_k</script>. Entretanto, normalmente a saída é acompanhada de um erro, que seria a diferença entre o valor alvo (valor de saída desejado) e a saída que foi produzida pela rede.</p>
+
+<p>O objetivo é promover tantas iterações quanto possível nos dados de treino até que este erro seja minimizado por meio de um processo de otimização de uma função que, preferencialmente, deveria ser convexa. Durante estas iterações, os pesos serão ajustados inúmeras vezes até que a rede seja capaz de generalizar bem. Estes ajustes nos pesos ocorrem por meio da <a href="http://neuralnetworksanddeeplearning.com/chap2.html"><em>retropropagação do erro</em></a> produzido na saída, na qual a rede o propaga pelo caminho inverso do fluxo (camada por camada), utilizando derivadas parciais para computar o gradiente da função objetivo, tendo como base o valor deste erro para promover o ajuste dos pesos até que tal erro se reduza ao mínimo possível. Usando um conjunto de derivadas parciais de primeira ordem, computadas pela regra da cadeia do cálculo, com valores ponderados por uma taxa de aprendizado, o gradiente vai indicar a proporção do ajuste que precisa ser feito nos pesos da rede a cada iteração.</p>
+
+<p>O diagrama abaixo ilustra uma rede neural MLP, também chamada de <em>feed-foward</em> (alimentada adiante). Ela tem duas camadas, sendo que uma delas é oculta.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/0*1WQ3MbOKn2GXSO-b.png" alt="" /></p>
+
+<p>Perceba que os <em>pesos</em> (parâmetros) são representados por ligações entre cada <em>nó</em> (neurônio) da rede. As setas verdes indicam o fluxo no qual ocorre o aprendizado. A seguinte função ilustra estes estágios:</p>
+
+<script type="math/tex; mode=display">y_k(\mathbf{\text{x}}, \mathbf{\text{y}}) = \sigma \bigg( \sum_{j=1}^Mw^{(2)}_{kj}h\bigg(\sum_{i=1}^Dw_{ji}^{(1)x_i} + w_{j0}^{(1)}\bigg) + w_{k0}^{(2)} \bigg)</script>
+
+<p>Na equação acima,  $\sigma$ é uma função de ativação (como uma ReLU ou Tangente hiperbólica), a qual recebe os valores das entradas $x_i$ ponderadas pelos pesos $w$, incluindo os das camadas intermediárias. O processo de aprendizagem da rede neural consiste justamente em obter a melhor combinação possível destes pesos, de modo que a rede produza o menor erro e generalize o melhor possível. É evidente, contudo, que esta é uma representação simplificada do processo de aprendizado de uma RNA, visto que o interesse aqui <strong>não</strong> é abordar este assunto de uma forma aprofundada. Por este motivo, eu recomendo que você veja o <a href="http://amzn.to/2Bs5T0P">livro do Simon Haykin</a>, o qual traz um estudo bastante abrangente das RNA’s.</p>
+
+<p>Como mencionado, há diferentes arquiteturas de redes neurais, com propósitos específicos. A maioria delas deriva de redes neurais convolucionais (CNN) e redes recorrentes (RNN):</p>
+
+<p><strong>Redes Neurais Recorrentes</strong> — São muito utilizadas em tarefas relacionadas com o processamento de linguagem natural, como modelagem e marcação de sequências, reconhecimento de entidades, análise de sentimentos, reconhecimento de voz, tradução de textos, etc. Caso você queira ter uma visão mais ampla desta arquiteura neural, bem como para ver um exemplo de aplicação na prática com códigos em Python, sugiro que veja este vídeo:</p>
+
+<div class="video-container">
+	<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/bIcadBu--u8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+	</center>
+</div>
+
+<p><strong>Redes Neurais Convolucionais</strong> — São muito utilizadas no campo de visão computacional, como classificação de imagens e reconhecimento de objetos em fotografias e vídeos, além de outras aplicações mais recentes como as GANs - Generative Adversarial Networks. As GANs permitiram o desenvolvimento de algumas aplicações interessantes, como é o caso de modelos capazes de <a href="https://thispersondoesnotexist.com/">gerar fotografias de pessoas que nunca existiram</a>. Recentemente, as ConvNets revelaram uma grande capacidade para processar linguagem natural, trazendo resultados bastante interessantes. Em algumas situações, elas são combinadas com RNNs e outras técnicas, possibilitando outros resultados bacanas.</p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FhwzOaEMk6Y" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<p>As RNA’s entram em cena para nos ajudar a resolver problemas que normalmente parecem ser intratáveis. Problemas estes que envolvem não apenas uma complexidade maior, como também volumes de dados consideravelmente grandes. São algoritmos que superam consideravelmente as performances de abordagens mais tradicionais (mas nem sempre!!!!!)</p>
+
+<p>Atualmente, grandes produtos e serviços que fazem parte do nosso cotidiano e facilitam a nossa vida contam com tecnologias neurais. O Google Tradutor, por exemplo, já está na sua segunda geração, <a href="https://www.blog.google/products/translate/higher-quality-neural-translations-bunch-more-languages/">agora contando com modelos neurais</a> capazes de compreender o contexto das sentenças e proporcionar traduções muito melhores. A Apple, por sua vez, está utilizando tecnologias baseadas em deep learning para tornar os seus produtos muito mais competitivos, como é o caso das versões mais recentes do IOS e do <a href="https://www.apple.com/homepod/">HomePod</a>. Os iPhones mais recentes, por exemplo, <a href="https://www.tecmundo.com.br/produto/122085-apple-comecou-desenvolver-a11-bionic-iphone-x-tres-anos.htm">conta com um chip neural</a>.</p>
+
+<h3 id="para-concluir">Para concluir</h3>
+
+<p>O objetivo deste post foi trazer uma visão geral, <strong>não aprofundada</strong>, dos algoritmos de aprendizagem supervisionada mais frequentes em tarefas de Machine e Deep Learning. Embora eu tenha tentado limitar a apresentação de jargões matemáticos, é preciso entender que o Machine Learning é, por natureza, fundamentado nesta ciência. Você não precisaria se preocupar muito com isso caso o seu interesse seja apenas incorporar alguma solução existente de ML dentro do seu negócio. Entretanto, caso pretenda criar seus próprios modelos ou outras soluções baseadas em IA com o apoio de modelos customizados, saiba que terá que estudar ML com mais carinho :-).</p>
+
+<p>Ficou interessando no assunto? Para saber como iniciar seus estudos em Machine Learning, não deixa de ver <a href="https://luisfred.com.br/machine-learning/dicas-para-aprender-machine-learning">este outro post, com dicas de como começar</a>. Também <a href="https://medium.com/luisfredgs/grupo-de-estudos-de-machine-learning-5f2636657d92">criei um grupo de estudos recentemente</a>, para servir de apoio ao pessoal que está iniciando na área. Frequentemente compartilho algum estudo legal por lá!</p>
+
+<h3 id="bibliografia">Bibliografia:</h3>
+
+<p>Para uma leitura mais aprofundada, eu recomendo a bibliografia abaixo. O livro do Christopher M. Bishop, que cobre amplamente vários tópicos de Machine Learning, é um dos meu preferidos.</p>
+
+<p><a href="http://amzn.to/2zqRRLp">Álgebra Linear com Aplicações — </a>Anton, Howard</p>
+
+<p><a href="http://amzn.to/2BmFJfX">Deep Learning — </a>Goodfellow, Ian</p>
+
+<p><a href="http://amzn.to/2zqSxjV">An Introduction to Statistical Learning: With Applications in R: 103</a> — James, Gareth</p>
+
+<p><a href="http://amzn.to/2znbDaL">The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition</a> — Hastie, Trevor <em>et al</em>.</p>
+
+<p><a href="http://amzn.to/2A7xeHq">Pattern Recognition and Machine Learning</a> — Christopher M. Bishop</p>
+
+<p><a href="http://amzn.to/2CJh5pS">Hands–On Machine Learning with Scikit–Learn and TensorFlow</a> — Aurelien Geron</p>
+
+<p><a href="https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/an-executives-guide-to-ai">An executive’s guide to AI</a></p>
+:ET

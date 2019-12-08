@@ -1,0 +1,57 @@
+I"�&<p class="image"><img src="/blog/assets/img/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir.png" alt="" /></p>
+
+<p class="intro"><em>Já percebeu que quando você acessa a página inicial do Youtube, os vídeos que aparecem convenientemente logo no topo têm a mais alta probabilidade de serem os vídeos que você gostaria de ver? Você já se perguntou como a maior plataforma de vídeos do mundo sabe qual é o próximo vídeo que você quer assistir? Ao final deste post, você terá uma ideia de como o Youtube utiliza o deep learning para chegar a este resultado.</em></p>
+
+<p>A Google recentemente deu um grande passo em direção à próxima geração de seus aplicativos baseados em inteligência artificial, introduzindo tecnologia neural que vem garantindo performances no <a href="https://pt.wikipedia.org/wiki/Estado_da_arte">estado da arte</a>. Um grande exemplo disto é a segunda geração do Google Tradutor, no qual os modelos estatísticos de tradução foram substituídos por uma nova abordagem chamada <strong>Neural Machine Translation</strong> (Tradução Neural de Máquina), conforme você poderá conferir <a href="https://blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate/">neste post</a>, no blog da Google.</p>
+
+<p>Um outro produto Google que passou por uma mudança similar recentemente foi o Youtube, no qual passaram a adotar técnicas de <em>deep learning</em> com o objetivo de predizer qual é o próximo vídeo que nós queremos assistir na plataforma, constituindo a base para o seu novo sistema de recomendação. Os resultados da pesquisa foram descritos e compartilhados <a href="https://static.googleusercontent.com/media/research.google.com/pt-BR//pubs/archive/45530.pdf">neste paper</a>.</p>
+
+<p>A versão anterior deste sistema de recomendação contava com uma abordagem baseada em <strong>fatoração de matrizes</strong>, em conjunto com a <strong>filtragem colaborativa</strong>, a qual se baseia, por sua vez, no feedback dado pelos usuários (likes, views, etc). Um <em>paper</em> interessante sobre este assunto pode ser <a href="https://arxiv.org/ftp/arxiv/papers/1503/1503.07475.pdf">encontrado aqui</a>. O novo sistema de recomendação é composto por duas redes neurais, cada uma responsável por uma tarefa específica: <strong><em>geração de candidatos</em></strong> e <strong>*rankeamento</strong>, *respectivamente. A figura abaixo mostra uma visão geral do funcionamento deste sistema.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2048/0*xQJC_w0RS_AF78M6.png" alt="" /></p>
+
+<h3 id="geração-de-candidatos">Geração de candidatos</h3>
+
+<p>Esta rede neural gera uma lista dos vídeos que têm a maior probabilidade de serem relevantes para quem estiver acessando a plataforma a qualquer momento. Utiliza como entrada, informações baseadas no histórico de atividades dos usuários. Nesta etapa, a filtragem colaborativa torna-se um elemento importante, pois se baseia em determinadas ações dos usuários que constituem-se num forte indicativo de que um determinado vídeo seja relevante. Se, por exemplo, um vídeo específico foi assistido na íntegra por várias pessoas, isto pode ser um grande sinal de que este vídeo seja relevante dentro do contexto no qual esteja inserido. A quantidade de <em>likes</em> que este vídeo recebeu também é um importante feedback a ser utilizado como entrada. A similaridade entre os usuários que assistem ao vídeo se baseia em determinadas características compartilhadas entre eles, tais como os dados demográficos, textos utilizados no campo de busca, vídeos que assistiram, de que maneira eles descobrem novos vídeos, etc. Esta similaridade também “entra no jogo”.</p>
+
+<h3 id="rankeamento">Rankeamento</h3>
+
+<p>Para que o sistema de recomendação consiga ser realmente efetivo, é preciso que seja garantido um alto valor para o recall (<em>a fração dos vídeos que são realmente relevantes em relação ao número total de registros candidatos gerados</em>). A rede neural de rankeamento possibilita isto ao atribuir um score para cada vídeo, com base numa <em>função objetivo</em> que utiliza um maciço conjunto informações capazes de descrever tanto os vídeos quanto os usuários que os assistem. Apenas os vídeos com scores mais altos serão exibidos na lista como recomendação para os usuários, rankeados com base em seu score.</p>
+
+<h3 id="arquitetura-do-modelo">Arquitetura do modelo</h3>
+
+<p>Essencialmente, o novo sistema de recomendação do Youtube é um problema de classificação em múltiplas classes (na ordem de milhões), na qual o modelo recebe bilhões de parâmetros como entrada. A figura abaixo ilustra a arquitetura da rede neural utilizada para selecionar vídeos que tenham maiores probabilidades se serem relevantes para os usuários (geração de registros candidatos), dentro do contexto específico de cada um.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2612/0*HvOGyZS-gHoYQ0c2.png" alt="" /></p>
+
+<p>É possível perceber que a rede, cujo fluxo se dá de baixo para cima, recebe como entrada algumas features incorporadas, tais como a média dos vídeos visualizados, dos <em>tokens</em> que formam os textos digitados no campo de busca, áreas geográficas dos usuários, o gênero deles, a quanto tempo o vídeo está publicado na plataforma, etc. A média destes dados incorporados em representação vetorial é calculada imediatamente antes de eles serem concatenados, com o objetivo de fixar o tamanho dos vetores, de modo a adequá-los à entrada nas camadas ocultas da rede profunda. Todas as camadas ocultas são totalmente conectadas (cada nó em uma camada está conectado a todos os nós da camada anterior e também da camada seguinte). Durante a fase de treino, a função de perda é minimizada por meio da técnica do gradiente descendente na saída da função <em>softmax *(responsável por representar a probabilidade de classe). Em seguida, é feita uma procura pelo registro vizinho mais próximo de modo a determinar os <strong>*N</strong></em> vídeos mais relevantes a serem exibidos na lista.</p>
+
+<p>Considerando que os usuários normalmente preferem conteúdo mais novo e atualizado, o sistema precisa levar em conta, ainda, as milhares de horas em vídeo que são enviadas para a plataforma a cada minuto. Ou seja, os novos vídeos também precisam “entrar na lista” para serem recomendados. Os dados de treino utilizados para “ensinar” a rede são gerados a partir de TODOS os vídeos visualizados na plataforma, até mesmo aqueles que estão incorporados em páginas de sites externos.</p>
+
+<p>Uma arquitetura similar àquela utilizada na fase de geração de candidatos entra em ação logo em seguida, para rankear os registros candidatos obtidos por meio da rede ilustrada na figura anterior. A diferença neste ponto é que os pesquisadores utilizaram <em>regressão logística</em> para atribuir um score independente à cada vídeo a ser exibido na lista de recomendados. A figura abaixo ilustra este procedimento:</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2128/0*lScbklnqqXgm8NtA.png" alt="" /></p>
+
+<p>Centenas de features (idioma do vídeo, exibições anteriores na lista de recomendação, quanto tempo levou desde que cada vídeo candidato foi visto pela última vez, quantos vídeos do canal em questão foram vistos pelo usuário, quando foi a última vez que o usuário assistiu a um vídeo do tópico em questão, etc) alimentam a rede, que possui todas as suas camadas completamente conectadas, tal como ocorre na rede neural para geração de candidatos. Nesta etapa, a lista de vídeos recomendados é ordenada de acordo com o score atribuído a cada vídeo e, então, exibida na tela do usuário.</p>
+
+<p>Em ambos os modelos, as features são conectadas em uma primeira camada mais larga, ao passo em que as camadas seguintes são completamente conectadas e compostas de Unidades Lineares Retificadas (<a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">ReLU</a>) como funções de ativação.</p>
+
+<p>Parte do processo de criação do modelo se deu de modo offline. No entanto, para determinar a efetividade do modelo, os pesquisadores fizeram experimentos em produção com base em testes A/B, pois assim conseguiriam medir mudanças sutis, tais como: taxas de cliques, tempo de visualização e muitas outras métricas que medem o engajamento dos usuários.</p>
+
+<p>O sistema de recomendações do Youtube é responsável por ajudar mais de um bilhão de usuários a encontrar conteúdo personalizado diariamente, nesta que é a maior plataforma de vídeos do mundo. Para o sistema em si, trata-se de uma tarefa que envolve um desafio imenso, considerando a necessidade de obter uma boa performance numa escala tão grande e num intervalo de tempo que fica na ordem dos milissegundos. Da próxima vez em que você acessar a página inicial do Youtube e ver todos aqueles vídeos que combinam exatamente com o que você mais gosta de assistir, terá uma boa ideia do que é preciso para que esta “mágica” aconteça.</p>
+
+<ul>
+  <li>
+    <p><a href="/livros/7-livros-essenciais-para-aprender-machine-learning">7 livros essenciais para aprender machine learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/analise-de-sentimentos-usando-redes-neurais">Análise de sentimentos com redes neurais recorrentes LSTM</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes">Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/classificando-textos-com-machine-learning">Classificando textos com Machine Learning</a></p>
+  </li>
+</ul>
+:ET

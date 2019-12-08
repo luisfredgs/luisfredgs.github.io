@@ -1,0 +1,198 @@
+I"l�<p class="image"><img src="/blog/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png" alt="Deep learning e Modelagem de Linguagem — Teoria e prática" /></p>
+
+<p class="intro">A modelagem de linguagem é um dos componentes mais importantes na área de processamento de linguagem natural, sendo uma peça fundamental em tarefas como <strong>Machine Translation</strong> e <strong>Reconhecimento de voz</strong>. Por esta razão, é uma área de pesquisa que recebe bastante atenção frequentemente. Mas o que seria isso, exatamente?</p>
+
+<h1 id="o-que-significa-modelagem-de-linguagem">O que significa Modelagem de Linguagem?</h1>
+
+<p>Para ser sucinto, trata-se de atribuir probabilidades às sentencas em um texto. Por exemplo, considere o seguinte questionamento:</p>
+
+<blockquote>
+  <p>Qual seria a probabilidade de vermos a frase: <strong>minha terra tem palmeiras onde canta o sabiá</strong>?</p>
+</blockquote>
+
+<p>Além disso, o modelo também tenta atribuir uma probabilidade para cada palavra que aparece numa sequência de palavras presentes na mesma frase, parágrafo ou texto. Considere agora este outro questionamento:</p>
+
+<blockquote>
+  <p>Qual seria a probabilidade de vermos a palavra <strong>sabiá</strong>, dado que temos a frase <strong>minha terra tem palmeiras onde canta</strong>?</p>
+</blockquote>
+
+<p>De uma forma geral, o modelo tenta adivinhar qual é a próxima palavra a aparecer na frase, diante de um conjunto de palavras que já existem nela. Obviamente você já viu isto funcionar na prática enquanto digitava alguma coisa no seu smartphone ou tablet e cada palavra que você queria usar na sequência ia aparecendo na parte superior do teclado virtual.</p>
+
+<p class="image"><img src="/blog/assets/img/modelagem-de-linguagem-teclado-ios.jpg" alt="modelágem de linguagem" />
+<em>o teclado virtual do seu smartphone utiliza modelagem de linguagem para estimar qual é a próxima palavra que você quer digitar, baseado no que você já digitou antes.</em></p>
+
+<p>Neste ponto, você já deve ter notado que nós podemos adotar este tipo de abordagem para gerar sentenças, parágrafos e até mesmo livros inteiros.</p>
+
+<h1 id="matematicamente-como-isto-poderia-ser-representado">Matematicamente, como isto poderia ser representado?</h1>
+
+<p>Para expressar matematicamente o que já foi dito aqui, a tarefa de modelar linguagens é atribuir uma probabilidade à qualquer sequência de palavras <script type="math/tex">w_{1:n}</script>, ou seja, estimar <script type="math/tex">P(w_{1:n})</script>. Pela regra da cadeia da probabilidade é mais fácil expressar isto:</p>
+
+<script type="math/tex; mode=display">P(w_{1:n}) = P(w_1)P(w_2 \mid w_1)P(w_3 \mid w_{1:2})P(w_4 \mid w_{1:3})... P(w_n \mid w_{1:n-1})</script>
+
+<p>Isto significa predizer palavras sequencialmente onde a estimativa de cada palavra está condicionada às palavras precedentes. Modelar uma única palavra com base no contexto presente à esquerda dela é preferível em relação à atribuir um score para uma frase inteira.</p>
+
+<p>Porém, se pensarmos no fato de que o último termo na sequência da equação anterior <script type="math/tex">P(w_n \mid w_{1:n-1})</script> ainda está condicionado à todas as <script type="math/tex">n-1</script> palavras, nós vemos que há um problema nisto, porque este termo é tão chato de modelar quanto uma frase inteira.</p>
+
+<p>Durante muito tempo os modelos de linguagem fizeram uso da <a href="https://en.wikipedia.org/wiki/Markov_property">Propriedade de Markov</a> para contornar este problema, a qual declara o seguinte:</p>
+
+<blockquote>
+  <p>A distribuição de probabilidade condicional de estados futuros do processo depende apenas do estado atual.</p>
+</blockquote>
+
+<p>Aplicando isto no contexto do nosso problema de modelagem de linguagem, nós podemos concluir que <strong>a próxima palavra em uma sequência depende apenas das últimas <em>k</em> palavras</strong>:</p>
+
+<script type="math/tex; mode=display">P(w_{i+1} \mid w_{1:i}) \approx P(w_{i+1} \mid w_{i-k:i}).</script>
+
+<p>Assim, a estimativa da probabilidade da senteça pode ser representada desta forma:</p>
+
+<script type="math/tex; mode=display">P(w_{1:n}) \approx \prod_{i=1}^{n}P( w_i \mid w_{i-k:i-1})</script>
+
+<p>O objetivo, então, é precisamente estimar $P(w_{i+1} \mid w_{i-k:i})$ com base em um conjunto de dados de texto. Quanto maior for o volume de dados que você tiver à disposição, mais preciso será o seu modelo.</p>
+
+<p>Acontece que este método acima possui uma fraqueza nítida. Repare que este cálculo é baseado em um <strong>produto</strong>, de maneira que se houver um termo qualquer que não tenha sido observado no conjunto de aprendizagem, então a probabilidade dele será <strong>0</strong> (zero) e isto anulará toda a equação. Contudo, algumas técnicas foram utilizadas para contornar este problema, impedindo que os valores se anulem. Mesmo assim, há um limite para o que podemos fazer com esta abordagem. Apesar de ela produzir resultados interessantes em pequenos conjuntos de dados, ela costuma falhar em sequências maiores e mais complexas com dependências distantes que são mais difíceis de modelar (contextos maiores).</p>
+
+<p class="note">Modelos tradicionais de linguagem baseados em propriedades de Markov costumam falhar em sequências maiores e mais complexas com dependências distantes que são mais difíceis de modelar.</p>
+
+<h1 id="modelos-neurais-de-linguagem-e-word-embeddings">Modelos Neurais de Linguagem e <strong><em>Word Embeddings</em></strong></h1>
+
+<p>Modelos neurais de linguagem resolvem muitos dos problemas que são encontrados nas abordagens tradicionais. Redes neurais têm algumas propriedades bem convenientes no âmbito da modelagem de linguagem, apesar do seu custo proibitivo diante de conjuntos de dados maiores em muitas ordens de magnitude. Uma destas vantagens é poder administrar contextos mais amplos de uma forma muito mais eficiente. Isto acontece, principalmente, nas arquiteturas de redes neurais recorrentes mais modernas, tais como a LSTM e a GRU (<a href="https://arxiv.org/abs/1406.1078">Cho et al. 2014</a>).</p>
+
+<p>Quando você usa redes neurais para modelar linguagens, é útil criar representações de palavras distribuídas em espaços vetoriais, onde cada palavra é representada como um vetor de valores reais (nada de símbolos discretos aqui). O significado de cada termo e sua relação com outras entidades são capturados pelas ativações presentes neste vetor que representa cada palavra, bem como pelas similaridades entre os diferentes vetores.</p>
+
+<p class="image"><img src="/blog/assets/img/deep-learning-e-modelagem-de-linguagem-word-embeddings.png" alt="Modelagem de linguagem - word Embeddings" />
+<em>Vetores de palavras onde cada palavra é representada como um vetor em um espaço de baixa dimensionalidade (cada linha na tabela acima é um vetor). As dimensões mais comuns para este vetor são: 50, 100, 300, 800 e 1000.</em></p>
+
+<p>Estas representações de palavras em espaço vetorial são normalmente chamadas de <strong><em>Word embeddings</em></strong> na literatura e podem “alimentar” redes neurais para processamento de linguagem natural, melhorando suas capacidades.</p>
+
+<p class="note">Nós podemos representar cada feature (palavra) como um vetor em um espaço de baixa dimensionalidade. Na prática, isto significa que cada palavra é mapeada para um vetor de valores reais <em>d</em>-dimensional e o significado da palavra será capturado pela sua relação com outras palavras e seus valores de ativação presentes em seus respectivos vetores.</p>
+
+<p>Abordagens como as de <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf"><strong>Mikolov et al., 2013b</strong></a> e <a href="https://arxiv.org/abs/1607.04606"><strong>P. Bojanowski et al., 2016</strong></a> se popularizaram recentemente porque trouxeram melhorias significativas nas performances de modelos neurais para processamento de linguagem natural. Trata-se de modelos semânticos de linguagem, obtidos a partir treinos não-supervisionados em grandes corpus de textos não estruturados, que se baseiam na seguinte premissa: as palavras que compartilham significados possuem vetores muito similares porque também foram utilizadas em contextos similares. Assim, estas palavras podem ser agrupadas muito próximas umas das outras numa mesma região do espaço vetorial.</p>
+
+<p class="image"><img src="/blog/assets/img/word_embeddings_most_similar_2.png" alt="Word Embeddings" />
+<em>palavras que foram usandas em contextos similares possuem vetores similares e são agrupadas numa mesma região do espaço vetorial, justamente por compartilharem algum significado. Para saber como plotar um gráfico assim, veja <a href="https://www.kaggle.com/luisfredgs/plotando-gr-fico-de-word-embedding">este link</a></em></p>
+
+<p>Estas <em>word embeddings</em> vão entrar em uma camada da rede normalmente referenciada como <strong><em>Embedding Layer</em></strong>. Você até pode inicializar esta camada com pesos aleatórios e depois ajustar estes pesos progressivamente durante o treino até encontrar uma combinação ótima. Mas, melhor ainda do que isso é já poder inicializá-la utilizando estas representações de palavras previamente obtidas com base no vocabulário do seu conjunto de aprendizagem, ou até mesmo com base em vetores de palavras pré-treinados em dados de outros domínios.</p>
+
+<p>Alguns destes vetores de palavras são treinados em grandes corpus de dados não supervisionados, como a Wikipédia. Treinar <em>word embeddings</em> usando estas abordagens em quantidades de dados tão grandes assim pode trazer importantes benefícios, como o de fornecer representações vetoriais para palavras raras, que normalmente nem aparecem no seu conjunto de aprendizagem (<a href="https://arxiv.org/abs/1607.04606"><strong>P. Bojanowski et al., 2016</strong></a>). Teoricamente, as representações para estas palavras serão similares àquelas de palavras relacionadas que estariam no conjunto de aprendizagem, permitindo que o modelo obtenha melhores generalizações.</p>
+
+<p>Considerando que as palavras são representadas como vetores, o modelo pode computar as similaridades entre estas palavras ao calcular as similaridades entre os vetores. Duas medidas de similaridade comuns são a <em>cosine</em> e <em>Jacaard Similarity</em>. A <em>cosine</em> mede o cosseno do ângulo entre os vetores $u$ e $v$ (digamos que $u$ represente uma palavra e $v$ represente uma ourta palavra):</p>
+
+<script type="math/tex; mode=display">sim_{cos}(u, v) = \frac{u \cdot v}{ \left\Vert u \right\Vert_2 \left\Vert v \right\Vert_2 } = \frac{ \sum_{i}u_{[i]} \cdot v_{[i]} }{ \sqrt{ \sum_{i}(u_{[i]})^2 } \sqrt{ \sum_{i}(v_{[i]})^2 } }</script>
+
+<p>A <em>Jacaard Similarity</em> é definida assim:</p>
+
+<script type="math/tex; mode=display">sim_{Jacaard}(u, v) = \frac{\sum_{i}min(u_{[i]}, v_{[i]})}{\sum_{i}max(u_{[i]}, v_{[i]})}</script>
+
+<p>Para ilustrar esta medida de similaridade, vamos extrair os vetores de 3 palavras presentes <a href="http://143.107.183.175:22980/download.php?file=embeddings/word2vec/cbow_s50.zip">neste word embedding</a>, com vetores em 50 dimensões obtidos por meio de <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf"><strong>Mikolov et al., 2013b</strong></a> e <a href="https://arxiv.org/abs/1607.04606"><strong>P. Bojanowski et al., 2016</strong></a>. As palavras são: <strong><em>presidente</em></strong>, <strong><em>estado</em></strong> e <strong><em>comissão</em></strong>. Vamos calcular as similaridades entre elas:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># u = presidente
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.093907</span><span class="p">,</span> <span class="mf">0.271813</span><span class="p">,</span> <span class="mf">0.045385</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.062937</span><span class="p">,</span> <span class="mf">0.135744</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.495446</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.633432</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.278358</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.281258</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.352969</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.389262</span><span class="p">,</span> <span class="mf">0.037469</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.576813</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.106252</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.131994</span><span class="p">,</span> <span class="mf">0.037046</span><span class="p">,</span> <span class="mf">0.151033</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.178932</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.449697</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.074721</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.643320</span><span class="p">,</span> <span class="mf">0.471278</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.275966</span><span class="p">,</span> <span class="mf">0.350979</span><span class="p">,</span> <span class="mf">0.285883</span><span class="p">,</span> <span class="mf">0.280474</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.281239</span><span class="p">,</span> <span class="mf">0.363799</span><span class="p">,</span> <span class="mf">0.159182</span><span class="p">,</span> <span class="mf">0.434006</span><span class="p">,</span> <span class="mf">0.020838</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.398882</span><span class="p">,</span> <span class="mf">0.339602</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.055495</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.196537</span><span class="p">,</span> <span class="mf">0.323546</span><span class="p">,</span> <span class="mf">0.080960</span><span class="p">,</span> <span class="mf">0.033596</span><span class="p">,</span> <span class="mf">0.265669</span><span class="p">,</span> <span class="mf">0.438394</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.287924</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.161542</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.051969</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.266580</span><span class="p">,</span> <span class="mf">0.080336</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.073548</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.224689</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.007176</span><span class="p">,</span> <span class="mf">0.022561</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.229548</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># v = estado
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.254259</span><span class="p">,</span> <span class="mf">0.588025</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.056152</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.055573</span><span class="p">,</span> <span class="mf">0.206882</span><span class="p">,</span> <span class="mf">0.408681</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.325860</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.144961</span><span class="p">,</span> <span class="mf">0.671040</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.237184</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.009760</span><span class="p">,</span> <span class="mf">0.785549</span><span class="p">,</span> <span class="mf">0.249680</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.018667</span><span class="p">,</span> <span class="mf">0.296448</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.005555</span><span class="p">,</span> <span class="mf">0.163902</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.462612</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.203502</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.152195</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.898882</span><span class="p">,</span> <span class="mf">0.567912</span><span class="p">,</span> <span class="mf">0.136436</span><span class="p">,</span> <span class="mf">0.785681</span><span class="p">,</span> <span class="mf">0.137562</span><span class="p">,</span> <span class="mf">0.366535</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.104239</span><span class="p">,</span> <span class="mf">0.164342</span><span class="p">,</span> <span class="mf">0.289210</span><span class="p">,</span> <span class="mf">0.004095</span><span class="p">,</span> <span class="mf">0.027409</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.560103</span><span class="p">,</span> <span class="mf">0.997733</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.346338</span><span class="p">,</span> <span class="mf">0.505060</span><span class="p">,</span> <span class="mf">0.267630</span><span class="p">,</span> <span class="mf">0.159966</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.278708</span><span class="p">,</span> <span class="mf">0.134177</span><span class="p">,</span> <span class="mf">0.344001</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.505864</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.431534</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.403217</span><span class="p">,</span> <span class="mf">0.218687</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.011242</span><span class="p">,</span> <span class="mf">0.524582</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.333766</span><span class="p">,</span> <span class="mf">0.035323</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.136235</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.627216</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># w = comissão
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.306975</span><span class="p">,</span> <span class="mf">0.379277</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.014631</span><span class="p">,</span> <span class="mf">0.026234</span><span class="p">,</span> <span class="mf">0.167269</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.062476</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.224295</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.224618</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.303858</span><span class="p">,</span> <span class="mf">0.156032</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.360141</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.185232</span><span class="p">,</span> <span class="mf">0.091300</span><span class="p">,</span> <span class="mf">0.069819</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.402067</span><span class="p">,</span> <span class="mf">0.574204</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.274878</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.237076</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.605752</span><span class="p">,</span> <span class="mf">0.312052</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.785056</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.082266</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.354681</span><span class="p">,</span> <span class="mf">0.137450</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.120481</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.018686</span><span class="p">,</span> <span class="mf">0.217644</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.069758</span><span class="p">,</span> <span class="mf">0.102755</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.008425</span><span class="p">,</span> <span class="mf">0.175850</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.435626</span><span class="p">,</span> <span class="mf">0.085948</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.659927</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.050797</span><span class="p">,</span> <span class="mf">0.380319</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.394668</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.182752</span><span class="p">,</span> <span class="mf">0.502834</span><span class="p">,</span> <span class="mf">0.170226</span><span class="p">,</span> <span class="mf">0.289859</span><span class="p">,</span> <span class="mf">0.456589</span><span class="p">,</span> <span class="mf">0.248910</span><span class="p">,</span> <span class="mf">0.032968</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.264588</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.392039</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.495116</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.057584</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.341951</span><span class="p">,</span> <span class="mf">0.204977</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># similaridade entre a palavra presisente e estado
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">u</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">v</span><span class="p">])))</span>
+
+<span class="p">[[</span><span class="mf">0.45978313</span><span class="p">]]</span>
+
+<span class="c1"># similaridade entre a palavra presidente e comissão
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">u</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w</span><span class="p">])))</span>
+
+<span class="p">[[</span><span class="mf">0.38518093</span><span class="p">]]</span>
+
+</code></pre></div></div>
+<p>A medida de similaridade baseada no cosseno do ângulo entre os dois vetores nos dá um resultado entre <strong>0</strong> (zero) e <strong>1</strong> e quanto mais próximo de <strong>1</strong> for o resultado, mais similares são os vetores e, portanto, mais similares serão os dois termos. Pela saída emitida no código acima, nós podemos perceber que os termos <strong>presidente</strong>  e <strong>estado</strong> (cosseno = 0.45978313) são mais similares do que <strong>presidente</strong> e <strong>comissão</strong> (cosseno=0.38518093), ao menos com base no contexto em que elas foram utilizadas no dataset.</p>
+
+<h1 id="exemplo-prático">Exemplo prático</h1>
+
+<p>Foi mencionado no início deste post que modelos de linguagem podem ser usados para gerar sentenças. Isto, é claro, depois de treinados em algum conjunto de aprendizagem. Eu desenvolvi um pequeno código para exemplificar os conceitos abordados aqui neste post e você pode usá-lo como ponto de partida nos seus estudos. O vídeo abaixo mostra este código funcionando no Google Colab.</p>
+
+<div class="video-container">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/riS1Zf1cgYk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p>Para exemplificar o uso de <strong>Word embeddings</strong> pré-treinados, eu inicializei a camada embedding com word vectors <em>300</em>-dimensional obtidos por meio de um modelo não-supervisionado treinado em um <a href="https://fasttext.cc/docs/en/english-vectors.html">dump de 2017 da Wikipedia em inglês</a>. Veja um trecho do código apenas para ilustrar:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Esta função nos permite usar um Word Embedding pré-treinado
+# em um outro conjunto de dados. Como nosso dataset nesta tarefa é
+# muito pequeno, pode ser uma boa ideia usar um word embedding pré-treinado
+</span>
+<span class="k">def</span> <span class="nf">load_fasttext</span><span class="p">(</span><span class="n">word_index</span><span class="p">,</span> <span class="n">max_features</span><span class="p">):</span>    
+    <span class="n">embeddings_index</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"wiki.pt.vec"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">coefs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">)</span>
+        <span class="n">embeddings_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">coefs</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">s word vectors encontrados'</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">embeddings_index</span><span class="p">))</span>
+    
+    <span class="n">words_not_found</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">embedding_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">word_index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">word_index</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">max_features</span><span class="p">:</span> <span class="k">continue</span>
+        <span class="n">embedding_vector</span> <span class="o">=</span> <span class="n">embeddings_index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">embedding_vector</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">embedding_vector</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># palavras nao encontradas no embedding permanecem com valor nulo
+</span>            <span class="n">embedding_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding_vector</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">words_not_found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">embedding_matrix</span>
+</code></pre></div></div>
+
+<p>Agora, nós carregamos os word vectors em uma variável e alimentamos a <strong><em>Embedding Layer</em></strong> com estes vetores:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># carrega nosso word embedding pré-treinado
+</span><span class="n">embedding_matrix</span> <span class="o">=</span> <span class="n">load_fasttext</span><span class="p">(</span><span class="n">word_index</span><span class="p">,</span> <span class="n">max_features</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Embedding</span><span class="p">(</span>
+	<span class="n">max_features</span><span class="p">,</span> 
+	<span class="mi">300</span><span class="p">,</span> 
+	<span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="n">embedding_matrix</span><span class="p">],</span> <span class="c1"># pesos do word embedding pré-treinado 
+</span>	<span class="n">input_length</span><span class="o">=</span><span class="n">max_length</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> 
+	<span class="n">trainable</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Bidirectional</span><span class="p">(</span><span class="n">GRU</span><span class="p">(</span><span class="mi">50</span><span class="p">)))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<p>Perceba que, como estes pesos já foram treinados, nós setamos a opção <strong>trainable=False</strong>. Porém, você pode gerar estes word embeddings com base no vocabulário do seu dataset e utilizá-los para inicializar esta mesma camada. Isto é preferível, dependendo da situação. Como nosso dataset é muito pequeno, acabei usando um pré-treinado mesmo.</p>
+
+<p>Postei todo o código <a href="https://github.com/luisfredgs/language-modeling-tensorflow-keras">no github</a> com algumas instruções para que você possa reproduzir os resultados no Google Colab ou na sua máquina.</p>
+
+<p>Dúvidas? Comentários? Sugestôes? Escrevam aí em baixo, na área de comentários! :-)</p>
+
+<h2 id="leia-também">Leia também</h2>
+
+<ol>
+  <li>
+    <p><a href="/livros/7-livros-essenciais-para-aprender-machine-learning">7 livros essenciais para aprender machine learning</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/dicas-para-aprender-machine-learning">Dicas para aprender Machine Learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes">Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/classificando-textos-com-machine-learning">Classificando textos com Machine Learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/analise-de-sentimentos-usando-redes-neurais">Análise de sentimentos com redes neurais recorrentes LSTM</a></p>
+  </li>
+</ol>
+:ET

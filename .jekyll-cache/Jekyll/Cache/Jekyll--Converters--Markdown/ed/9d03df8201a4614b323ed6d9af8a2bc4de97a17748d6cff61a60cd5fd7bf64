@@ -1,0 +1,135 @@
+I"�F<p>Uma inteligência artificial capaz de compreender textos, do mesmo jeito que um ser humano faz, é algo bem mais tangível hoje do que foi em um passado não muito distante. Graças à evolução das técnicas de machine learning ao longo do tempo, hoje é possível ver este tipo de conceito aplicado em algumas ferramentas tecnológicas que usamos com frequência.</p>
+
+<p>Por exemplo, você pode nem ter percebido ainda, mas quando fazemos uma pergunta ao Google e ele vai procurar respostas em seu imenso banco de dados, um procedimento baseado em inteligência artificial que envolve interpretação de textos é executado instantaneamente. O Bing, da Microsoft, também usa este tipo de técnica. Até mesmo alguns chatbots estão usando isso. Na prática, é o que nos permite fazer perguntas de uma maneira muito mais natural ao Google e contirnuarmos, ainda assim, obtendo respostas relevantes pois o texto da query não precisa ser sintaticamente similar à alguma sequência contida no texto da resposta.</p>
+
+<p class="image"><img src="/blog/assets/img/uma-inteligencia-artificial-que-consegue-ler-e-interpretar-textos-google.png" alt="" />
+<em>A aplicação de técnicas de machine learning para interpretação de textos permite que façamos perguntas para o Google de uma maneira muito mais natural, como se estivéssemos perguntando para um humano.</em></p>
+
+<p>Lembra daquelas atividades que tinham no seu livro de Português, História, Geografia? Havia um texto específico a ser lido e, nas páginas seguintes, estavam as perguntinhas sobre o texto que precisavam ser respondidas (a resposta sempre estava contida em alguma parte do texto)? Pois é, trata-se de uma tarefa trivial para qualquer humano. Para as máquinas, contudo, desempenhar essa mesma tarefa é algo bastante desafiador. Mas, então, como é que eles fazem para funcionar?</p>
+
+<p><strong>Ao final deste post, você terá visto o seguinte:</strong></p>
+
+<ol>
+  <li>
+    <p>Como a inteligência artificial consegue interpretar textos;</p>
+  </li>
+  <li>
+    <p>Conjuntos de dados conhecidos;</p>
+  </li>
+  <li>
+    <p>Alguns algoritmos interessantes (Papers e códigos dos autores compartilhados no github para você tentar reproduzir os resultados);</p>
+  </li>
+  <li>
+    <p>Possíveis aplicações práticas (um curto vídeo de exemplo com chatbot funcionando no Facebook Messenger);</p>
+  </li>
+  <li>
+    <p>Fontes de estudo para leituras mais aprofundadas.</p>
+  </li>
+</ol>
+
+<h2 id="como-uma-inteligência-artificial-conseguiria-tal-façanha">Como uma inteligência artificial conseguiria tal façanha?</h2>
+
+<p>Depois de ler alguns papers sobre o assunto, me familiarizei com uma terminologia nova: <strong>Machine Reading Comprehension (MRC)</strong>. Apesar de a literatura normalmente mencionar desta forma, você pode também chamar de Compreensão de Leitura de Máquina (CLM). Estamos falando da habilidade de uma inteligência artificial fazer uso do deep learning para ler e compreender textos, tendo ainda a aptidão para responder perguntas baseadas em algumas passagens presentes no conteúdo.</p>
+
+<p>Em boa parte da literatura, notei o uso de redes neurais artificiais com base nas arquiteturas <strong>LSTM (Long-Short Term Memory)</strong> ou <strong>GRU (Gated Recurrent Unit),</strong> normalmente bidirecionais, combinados com variantes específicas do mecanismo atencional de <strong><a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau, et al., 2015</a></strong>. Nesse post, irei destacar alguns dos trabalhos que mais despertaram o meu interesse.</p>
+
+<p>Por mais que você não esteja familiarizado com o tema, saiba que todos os dias você experimenta isto na prática enquanto faz pesquisas no Google ou no Bing, apenas para citar um exemplo. Um tipo de tarefa que tem sido muito explorada em modelos de MRC que contam com Deep Learning é o <a href="https://en.wikipedia.org/wiki/Question_answering">Question Answering</a>– QA (Pergunta &amp; Resposta). O pequeno vídeo abaixo ilustra bem este processo, que pode ter várias aplicações práticas, incluindo chatbots:</p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/27As1HtqvJI" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<p>Muito embora não pareça, este tema não é nada novo. Por volta do ano 2000, isto já tinha relevância quando <a href="http://www.aclweb.org/anthology/W00-1316">Ng et al.</a> desenvolveu um modelo de machine learning baseado em regressão logística para compreensão de leitura de máquina. Usado para responder perguntas aleatórias após ser exposto a qualquer texto inédito, o modelo foi o primeiro a mostrar que o uso de machine learning era capaz de alcançar resultados competitivos em MRC.</p>
+
+<h2 id="o-surgimento-de-datasets-mais-precisos">O surgimento de Datasets mais precisos</h2>
+
+<p>Avanços mais significativos neste tópico passaram a ocorrer muito recentemente, principalmente com o uso mais abrangente das redes neurais artificiais e também devido à maior disponibilidade de dados para usar como treino. Não apenas isso, mas também devido à disponibilidade de datasets mais realistas e precisos. O resultado disto é que o MRC passou a ser um dos tópicos mais “quentes” na área de Processamento de Linguagem Natural (PLN).</p>
+
+<p><a href="https://arxiv.org/pdf/1606.05250.pdf">Rajpurkar et al. (2016)</a> disponibilizou publicamente <a href="https://rajpurkar.github.io/SQuAD-explorer/">o seu dataset</a> <strong>S</strong>tanford <strong>Q</strong>uestion <strong>A</strong>nswering <strong>D</strong>ataset (<strong>SQuAD</strong>), que viabilizou o desenvolvimento de diversos modelos interessantes. Trata-se de um dataset composto por <strong>100.000+</strong> perguntas elaboradas por humanos com base em um conjunto de artigos da Wikipédia. A resposta para cada pergunta é um segmento de texto destacado manualmente a partir de alguma passagem presente no artigo. Recentemente, foi libearada a versão 2.0 do dataset. O SQuAD2.0 testa a capacidade de um modelo não apenas responder às perguntas no processo de interpretação, mas também se abster de responder quando for feita uma pergunta que não pode ser respondida com base no conteúdo fornecido.</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/1*RXS4n7ykoPKzG8S-Rlgfrg.png" alt="Exemplo de pares de pergunta-resposta presentes no dataset SQuAD. Cada uma das respostas é um segmento de texto da passagem. Créditos: Rajpurkar et al. (2016)" /><em>Exemplo de pares de pergunta-resposta presentes no dataset SQuAD. Cada uma das respostas é um segmento de texto da passagem. Créditos: Rajpurkar et al. (2016)</em></p>
+
+<p>Algum tempo depois, <a href="https://arxiv.org/pdf/1611.09268v2.pdf">Nguyen et al. (2016)</a> disponibilizou o <a href="http://www.msmarco.org/">dataset</a> <strong>MS MARCO</strong>: <strong>MA</strong>chine <strong>R</strong>eading <strong>CO</strong>mprehension Dataset. Refere-se à um conjunto de dados de alto padrão, cuidadosamente preparado com base em documentos coletados a partir do índice do buscador Bing. As respostas para as perguntas neste dataset também foram pontuadas por humanos, tornando este conjunto de dados tão preciso e real quanto o SQuAD, ou além.</p>
+
+<h1 id="alguns-trabalhos-interessantes">Alguns trabalhos interessantes</h1>
+
+<h2 id="bidaf--bi-directional-attention-flow-network">BiDAF — Bi-Directional Attention Flow network</h2>
+
+<p>Diversos trabalhos interessantes surgiram diante da disponibilidade destes conjuntos de dados. <a href="https://arxiv.org/abs/1611.01603">Seo et al., (2017)</a> propõe uma arquitetura hierárquica em seis camadas, a qual conta com um mecanismo antencional <a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau, et al., 2015</a> operando ao longo de um fluxo bidirecional. O modelo, que foi testado na solução de um problema de QA, utiliza uma variante do mecanismo atencional para obter uma representação do contexto referente à passagem textual, a qual está ligada a uma pergunta específica. Este fluxo ocorrendo em ambas as direções é justificado pelo ganho de informações que ele proporciona, ao obter dados contextuais em duas mãos.</p>
+
+<p>No <strong>BiDAF</strong>, o contexto da passagem é observado e computado a partir de uma dada pergunta (Context2Query), e também no sentido contrário (Query2Context). A figura abaixo ilustra bem este processo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*r-LvP2My-IHymbzPa4r1hw.png" alt="Uma ilustração do fluxo atencional bi-direcional. Créditos: **Seo et al., 2017**" /><em>Uma ilustração do fluxo atencional bi-direcional. Créditos: <strong>Seo et al., 2017</strong></em></p>
+
+<p>Você pode visualizar o modelo em funcionamento <a href="http://allgood.cs.washington.edu:1995/">por meio deste link</a>. Caso queira reproduzir os resultados, os autores disponibilizaram o <a href="https://github.com/allenai/bi-att-flow">código no github</a>.</p>
+
+<h2 id="match-lstm">match-LSTM</h2>
+
+<p>Um outro algoritmo bem legal é o de <a href="https://arxiv.org/pdf/1608.07905.pdf">Wang &amp; Jiang (2016a)</a>, o qual baseia-se no uso combinado de duas arquiteturas: <strong>match-LSTM</strong> e <strong>Ptr-Net</strong>. Funciona com base no seguinte princípio: Uma vez que é dada uma passagem de texto e uma pergunta relacionada com esta passagem, o objetivo é usar a referida combinação para identificar uma sequência dentro da passagem que corresponda à pergunta.</p>
+
+<p>A <strong>match-LSTM</strong> percorre todos os tokens da passagem sequencialmente, computando um conjunto de pesos atencionais com o objetivo de medir o grau de relacionamento entre o <em>i-ésimo</em> token da passagem e o <em>j-ésimo</em> token da pergunta. Em seguida, estas duas partes são combinada em um vetor que é dado como entrada para uma LSTM unidirecional. A <strong>match-LSTM</strong> opera em duas direções com o objetivo de obter o contexto de cada token da passagem em ambos os sentidos da leitura (esquerda-direita/direita-esquerda).</p>
+
+<p>A <strong>Ptr-Net</strong>, que representa a saída do modelo<strong>,</strong> fica encarregada de predizer onde começa e onde termina a sequência que corresponde à resposta para a pergunta. Deste modo, ela apenas precisa selecionar dois tokens a partir da passagem, a=(as,ae). Neste caso, as e ae representam o início e o fim da sequência que corresponde à resposta, respectivamente. Eles chamaram este método de <strong>Boundary Model</strong>. A figura abaixo ilustra esta arquitetura:</p>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2000/1*Xf5JNJV7HiZE3ix6GOed2Q.png" alt="a match-LSTM opera em duas direções, passando a saída para a camada Ptr, que tem o objetivo de predizer as fronteiras da sequência de resposta. Créditos: **Wang &amp; Jiang (2016a)**" /><em>a match-LSTM opera em duas direções, passando a saída para a camada Ptr, que tem o objetivo de predizer as fronteiras da sequência de resposta. Créditos: <strong>Wang &amp; Jiang (2016a)</strong></em></p>
+
+<p>No mesmo trabalho, os autores também usaram uma outra variante do modelo, que não mencionei aqui, mas você pode conferir no paper que já foi linkado. Caso queira testar o código e tentar reproduzir os resultados, ele está disponível <a href="https://github.com/shuohangwang/SeqMatchSeq">neste link do github</a>.</p>
+
+<h2 id="reading-wikipedia-to-answer-open-domain-questions">Reading Wikipedia to Answer Open-Domain Questions</h2>
+
+<p>Também despertou a minha atenção o trabalho de <a href="https://arxiv.org/pdf/1704.00051.pdf">Chen et al., (2017)</a>, o qual consiste num modelo que opera em larga escala. Ele é voltado para trazer respostas a perguntas em domínio aberto, usando a Wikipédia como única base de conhecimento. A arquitetura combina um componente de buscas (<strong>Document Retriever</strong>), baseado na medida TF-IDF, com uma rede neural LSTM de múltiplas camadas (<strong>Document Reader</strong>), a qual é treinada para encontrar respostas em múltiplos parágrafos de artigos da Wikipédia. Estes dois componentes trabalham da seguinte maneira:</p>
+
+<ol>
+  <li>
+    <p><strong>Document Retriever</strong> — Um componente de buscas (não baseado em machine learning) é usado para retornar um subconjunto de artigos relevantes, com grandes chances de conter a resposta de uma pergunta. Para qualquer pergunta que é feita ao modelo, apenas 5 artigos da Wikipédia são retornados. A pergunta e os artigos obtidos são comparados usando a medida TF-IDF.;</p>
+  </li>
+  <li>
+    <p><strong>Document Reader</strong> — Uma rede neural recorrente LSTM bidirecional recebe o retorno do primeiro componente do modelo e tenta identificar a resposta esperada a partir deste conteúdo. A rede neural agrega informação a partir de diferentes parágrafos para compor a resposta final.</p>
+  </li>
+</ol>
+
+<p class="image"><img src="https://cdn-images-1.medium.com/max/2562/1*id4F3D0yOO74FNydnRqMrg.png" alt="Uma ilustração do modelo QA de [**Chen et al., (2017)**](https://arxiv.org/pdf/1704.00051.pdf)" /> <em>Uma ilustração do modelo QA de <a href="https://arxiv.org/pdf/1704.00051.pdf"><strong>Chen et al., (2017)</strong></a></em></p>
+
+<p>Para compor a base de conhecimentos usada para responder às perguntas de domínio aberto, os autores utilizaram um dump de todos os artigos da Wikipédia em inglês datado de 2016. Os autores também utilizaram o dataset SQuAD, para treinar o componente <strong>Document Reader</strong>.</p>
+
+<blockquote>
+  <p><em>“Nós estamos interessados em obter um sistema simples e completo, capaz de responder a qualquer pergunta usando a Wikipédia</em> “ — <a href="https://arxiv.org/pdf/1704.00051.pdf">Chen et al., (2017)</a></p>
+</blockquote>
+
+<p>Caso você esteja interessado no código para reproduzir os resultados do paper, os autores o <a href="https://github.com/facebookresearch/DrQA">disponibilizaram no github</a>.</p>
+
+<h2 id="possíveis-aplicações">Possíveis aplicações</h2>
+
+<p>Como você já deve ter notado, modelos baseados em Machine Reading Comprehension têm mostrado uma incrível capacidade para entendimento da linguagem natural, considerando se tratar de uma tarefa que é bastante desafiadora até mesmo para uma inteligência artificial mais avançada. Este potencial abre portas para diversas aplicações práticas possíveis. Como mencionado no início do post, há aplicações em mecanismos de buscas e chatbots, mas são apenas dois exemplos e pode haver bem mais.</p>
+
+<p>Você poderia, por exemplo, usar isto para desenvolver um chatbot e disponibilizá-lo na página de vendas de um produto (o cliente poderia perguntar: <em>Qual é a configuração de memória deste notebook?</em>) ou na página FAQ do seu site. Assistentes virtuais que funcionam em sistemas de EAD também podem se beneficiar deste tipo de tecnologia.</p>
+
+<p>Para que você possa visualizar melhor, achei que seria interessante exemplificar por meio de um pequeno vídeo, ilustrando uma situação real. Digamos que seu chatbot seja responsável por tirar dúvidas dos visitantes em uma página de produto. Então, ele normalmente teria como base de conhecimento as especificações do produto, o que na literatura já vista neste post é normalmente referenciado como <em>passagem de texto</em>. Veja um exemplo abaixo:</p>
+<blockquote>
+  <p>Informações sobre o produto podem ser obtidas aqui. O Moto G6 Plus possui sensor de impressão digital multifunção. Com ele, você não precisa mais digitar senha quando quiser acessar os aplicativos do seu smartphone. Basta usar o sensor de impressão digital multifunção que, além de desbloquear ou bloquear seu aparelho, pode ser utilizado como botão de navegação, para que a tela tenha um maior aproveitamento do espaço. O Moto G6 Plus tem Processador Qualcomm Snapdragon 630 Octa-Core 2,2 GHz com recursos gráficos avançados, para que você execute aplicativos e navegue na web. A bateria de 3200 mAh do Moto G6 Plus tem capacidade suficiente para o dia inteiro. Para isso, ela é turbinada pelo super carregador TurboPower, que fornece até 6 horas de uso com apenas 15 minutos de carregamento. Você pode pagar com cartões VISA e MASTER.</p>
+</blockquote>
+
+<p>Neste caso, sempre que alguém fizer qualquer pergunta relacionada à passagem acima, seu chatbot conseguirá responder. Veja, no vídeo abaixo, o exemplo de um chatbot que aplica este princípio, funcionando no Facebook Messenger:</p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/isI9UuuBcbs" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<p>Claro, ainda há muito espaço para melhorar. Toda semana, praticamente, alguém publica um paper com uma arquitetura nova que supera os resultados obtidos em trabalhos anteriores. É interessante ficar de olho e sempre tentar reproduzir os resultados depois de ler estes papers, compreender a arquitetura dos modelos e tentar rodar os códigos que quase sempre são disponibilizados pelos autores no github.</p>
+
+<h2 id="leitura-aprofundada">Leitura aprofundada</h2>
+
+<p>Para uma leitura mais aprofundada, consulte os seguintes papers:</p>
+
+<p><a href="https://arxiv.org/pdf/1704.00051.pdf">Reading Wikipedia to Answer Open-Domain Questions</a>, 2017</p>
+
+<p><a href="https://arxiv.org/pdf/1608.07905.pdf">Machine Comprehension Using match-LSTM and Answer Pointer</a>, 2016</p>
+
+<p><a href="https://arxiv.org/pdf/1611.01603.pdf">Bidirectional Attention Flow for Machine Comprehension</a>, 2016</p>
+
+<p><a href="https://arxiv.org/pdf/1409.0473.pdf">Neural Machine Translation By Jointly Learning To Align and Translate</a>, 2014</p>
+
+<p><a href="https://arxiv.org/pdf/1606.05250.pdf">SQuAD: 100,000+ Questions for Machine Comprehension of Text</a>, 2016</p>
+
+<p><a href="https://arxiv.org/pdf/1611.09268v2.pdf">MS MARCO: A Human Generated MAchine Reading COmprehension Dataset</a>, 2016</p>
+:ET

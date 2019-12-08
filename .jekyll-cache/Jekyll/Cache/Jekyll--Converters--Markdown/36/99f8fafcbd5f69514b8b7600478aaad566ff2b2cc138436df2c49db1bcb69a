@@ -1,0 +1,63 @@
+I"Y<p class="image"><img src="/blog/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg" alt="" /></p>
+
+<p class="intro"><em>Recentemente eu fiz uma análise descritiva nos dados de ocorrências sobre acidentes ocorridos em rodovias federais do Brasil, usando machine learning para criar um classificador de acidentes de acordo com o nível de gravidade.</em></p>
+
+<p>O sistema BR-Brasil, desenvolvido pelo Departamento de Polícia Rodoviária Federal (DPRF), cataloga todas os boletins de ocorrência registrados após algum acidente ter ocorrido em alguma rodovia federal. A ferramenta consolida diversos detalhes sobre os veículos e pessoas envolvidos, sobre as condições do local, a dinâmica do acidente, etc. Por meio do programa governamental de dados abertos, a PRF <a href="https://www.prf.gov.br/portal/dados-abertos">disponibiliza publicamente</a> esses dados em formato legível, para que qualquer pessoa possa analisá-los.</p>
+
+<p>Sabendo disso, resolvi pegar uma amostra desses dados, referente aos anos de 2017 e 2018, para fazer uma análise. O trabalho foi dividido em duas etapas. Na primeira, os dados passaram por um preprocessamento e algumas transformações. Em seguida, foi realizada uma análise exploratória e descritiva, para descoberta de conhecimento nesta base. Já na segunda etapa, foi desenvolvido um modelo para classificar os acidentes de acordo o nível de gravidade (leve, grave, gravíssimo). O modelo foi testado numa amostra com dados de 2019, com registros que vão de janeiro à maio e que não foram usados no conjunto de aprendizagem.</p>
+
+<h1 id="quais-perguntas-a-análise-ajudou-a-responder">Quais perguntas a análise ajudou a responder?</h1>
+
+<p>Para obter algumas respostas latentes nos dados, realizei uma análise descritiva e testes estatísticos de hipótese. Várias perguntas foram respondidas e abaixo estão listadas uma parte delas:</p>
+
+<ul>
+  <li>As ocorrências acontecem mais frequentemente em qual BR?</li>
+  <li>Existem valores extremos (outliers)? Onde eles estão?</li>
+  <li>Acidentes envolvendo colisão traseira estão relacionados com o fato de ter caído chuva no momento do acidente?</li>
+  <li>Quais são os estados com mais ocorrências</li>
+  <li>Qual BR é mais perigosa de se trafegar no estado com mais ocorrências?</li>
+  <li>Quais os tipos de acidentes que ocorrem mais?</li>
+  <li>Em quais tipos de pistas acontecem mais acidentes (simples, dupla ou múltipla)?</li>
+  <li>Em qual época do ano acontecem mais acidentes?</li>
+  <li>Quais as maiores causas de acidentes?</li>
+  <li>Em qual época do ano aconteceu mais acidentes provocados por ingestão de bebidas alcoólicas?</li>
+  <li>Os acidentes acontecem mais nas retas ou nas curvas?</li>
+  <li>Colisões e capotamentos acontecem mais nas curvas ou nas retas?</li>
+  <li>O reparo de vias com o objetivo de reduzir acidentes é prioridade de quais estados?</li>
+  <li>Onde se concentram mais os acidentes causados por animais na pista?</li>
+  <li>Quais estados registram mais acidentes durante a noite?</li>
+  <li>Quais as principais causas dos acidentes envolvendo vítimas fatais e onde eles mais acontecem?</li>
+</ul>
+
+<h1 id="preview-do-código-em-python--links">Preview do código em Python (+ links)</h1>
+
+<div class="video-container">
+	<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/IOGdvLL2YTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+	</center>
+</div>
+
+<p>O vídeo acima é apenas um preview do código desenvolvido em um notebook na plataforma Kaggle. Todos os detalhes sobre a análise desses dados, bem como os códigos em Python utilizados, podem ser encontrados <a href="https://www.kaggle.com/luisfredgs/prf-an-lise-explorat-ria-classificador">neste link</a>. Não se esqueça de dá um “up vote” no notebook para incentivar a produção de novos materiais similares.</p>
+
+<p>Comenta aí em baixo, se você encontrou qualquer erro na metodologia ou no código, ou se ficou com alguma dúvida. Estou aqui para ajudar!</p>
+
+<h2 id="leia-também">Leia também</h2>
+
+<ol>
+  <li>
+    <p><a href="/livros/7-livros-essenciais-para-aprender-machine-learning">7 livros essenciais para aprender machine learning</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/dicas-para-aprender-machine-learning">Dicas para aprender Machine Learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes">Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/classificando-textos-com-machine-learning">Classificando textos com Machine Learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/analise-de-sentimentos-usando-redes-neurais">Análise de sentimentos com redes neurais recorrentes LSTM</a></p>
+  </li>
+</ol>
+:ET

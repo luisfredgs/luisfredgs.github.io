@@ -1,0 +1,151 @@
+I"�-<p><img src="/blog/assets/img/dicas-para-aprender-machine-learning.png" alt="" /></p>
+
+<p>O que é preciso para começar a aprender Machine Learning? A bem da verdade, não é preciso muito mais do que a sua própria vontade de aprender algo novo. Há alguns pré-requisitos, de fato, e eles serão abordados neste post. Mas, em considerável medida, tudo depende da sua iniciativa em querer aprender sobre um assunto novo. Então, seja curioso em primeiro lugar. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está <em>[<strong>há um vídeo no final</strong>]</em>.</p>
+
+<p>No final deste texto, você saberá sobre:</p>
+
+<ol>
+  <li>
+    <p>Quais são os pré-requisitos para aprender Machine Learning;</p>
+  </li>
+  <li>
+    <p>Quais livros poderá usar para aprender sobre o assunto;</p>
+  </li>
+  <li>
+    <p>Onde encontrar bons cursos on-line;</p>
+  </li>
+  <li>
+    <p>No que se baseiam os principais modelos de Machine Learning usados hoje;</p>
+  </li>
+  <li>
+    <p>Onde se manter atualizado sobre o tema, no que se refere aos constantes avanços em pesquisa científica.</p>
+  </li>
+</ol>
+
+<p>Antes de prosseguir, aproveita que já veio aqui e participa do grupo “<strong><em>Falando sobre I.A</em></strong>”, que acabo de criar no Slack: <a href="http://bit.ly/2t0qOrN">http://bit.ly/2t0qOrN</a></p>
+
+<p>De um modo geral, em machine learning nós precisamos desenvolver um modelo matemático que possa representar certas suposições sobre um problema do mundo real que estamos tentando resolver e confirmar nossas suposições, ou hipóteses, sobre tal problema. Assim, nós precisamos elaborar uma <strong>função de custo</strong> que nos permita medir <strong>o quão bem estas suposições correspondem à realidade</strong>. Para tanto, nós precisamos de um <strong>algoritmo de treino</strong> que se baseie em <strong>conjuntos de dados representativos</strong> em relação ao problema (os dados de treino relativos ao domínio da tarefa), e que seja capaz de <strong>minimizar a função custo</strong> (também conhecida como função de perda), pois este é o objetivo. Durante este processo, <strong>a matemática é utilizada diversas vezes</strong> por meio de uma <strong>camada de software</strong>, no que pode chegar a ser uma mistura de modelagem estatística com teoria da probabilidade, álgebra linear, cálculo diferencial e outras aplicações matemáticas. A esta altura, você já percebeu do que precisará para trabalhar com Machine Learning, certo? Pois é, o ML é, fundamentalmente, <strong>matemática aplicada e software</strong>.</p>
+
+<h2 id="porque-a-álgebra-linear-é-um-pré-requisito-tão-importante-para-o-machine-learning">Porque a álgebra linear é um pré-requisito tão importante para o Machine Learning?</h2>
+
+<p>A álgebra linear é uma área da matemática que é largamente utilizada em diversos ramos da engenharia e da ciência. Uma boa compreensão da álgebra linear é essencial se você pretende trabalhar com algoritmos de ML, principalmente em deep learning. Não é meu objetivo se aprofundar em álgebra linear neste post, mas se eu puder resumir em poucas palavras no que você deveria se concentrar, a princípio eu diria (a ordem faz diferença): <strong>Escalares</strong>, <strong>Vetores</strong>, <strong>Matrizes</strong> e <strong>Tensores</strong>. Além disso, é importantíssimo que você compreenda os seguintes tópicos:</p>
+
+<ul>
+  <li>
+    <p>Multiplicação entre matrizes e vetores</p>
+  </li>
+  <li>
+    <p>Matriz identidade e matriz inversa</p>
+  </li>
+  <li>
+    <p>Dependência linear</p>
+  </li>
+  <li>
+    <p>Transformações lineares</p>
+  </li>
+  <li>
+    <p>Autovalores e Autovetores</p>
+  </li>
+</ul>
+
+<p>Há outros tópicos, é claro, mas estes são os mais importantes.</p>
+
+<h2 id="cálculo-diferencial">Cálculo diferencial</h2>
+
+<p>A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do <em>gradiente descendente</em> da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido por um neurônio na camada de saída.</p>
+<blockquote>
+  <p><em>“ a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda”</em></p>
+</blockquote>
+
+<p>É interessante, portanto, que você compreenda estes tópicos:</p>
+
+<ul>
+  <li>
+    <p>Derivadas, bem como as derivadas parciais e regra da cadéia</p>
+  </li>
+  <li>
+    <p>Derivação com múltiplas variáveis</p>
+  </li>
+  <li>
+    <p>Integrais (normalmente apenas as integrais de primeira ordem)</p>
+  </li>
+  <li>
+    <p>Cálculo de vetor e função gradiente</p>
+  </li>
+</ul>
+
+<h2 id="teoria-da-probabilidade">Teoria da probabilidade</h2>
+
+<p>A incerteza é um conceito chave em inteligência artificial e reconhecimento de padrões. É neste ponto que surge a necessidade de uma ferramenta para quantificar e representar a incerteza. Por tal motivo, a probabilidade é uma ferramenta de grande interesse em inteligência artificial. Em ML você vai lidar basicamente com a aleatoriedade e, portanto, um entendimento básico em estatística e probabilidade (principalmente a interpretação Bayesiana) é desejável para que você possa trabalhar com os algoritmos e gerar modelos preditivos.</p>
+<blockquote>
+  <p><em>“Em ML você vai lidar basicamente com a aleatoriedade e, portanto, um entendimento básico em estatística e probabilidade (principalmente a interpretação Bayesiana) é desejável.”</em></p>
+</blockquote>
+
+<p>Um exemplo clássico de aplicação da probabilidade em machine learning é o filtro de spam. Qual a probabilidade de um determinado e-mail ser um SPAM? Frequentemente, este tipo de predição é feita por modelos probabilísticos baseados no teorema de Bayes.</p>
+
+<h2 id="quais-linguagens-de-programação-são-mais-usadas-em-machine-learning">Quais linguagens de programação são mais usadas em Machine Learning</h2>
+
+<p>Você vai precisar de uma ferramenta computacional para poder obter e testar seus modelos em machine learning, afinal, fazer isto manualmente é impraticável. Você precisa entender os conceitos, o que é importantíssimo, mas não significa que vai implementar todos os cálculos na unha. Você vai precisar de alguma linguagem de programação.</p>
+
+<p>Se você ainda não programa em nenhuma linguagem, ou pelo menos em nenhuma das que vou listar aqui, então tente começar por aquelas mais valorizadas no mercado.</p>
+
+<p>As linguagens de programação mais utilizadas pela comunidade e mais exigidas pelas empresas ou instituições de pesquisa na área de IA e de Data Science são:</p>
+
+<ul>
+  <li>
+    <p><strong>Python</strong></p>
+  </li>
+  <li>
+    <p><strong>R</strong></p>
+  </li>
+  <li>
+    <p>C++</p>
+  </li>
+  <li>
+    <p>Matlab</p>
+  </li>
+  <li>
+    <p>Java</p>
+  </li>
+  <li>
+    <p>Scala</p>
+  </li>
+</ul>
+
+<p><em>“ Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens”</em></p>
+
+<p>Hoje em dia, <strong>Python</strong> e <strong>R</strong> são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. Uma grande maioria das <em>toolboxes</em> disponíveis para machine learning — ao menos as que são baseadas em linguagens open source — que existem hoje estão implementadas nestas duas linguagens; a maior parte dos cursos online ou dos livros voltados para este tema se baseiam nestas duas ferramentas. Então, é fundamental que você tente se aprofundar no uso destas linguagens de programação.</p>
+
+<h3 id="quais-livros-ou-cursos-online-você-me-recomenda-para-estudar-machine-learning">Quais livros ou cursos online você me recomenda para estudar machine learning?</h3>
+
+<p>Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar e também alguns cursos online que, apesar de eu ainda não ter feito nenhum deles, sei que são cursos muito bem conceituados e recomendados pela comunidade. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.</p>
+
+<p class="note"><em><strong>ATENÇÃO</strong>: Aos 07:54, eu na verdade estou me referindo ao <strong>k-Nearest Neighbors</strong>, ou K-NN. Há uma pequena diferença em relação ao K-Means, que tenta fornecer um agrupamento de dados, com separações bem definidas, baseado na similaridade entre estes dados. Peço desculpas pelo equívoco, pois só notei depois de rever o vídeo, logo após ser publicado no canal. Todos os links aos quais me refiro durante a apresentação dos slides estão presentes na descrição do vídeo.</em></p>
+
+<div class="video-container">
+	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/9aCUXJXPHGw" frameborder="0" allowfullscreen=""></iframe></center>
+</div>
+
+<h3 id="e-se-eu-não-quiser-aprender-tudo-isso-para-poder-usar-machine-learning">E se eu não quiser aprender tudo isso para poder usar machine Learning?</h3>
+
+<p>As APIs de machine learning da Google (Google Cloud Machine Learning), Microsoft (Azure Machine Learning) e IBM (IBM Watson) existem para facilitar a vida de quem não quer ter o trabalho de estudar tudo o que foi dito nos parágrafos anteriores para poder criar sistemas de inteligência artificial. De fato, se você tiver o conhecimento em programação necessário para utilizar os <em>endpoits</em> destas APIs, poderá criar sistemas inteligentes usando modelos prontos e sem se preocupar com teoria. Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente estes serviços cobram um valor específico a partir de um determinado volume de requisições. Entretanto, aprender a teoria continua sendo importante se você quiser extrair o máximo do potencial destas APIs e modelar sistemas mais robustos.</p>
+
+<p>Não deixe de comentar aí na parte de baixo desta página, caso você tenha ficado com qualquer dúvida ou se tem alguma sugestão para novos posts ou vídeos no canal.</p>
+
+<h2 id="leia-também">Leia também</h2>
+
+<ul>
+  <li>
+    <p><a href="/livros/7-livros-essenciais-para-aprender-machine-learning">7 livros essenciais para aprender machine learning</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/analise-de-sentimentos-usando-redes-neurais">Análise de sentimentos com redes neurais recorrentes LSTM</a></p>
+  </li>
+  <li>
+    <p><a href="/deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes">Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?</a></p>
+  </li>
+  <li>
+    <p><a href="/machine-learning/classificando-textos-com-machine-learning">Classificando textos com Machine Learning</a></p>
+  </li>
+</ul>
+:ET

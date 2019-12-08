@@ -157,4 +157,4 @@ E se você quiser saber um pouco mais sobre machine learning, veja o vídeo da l
 
 2. [Análise de sentimentos com redes neurais recorrentes LSTM]({% post_url 2018-12-23-analise-de-sentimentos-com-redes-neurais-recorrentes-lstm %})
 
-3. [Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?]({% post_url blog/2017-08-22-reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes %})
+3. [Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?]({% post_url 2017-08-22-reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes %})
