@@ -1,0 +1,33 @@
+---
+layout: single
+title: "404 | Inteligência Artificial, Machine Learning e mais"
+permalink: /404.html
+---
+
+<div id="home">
+  <h1>Ops! Página não encontrada</h1>
+  
+  <p>
+    A página que você está tentando acessar não existe mais neste site, ou mudou de nome. Mas você ainda pode acessar estes outros posts:
+  </p>
+
+
+  <div id="archives">
+  {% for category in site.categories %}
+    <div class="archive-group">
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      <div id="#{{ category_name | slugize }}"></div>
+      <p></p>
+      
+      <h2>{{ category_name| replace: '-', ' ' }}</h2>
+      <a name="{{ category_name | slugize }}"></a>
+      {% for post in site.categories[category_name] %}
+        <article class="archive-item">
+          <h4> - <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+        </article>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  </div>
+
+</div>

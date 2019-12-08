@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  {% include social.html %} <br/>
+  <span class="site-footer-owner">Desenvolvido por <a href="{{ site.author.url }}">{{ site.author.name }}</a>, em Juazeiro do Norte - CE.</span>
+  <!-- <span class="site-footer-credits"> ... <a href="#">....</a>.</span> -->
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45355255-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45355255-1');
+</script>
+<script id="dsq-count-scr" src="//luisfred-com-br.disqus.com/count.js" async></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="{{ site.siteurl }}/js/jscroll/jquery.jscroll.min.js"></script>
+<script src="{{ site.siteurl }}/js/medium-zoom/medium-zoom.min.js"></script>
+
+<script type="text/javascript">
+mediumZoom(".zoom > img")
+$('.content').jscroll({
+    contentSelector: ".content",
+    nextSelector: '.next',
+    debug: false,
+});
+</script>
