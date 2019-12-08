@@ -3,6 +3,6 @@ _site
 .sass-cache
 Gemfile.lock
 .DS_Store
-#_config.yml
+_config.yml
 test
 .jekyll-cache
