@@ -5,7 +5,7 @@ resume: "Recentemente eu usei machine learning para criar um classificador de ac
 date:   2019-09-01 23:50:00
 categories: [data-science, machine-learning]
 tags: [data-science, machine-learning]
-permalink: "/machine-learning/classificando-acidentes-de-transito"
+permalink: "/blog/machine-learning/classificando-acidentes-de-transito"
 thumbnail: "/blog/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg"
 ---
 {:.image}
