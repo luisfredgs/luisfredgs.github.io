@@ -2,7 +2,7 @@
 title:        Blog do Luís Fred | Inteligência Artificial, Machine Learning e mais
 tagline:      Inteligência artificial | Machine Learning | Mineração de dados
 description:  Inteligência artificial | Machine Learning | Mineração de dados
-baseurl:      "https://luisfredgs.github.io/blog/"
+baseurl:      "https://luisfredgs.github.io/blog"
 
 #paginate:     1
 paginate:      5
