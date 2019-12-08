@@ -1,0 +1,25 @@
+# Setup
+title:        Blog do Luís Fred | Inteligência Artificial, Machine Learning e mais
+tagline:      Inteligência artificial | Machine Learning | Mineração de dados
+description:  Inteligência artificial | Machine Learning | Mineração de dados
+baseurl:      ""
+
+#paginate:     1
+paginate:      5
+#paginate_path: '/page:num'
+
+locale:       "pt"
+
+# About/contact
+author:
+  name:       Luís Fred
+  url:        https://luisfredgs.github.io/blog
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  #- jekyll-seo-tag
+
+#Others
+markdown: kramdown
