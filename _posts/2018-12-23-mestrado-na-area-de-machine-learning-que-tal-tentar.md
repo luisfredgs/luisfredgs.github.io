@@ -8,7 +8,7 @@ tags: [academia, machine-learning]
 permalink: /academia/mestrado-na-area-de-machine-learning-que-tal-tentar
 ---
 
-![](/blog/assets/img/mestrado.jpg)
+![](/assets/img/mestrado.jpg)
 
 
 

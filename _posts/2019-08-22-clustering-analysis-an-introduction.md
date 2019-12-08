@@ -6,10 +6,10 @@ date:   2019-08-25 23:50:00
 categories: [unsupervised, machine-learning]
 tags: [unsupervised, machine-learning]
 permalink: "/machine-learning/clustering-analysis-an-introduction-to-unsupervised-learning"
-thumbnail: "/blog/assets/img/clustering-analysis-an-introduction.png"
+thumbnail: "/assets/img/clustering-analysis-an-introduction.png"
 ---
 {:.image}
-![Clustring Analysis - An introduction to unsupervised learning](/blog/assets/img/clustering-analysis-an-introduction.png)
+![Clustring Analysis - An introduction to unsupervised learning](/assets/img/clustering-analysis-an-introduction.png)
 
 {:.intro}
 *Cluster analysis is the grouping of individuals in a population in order to discover structure

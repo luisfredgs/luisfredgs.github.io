@@ -9,7 +9,7 @@ permalink: /deep-learning/o-que-e-sequence-to-sequence-em-deep-learning
 ---
 
 {:.image}
-![](/blog/assets/img/o-que-e-sequence-to-sequence-em-deep-learning.png)
+![](/assets/img/o-que-e-sequence-to-sequence-em-deep-learning.png)
 
 Mesmo que você só tenha começado a estudar machine learning há pouco tempo, e ainda não saiba o que é sequence-to-sequence (seq2seq), é quase certo de que já tenha ouvido falar neste termo. Trata-se de uma metodologia baseada em redes neurais que está presente no core de muitas aplicações que usamos hoje em dia, e que se baseiam em inteligência artificial. Entre os mais importantes casos de uso desta metodologia, estão o Google Search e o Google Tradutor. Há também outras aplicações interessantes, como casos de uso em modelagem de agentes conversacionais.
 

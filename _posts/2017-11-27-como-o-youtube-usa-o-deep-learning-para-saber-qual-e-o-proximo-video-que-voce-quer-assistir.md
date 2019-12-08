@@ -8,7 +8,7 @@ tags: [deep-learning]
 permalink: /deep-learning/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir
 ---
 {:.image}
-![](/blog/assets/img/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir.png)
+![](/assets/img/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir.png)
 
 {:.intro}
 *Já percebeu que quando você acessa a página inicial do Youtube, os vídeos que aparecem convenientemente logo no topo têm a mais alta probabilidade de serem os vídeos que você gostaria de ver? Você já se perguntou como a maior plataforma de vídeos do mundo sabe qual é o próximo vídeo que você quer assistir? Ao final deste post, você terá uma ideia de como o Youtube utiliza o deep learning para chegar a este resultado.*

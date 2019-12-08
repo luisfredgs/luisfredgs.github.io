@@ -6,10 +6,10 @@ date:   2019-09-01 23:50:00
 categories: [data-science, machine-learning]
 tags: [data-science, machine-learning]
 permalink: "/machine-learning/classificando-acidentes-de-transito"
-thumbnail: "/blog/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg"
+thumbnail: "/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg"
 ---
 {:.image}
-![](/blog/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg)
+![](/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg)
 
 {:.intro}
 *Recentemente eu fiz uma análise descritiva nos dados de ocorrências sobre acidentes ocorridos em rodovias federais do Brasil, usando machine learning para criar um classificador de acidentes de acordo com o nível de gravidade.*

@@ -8,7 +8,7 @@ tags: [machine-learning]
 permalink: /machine-learning/dicas-para-aprender-machine-learning
 ---
 
-![](/blog/assets/img/dicas-para-aprender-machine-learning.png)
+![](/assets/img/dicas-para-aprender-machine-learning.png)
 
 O que é preciso para começar a aprender Machine Learning? A bem da verdade, não é preciso muito mais do que a sua própria vontade de aprender algo novo. Há alguns pré-requisitos, de fato, e eles serão abordados neste post. Mas, em considerável medida, tudo depende da sua iniciativa em querer aprender sobre um assunto novo. Então, seja curioso em primeiro lugar. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 

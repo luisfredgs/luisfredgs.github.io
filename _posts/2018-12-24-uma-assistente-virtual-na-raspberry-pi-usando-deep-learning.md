@@ -8,7 +8,7 @@ tags: [experimentos, deep-learning]
 permalink: /experimentos/uma-assistente-virtual-na-raspberry-pi-usando-deep-learning
 ---
 
-![](/blog/assets/img/uma-assistente-virtual-na-raspberry-pi-usando-deep-learning.png)
+![](/assets/img/uma-assistente-virtual-na-raspberry-pi-usando-deep-learning.png)
 
 Logo que comecei a estudar sobre machine learning, fiquei inquieto para aplicar o conhecimento adquirido em algum projeto, eu queria mesmo praticar. Então, decidir criar uma assistente virtual e logo a aplicação estava pronta. Isto já tem mais ou menos um ano e, desde então, muita coisa mudou e eu aprendi coisas novas que poderiam resultar em novos recursos para o projeto. Também tive a ideia de transferir os modelos da assistente virtual para uma Raspberry Pi. Tive algumas dificuldades para atingir a meta, mas deu tudo certo no final. **[você pode pular para o vídeo no final do post, para conferir o resultado final]**
 

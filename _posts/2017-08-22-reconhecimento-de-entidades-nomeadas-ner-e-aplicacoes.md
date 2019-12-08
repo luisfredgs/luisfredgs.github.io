@@ -9,7 +9,7 @@ permalink: /deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes
 ---
 
 {:.image}
-![](/blog/assets/img/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes.png)
+![](/assets/img/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes.png)
 
 Nos últimos dois anos foram gerados cerca de 90% dos dados de que o mundo dispõe atualmente. Em torno de 80% destes mesmos dados não estão disponíveis de uma forma estruturada, sendo informações vindas de e-mails, posts de blog, redes sociais, textos gerados em sistemas de suporte ao cliente, etc. A chave para minerar e extrair valor desta montanha de dados é o Processamento de Linguagem Natural (PLN). O Reconhecimento de Entidades Nomeadas — *Named Entity recognition (NER)*, é uma das mais importantes ferramentas do Processamento de Linguagem Natural e refere-se à tarefa de extração de informação que é responsável por capturar as entidades presentes em um texto e classificá-las em categorias pré-definidas, tais como PESSOAS, EMPRESAS, LOCAIS, VALORES MONETÁRIOS, PORCENTAGENS e DATAS, que são as mais comuns, embora possa haver mais, dependendo do domínio da tarefa.
 

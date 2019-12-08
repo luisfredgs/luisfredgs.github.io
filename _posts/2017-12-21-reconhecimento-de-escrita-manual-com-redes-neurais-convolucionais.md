@@ -9,7 +9,7 @@ permalink: /deep-learning/reconhecimento-de-escrita-manual-com-redes-neurais-con
 ---
 
 {:.image}
-![](/blog/assets/img/reconhecimento-de-escrita-manual-com-redes-neurais-convolucionais.png)
+![](/assets/img/reconhecimento-de-escrita-manual-com-redes-neurais-convolucionais.png)
 
 {:.intro}
 *No final deste post (vídeo no final) você terá uma visão geral sobre o funcionamento das redes neurais convolucionais e saberá como usá-las para criar um modelo capaz de fazer o reconhecimento de escrita manual, mais particularmente reconhecer dígitos escritos à mão em imagens.*

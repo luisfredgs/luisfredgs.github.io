@@ -8,7 +8,7 @@ tags: [nlp, deep-learning]
 permalink: "/deep-learning/analise-de-sentimentos-usando-redes-neurais"
 ---
 {:.image}
-![](/blog/assets/img/analise-de-sentimentos-usando-redes-neurais.png)
+![](/assets/img/analise-de-sentimentos-usando-redes-neurais.png)
 
 {:.intro}
 *Aprenda, na teoria e na prática, como fazer análise de sentimentos com redes neurais artificiais. Aprenda como funcionam as redes neurais recorrentes LSTM e como aplicá-las na criação do seu próprio modelo para classificar sentimentos, usando tensorflow/keras. Este post acompanha um vídeo no final, que mostra teoria, código e o modelo funcionando ao vivo*

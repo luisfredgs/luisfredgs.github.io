@@ -6,11 +6,11 @@ date:   2018-12-26 11:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow
-thumbnail: "/blog/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png"
+thumbnail: "/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png"
 ---
 
 {:.image}
-![Deep learning e Modelagem de Linguagem — Teoria e prática](/blog/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png)
+![Deep learning e Modelagem de Linguagem — Teoria e prática](/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png)
 
 {:.intro}
 A modelagem de linguagem é um dos componentes mais importantes na área de processamento de linguagem natural, sendo uma peça fundamental em tarefas como **Machine Translation** e **Reconhecimento de voz**. Por esta razão, é uma área de pesquisa que recebe bastante atenção frequentemente. Mas o que seria isso, exatamente?
@@ -28,7 +28,7 @@ Além disso, o modelo também tenta atribuir uma probabilidade para cada palavra
 De uma forma geral, o modelo tenta adivinhar qual é a próxima palavra a aparecer na frase, diante de um conjunto de palavras que já existem nela. Obviamente você já viu isto funcionar na prática enquanto digitava alguma coisa no seu smartphone ou tablet e cada palavra que você queria usar na sequência ia aparecendo na parte superior do teclado virtual. 
 
 {:.image}
-![modelágem de linguagem](/blog/assets/img/modelagem-de-linguagem-teclado-ios.jpg)
+![modelágem de linguagem](/assets/img/modelagem-de-linguagem-teclado-ios.jpg)
 *o teclado virtual do seu smartphone utiliza modelagem de linguagem para estimar qual é a próxima palavra que você quer digitar, baseado no que você já digitou antes.*
 
 Neste ponto, você já deve ter notado que nós podemos adotar este tipo de abordagem para gerar sentenças, parágrafos e até mesmo livros inteiros.
@@ -78,7 +78,7 @@ Modelos neurais de linguagem resolvem muitos dos problemas que são encontrados 
 Quando você usa redes neurais para modelar linguagens, é útil criar representações de palavras distribuídas em espaços vetoriais, onde cada palavra é representada como um vetor de valores reais (nada de símbolos discretos aqui). O significado de cada termo e sua relação com outras entidades são capturados pelas ativações presentes neste vetor que representa cada palavra, bem como pelas similaridades entre os diferentes vetores. 
 
 {:.image}
-![Modelagem de linguagem - word Embeddings](/blog/assets/img/deep-learning-e-modelagem-de-linguagem-word-embeddings.png)
+![Modelagem de linguagem - word Embeddings](/assets/img/deep-learning-e-modelagem-de-linguagem-word-embeddings.png)
 *Vetores de palavras onde cada palavra é representada como um vetor em um espaço de baixa dimensionalidade (cada linha na tabela acima é um vetor). As dimensões mais comuns para este vetor são: 50, 100, 300, 800 e 1000.*
 
 
@@ -90,7 +90,7 @@ Nós podemos representar cada feature (palavra) como um vetor em um espaço de b
 Abordagens como as de [**Mikolov et al., 2013b**](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) e [**P. Bojanowski et al., 2016**](https://arxiv.org/abs/1607.04606) se popularizaram recentemente porque trouxeram melhorias significativas nas performances de modelos neurais para processamento de linguagem natural. Trata-se de modelos semânticos de linguagem, obtidos a partir treinos não-supervisionados em grandes corpus de textos não estruturados, que se baseiam na seguinte premissa: as palavras que compartilham significados possuem vetores muito similares porque também foram utilizadas em contextos similares. Assim, estas palavras podem ser agrupadas muito próximas umas das outras numa mesma região do espaço vetorial.
 
 {:.image}
-![Word Embeddings](/blog/assets/img/word_embeddings_most_similar_2.png)
+![Word Embeddings](/assets/img/word_embeddings_most_similar_2.png)
 *palavras que foram usandas em contextos similares possuem vetores similares e são agrupadas numa mesma região do espaço vetorial, justamente por compartilharem algum significado. Para saber como plotar um gráfico assim, veja [este link](https://www.kaggle.com/luisfredgs/plotando-gr-fico-de-word-embedding)*
 
 Estas *word embeddings* vão entrar em uma camada da rede normalmente referenciada como ***Embedding Layer***. Você até pode inicializar esta camada com pesos aleatórios e depois ajustar estes pesos progressivamente durante o treino até encontrar uma combinação ótima. Mas, melhor ainda do que isso é já poder inicializá-la utilizando estas representações de palavras previamente obtidas com base no vocabulário do seu conjunto de aprendizagem, ou até mesmo com base em vetores de palavras pré-treinados em dados de outros domínios.

@@ -13,7 +13,7 @@ Uma inteligência artificial capaz de compreender textos, do mesmo jeito que um 
 Por exemplo, você pode nem ter percebido ainda, mas quando fazemos uma pergunta ao Google e ele vai procurar respostas em seu imenso banco de dados, um procedimento baseado em inteligência artificial que envolve interpretação de textos é executado instantaneamente. O Bing, da Microsoft, também usa este tipo de técnica. Até mesmo alguns chatbots estão usando isso. Na prática, é o que nos permite fazer perguntas de uma maneira muito mais natural ao Google e contirnuarmos, ainda assim, obtendo respostas relevantes pois o texto da query não precisa ser sintaticamente similar à alguma sequência contida no texto da resposta.
 
 {:.image}
-![](/blog/assets/img/uma-inteligencia-artificial-que-consegue-ler-e-interpretar-textos-google.png)
+![](/assets/img/uma-inteligencia-artificial-que-consegue-ler-e-interpretar-textos-google.png)
 *A aplicação de técnicas de machine learning para interpretação de textos permite que façamos perguntas para o Google de uma maneira muito mais natural, como se estivéssemos perguntando para um humano.*
 
 Lembra daquelas atividades que tinham no seu livro de Português, História, Geografia? Havia um texto específico a ser lido e, nas páginas seguintes, estavam as perguntinhas sobre o texto que precisavam ser respondidas (a resposta sempre estava contida em alguma parte do texto)? Pois é, trata-se de uma tarefa trivial para qualquer humano. Para as máquinas, contudo, desempenhar essa mesma tarefa é algo bastante desafiador. Mas, então, como é que eles fazem para funcionar?

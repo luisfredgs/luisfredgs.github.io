@@ -9,7 +9,7 @@ permalink: /livros/7-livros-essenciais-para-aprender-machine-learning
 ---
 
 {:.center}
-![](/blog/assets/img/7-livros-essenciais-para-aprender-machine-learning.png)
+![](/assets/img/7-livros-essenciais-para-aprender-machine-learning.png)
 
 {:.intro}
 *Ao longo deste post você verá 7 livros essenciais para quem deseja aprender machine learning, os quais trazem conceitos que vão desde o nível básico até o avançado.*

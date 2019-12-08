@@ -6,12 +6,12 @@ date:   2018-12-31 11:50:00
 categories: [computer-vision, deep-learning]
 tags: [computer-vision, deep-learning]
 permalink: /deep-learning/neural-style-transfer-uma-introducao
-thumbnail: "/blog/assets/img/neural-style-transfer-cover.jpg"
+thumbnail: "/assets/img/neural-style-transfer-cover.jpg"
 ---
 
 {:.image}
 {:.zoom}
-![Neural Style transfer](/blog/assets/img/neural-style-transfer-cover.jpg)
+![Neural Style transfer](/assets/img/neural-style-transfer-cover.jpg)
 
 Recentemente, as redes neurais artificiais se mostraram capazes de transferir o estilo de uma pintura famosa para uma imagem de referência, gerando resultados visuais de encher os olhos. Logo depois que o primeiro paper abordando a transferência neural de estilos surgiu, vários outros trabalhos bem legais apareceram, transformando isto em um tópico bastante quente na comunidade de visão computacional. 
 
@@ -51,7 +51,7 @@ Apesar de estes algoritmos de Renderização Artistica serem capazes de reproduz
 [Gatys et al](https://arxiv.org/abs/1508.06576) mostrou, de maneira espetacular, que as redes neurais convolucionais (CNN) são capazes de codificar informações de estilo de qualquer imagem dada. Além disso, o autor mostrou que tanto o conteúdo de uma imagem de referência quanto o estilo a ser transferido de uma outra imagem podem ser separados e tratados individualmente. Como uma consequência disto, é possível transferir as características do estilo de uma dada imagem (como alguma pintura bem famosa de [Van Gogh](https://pt.wikipedia.org/wiki/Vincent_van_Gogh)) para alguma outra imagem de destino, ao mesmo tempo em que se preserva o conteúdo desta outra. Este trabalho é considerado um marco, porque deu início a um novo e empolgante campo de estudo, que se tornou um tópico de pesquisa quente, chamado: **Neural Style Transfer (NST)**. 
 
 {:.image}
-![](/blog/assets/img/neural-style-transfer-uma-introducao-gatys-et-al.png)
+![](/assets/img/neural-style-transfer-uma-introducao-gatys-et-al.png)
 As imagens combinam o conteúdo de uma fotografia com o estilo de algumas pinturas bem conhecidas. Estas imagens foram criadas ao encontrar uma imagem que simultaneamente combina a representação do conteúdo da fotografia com a representação do estilo da pintura. Para mais detalhes sobre a metodologia, veja [Gatys et al](https://arxiv.org/abs/1508.06576).
 
 Trata-se do processo de usar redes neurais convolucionais para renderizar o conteúdo de uma imagem em diferentes estilos. Este estudo atraiu muita atenção tanto da academia quanto da indústria, o que permitiu a criação de alguns produtos bem legais, como veremos mais adiante neste post.
@@ -78,21 +78,21 @@ Surgiram alguns trabalhos bem legais que tentam fazer transferência de estilos 
 
 {:.image}
 {:.zoom}
-![Deep Photo Style Transfer - Luan et al.(2017)](/blog/assets/img/neural-style-transfer-uma-introducao-luan-et-al_2.png)
+![Deep Photo Style Transfer - Luan et al.(2017)](/assets/img/neural-style-transfer-uma-introducao-luan-et-al_2.png)
 Este é o resultado da proposta de [Luan et al.(2017)](https://arxiv.org/pdf/1703.07511.pdf), cujo código pode ser [encontrado no Github](https://github.com/luanfujun/deep-photo-styletransfer), e permite fazer transferência de estilos para obter fotos realistas. Baseia-se no trabalho [Gatys et al.](https://arxiv.org/abs/1508.06576). **Clique para ampliar**
 
 Um outro trabalho bem bacana foi o de [Pęśko, M & Trzciński, T (2018)](https://arxiv.org/pdf/1809.01726). Neste paper, os autores avaliam e comparam os resultados obtidos por meio de vários métodos no contexto de transferência de estilo de quadrinhos, focando principalmente na otimização do tempo de execução por imagem. Mais precisamente, eles comparam vários métodos de transferência de estilos e avaliam sua eficiência em termos de quão bem eles propagam várias características do estilo de quadrinhos entre as imagens.
 
 {:.image}
 {:.zoom}
-![Neural Comic Style transfer](/blog/assets/img/neural-comic-style-transfer.png)
+![Neural Comic Style transfer](/assets/img/neural-comic-style-transfer.png)
 Resultados da aplicação de diferentes métodos de transferência de estilos no contexto de quadrinhos. A primeira coluna é a imagem de estilo; a segunda coluna contém as imagens de referência - [Pęśko, M & Trzciński, T (2018)](https://arxiv.org/pdf/1809.01726). **Clique para ampliar**
 
 [Pegios et al.(2018)](https://arxiv.org/pdf/1811.12704) argumenta que fazer uso dos sub-estilos presentes em uma imagem de estilo pode melhorar o resultado final do processo de TNE. A principal contribuição do paper é um método para modelar separadamente cada sub-estilo que existe numa imagem de estilo e, então, combinar cada um desses sub-estilos na região mais apropriada da imagem de referência, estilizando cada região correspondente da imagem de referência com um sub-estilo específico (brilhante!). Para isto, o método detecta e decompõe todos os sub-estilos que existem na imagem de estilo, como mostrado na figura abaixo, além de segmentar o conteúdo da imagem de referência em várias regiões semânticas usando um modelo de mistura de gaussianas.
 
 {:.image}
 {:.zoom}
-![Style Decomposition for Improved Neural Style Transfer - Pegios et al.(2018)](/blog/assets/img/style-decomposition-for-improved-neural-style-transfer.png)
+![Style Decomposition for Improved Neural Style Transfer - Pegios et al.(2018)](/assets/img/style-decomposition-for-improved-neural-style-transfer.png)
 Decomposição de estilo e conteúdo. À esquerda, temos a imagem de estilo original e imagem de referência. As outras imagens à direita correspondem às mascaras de sub-estilo e sub-conteúdos detectados pelo método proposto. Esta imagem foi retirada de [Pegios et al.(2018)](https://arxiv.org/pdf/1811.12704)
 
 Há outros trabalhos bem legais envolvendo TNE no contexto de vídeos, como em [Ruder et al.(2016)](https://arxiv.org/pdf/1604.08610). Neste paper, os autores abordam um método que transfere o estilo de uma imagem (como o de uma pintura, por exemplo) para uma sequência de frames, propondo uma nova função de perda que permite gerar vídeos estilizados com boa estabilidade, mesmo quando as imagens são oclusas. No vídeo abaixo é possível conferir o resultado dos experimentos realizados pelos autores do paper:
@@ -109,12 +109,12 @@ Em virtude do visual exuberante das imagens estilizadas, a pesquisa em Transfer�
 
 {:.image}
 {:.zoom}
-![Made with Prisma](/blog/assets/img/neural-style-transfer-prisma.png)
+![Made with Prisma](/assets/img/neural-style-transfer-prisma.png)
 Algumas imagens obtidas com o aplicativo [Prisma](https://prisma-ai.com/), que usa Transferência Neural de Estilos como um serviço e já recebeu alguns prêmios.
 
 {:.image}
 {:.zoom}
-![Transferência Neural de Estilo com Ostagram](/blog/assets/img/neural-style-transfer-ostagram.jpg)
+![Transferência Neural de Estilo com Ostagram](/assets/img/neural-style-transfer-ostagram.jpg)
 Imagens estilizadas com a ferramenta [Ostagram](https://www.ostagram.me)
 
 Há algumas outras aplicações possíveis para estas técnicas, como na indústria do entretenimento: filmes, animações, jogos, etc.
@@ -133,7 +133,7 @@ Eu disponibilizei o código fonte em [tensorflow](https://www.tensorflow.org/), 
 
 {:.image}
 {:.zoom}
-![Transferência Neural de Estilos](/blog/assets/img/neural-style-transfer-experimento-tensorflow.jpg)
+![Transferência Neural de Estilos](/assets/img/neural-style-transfer-experimento-tensorflow.jpg)
 Resultado de um experimento que conduzi usando Tensorflow. **(1)** é uma foto que tirei em Olinda-PE há algum tempo e usei como imagem de referência no experimento; **(2)** é uma [pintura que peguei na internet](https://www.carredartistes.com/us/en/art-online-gallery-contemporary-artist-frederic-thiery/14350-unique-contemporary-artwork-frederic-thiery-new-york-city.html); **(3)** é o resultado da transferência do estilo presente na imagem (2) para a imagem (1).
 
 Este post será atualizado em breve, com links para novos códigos, conforme eu for testando outras implementações.
