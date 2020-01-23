@@ -46,7 +46,8 @@ Há outros tópicos, é claro, mas estes são os mais importantes.
 
 ## Cálculo diferencial
 
-A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido por um neurônio na camada de saída.
+A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido pelos neurônios na camada de saída.
+
 > *“ a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda”*
 
 É interessante, portanto, que você compreenda estes tópicos:
@@ -59,7 +60,7 @@ A diferenciação é uma das mais importantes ferramentas na ciência, como na f
 
 * Cálculo de vetor e função gradiente
 
-Não! Você não vai precisar resolver equações de uma maneira direta para que seus modelos funcionem. Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso.
+Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Conhecimento, nessas horas, é poder!
 
 ## Teoria da probabilidade
 
