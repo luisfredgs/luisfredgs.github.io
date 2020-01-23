@@ -18,11 +18,11 @@ No final deste texto, você saberá sobre:
 
 1. Quais livros poderá usar para aprender sobre o assunto;
 
-1. Onde encontrar bons cursos on-line;
+1. Qual linguagem de programação preciso aprender?
 
-1. No que se baseiam os principais modelos de Machine Learning usados hoje;
+1. Quais ferramentas computacionais são mais usadas?
 
-1. Onde se manter atualizado sobre o tema, no que se refere aos constantes avanços em pesquisa científica.
+1. Preciso mesmo aprender tudo isso?
 
 Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
