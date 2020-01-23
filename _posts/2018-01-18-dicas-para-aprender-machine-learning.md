@@ -24,7 +24,7 @@ No final deste texto, você saberá sobre:
 
 1. Onde se manter atualizado sobre o tema, no que se refere aos constantes avanços em pesquisa científica.
 
-Antes de prosseguir, aproveita que já veio aqui e participa do grupo “***Falando sobre I.A***”, que acabo de criar no Slack: [http://bit.ly/2t0qOrN](http://bit.ly/2t0qOrN)
+Antes de prosseguir, aproveita que já veio aqui e participa do grupo mo Telegram, criado para promover discussões sobre o tema aprendizagem de máquina: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
 De um modo geral, em machine learning nós precisamos desenvolver um modelo matemático que possa representar certas suposições sobre um problema do mundo real que estamos tentando resolver e confirmar nossas suposições, ou hipóteses, sobre tal problema. Assim, nós precisamos elaborar uma **função de custo** que nos permita medir **o quão bem estas suposições correspondem à realidade**. Para tanto, nós precisamos de um **algoritmo de treino** que se baseie em **conjuntos de dados representativos** em relação ao problema (os dados de treino relativos ao domínio da tarefa), e que seja capaz de **minimizar a função custo** (também conhecida como função de perda), pois este é o objetivo. Durante este processo, **a matemática é utilizada diversas vezes** por meio de uma **camada de software**, no que pode chegar a ser uma mistura de modelagem estatística com teoria da probabilidade, álgebra linear, cálculo diferencial e outras aplicações matemáticas. A esta altura, você já percebeu do que precisará para trabalhar com Machine Learning, certo? Pois é, o ML é, fundamentalmente, **matemática aplicada e software**.
 
