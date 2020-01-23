@@ -59,6 +59,8 @@ A diferenciação é uma das mais importantes ferramentas na ciência, como na f
 
 * Cálculo de vetor e função gradiente
 
+Não! Você não vai precisar resolver equações de uma maneira direta para que seus modelos funcionem. Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso.
+
 ## Teoria da probabilidade
 
 A incerteza é um conceito chave em inteligência artificial e reconhecimento de padrões. É neste ponto que surge a necessidade de uma ferramenta para quantificar e representar a incerteza. Por tal motivo, a probabilidade é uma ferramenta de grande interesse em inteligência artificial. Em ML você vai lidar basicamente com a aleatoriedade e, portanto, um entendimento básico em estatística e probabilidade (principalmente a interpretação Bayesiana) é desejável para que você possa trabalhar com os algoritmos e gerar modelos preditivos.
