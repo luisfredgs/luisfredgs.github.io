@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Dicas para aprender Machine Learning"
-resume: "O que é preciso para começar a aprender Machine Learning? A bem da verdade, não é preciso muito mais do que a sua própria vontade de aprender algo novo. Há alguns pré-requisitos, de fato, e eles serão abordados neste post"
+resume: "O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação."
 date:   2018-01-18 11:50:00
 category: machine-learning
 tags: [machine-learning]
 permalink: /machine-learning/dicas-para-aprender-machine-learning
 ---
 
-![](/assets/img/dicas-para-aprender-machine-learning.png)
+![](/assets/img/linear_algebra.png)
 
 O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. contudo, ao contrário do que provavelmente já te fizeram crer, você não precisa ser nenhum PhD para aprender machine learning, muito embora isso fosse ajudar bastante na sua jornada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 
