@@ -11,7 +11,7 @@ permalink: /machine-learning/dicas-para-aprender-machine-learning
 ![](/assets/img/linear_algebra.png)
 Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
-O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. Contudo, ao contrário do que provavelmente já te fizeram crer em algum momento, você não precisa ser nenhum PhD para aprender machine learning, muito embora está em tal posição venha a te oferecer algumas vantagens. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
+O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação para te ajudar a avançar nos estudos. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 
 No final deste texto, você saberá sobre:
 
@@ -27,7 +27,9 @@ No final deste texto, você saberá sobre:
 
 Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
-De um modo geral, em machine learning nós precisamos desenvolver um modelo matemático que possa representar certas suposições sobre um problema do mundo real que estamos tentando resolver e confirmar nossas suposições, ou hipóteses, sobre tal problema. Assim, nós precisamos elaborar uma **função matemática** que nos permita medir **o quão bem estas suposições correspondem à realidade**. Para tanto, nós precisamos de um **algoritmo** que seja exposto a um **conjuntos de dados representativos** em relação ao problema (os dados de treino relativos ao domínio da tarefa), e que seja capaz de reconhecer padrões nesses dados, promover um ajuste iterativo da tal função matemática em relação aos parâmetros contidos nos dados, **minimizando uma função custo** (também conhecida como função de perda), a qual indica o qual longe ou perto estamos de uma função ótima, pois este é o objetivo. Durante esse processo, **a matemática é utilizada diversas vezes** por meio de uma **camada de software**, no que pode chegar a ser uma mistura de álgebra linear, cálculo diferencial, teoria da probabilidade e outras aplicações matemáticas. Eu sei que esta introdução parece meio confusa, mas a esta altura, você já percebeu do que precisará para trabalhar com Machine Learning, certo? Pois é, o ML é, fundamentalmente, **matemática aplicada e software**. Uma vez que você tenha aprendido os conceitos de que precisa, esta introdução lhe parecerá muito menos confusa.
+De um modo geral, em machine learning nós precisamos desenvolver um modelo matemático que possa representar certas suposições sobre um problema do mundo real que estamos tentando resolver e confirmar nossas suposições, ou hipóteses, sobre tal problema. Para tanto, nós precisamos de um **algoritmo** que seja exposto a um **conjuntos de dados representativo** em relação ao problema em estudo, e que seja capaz de reconhecer padrões nesses dados, usando esses padrões para fazer extrapolações (predições) por meio de uma função matemática (ajustada aos dados) obtida a partir de um processo de otimização. Tal processo de otimização ajuda a promover um ajuste iterativo da tal função matemática em relação aos parâmetros contidos nos dados, **minimizando uma função custo** (também conhecida como função de perda), a qual indica o qual longe ou perto estamos de uma função ótima, pois este é o objetivo. 
+
+Durante esse processo, **a matemática é utilizada diversas vezes** por meio de uma **camada de software**, no que pode chegar a ser uma mistura de álgebra linear, cálculo diferencial, teoria da probabilidade e outras aplicações matemáticas que dependem do algoritmo usado. Eu sei que esta introdução parece meio confusa, mas a esta altura, você já percebeu do que precisará para trabalhar com Machine Learning, certo? Pois é, o ML é, fundamentalmente, **matemática aplicada e software**. Uma vez que você tenha aprendido os conceitos de que precisa, esta introdução lhe parecerá muito menos confusa.
 
 ## Porque a álgebra linear é um pré-requisito tão importante para o Machine Learning?
 
@@ -76,11 +78,9 @@ Muita gente não fala, muitos cursos de machine learning que você encontra por 
 
 ## Linguagens de programação e outras ferramentas
 
-Você vai precisar de uma ferramenta computacional para poder obter e testar seus modelos em machine learning, afinal, fazer isto manualmente é impraticável. Você precisa entender os conceitos, o que é importantíssimo, mas não significa que vai implementar todos os cálculos na unha. Você vai precisar de alguma linguagem de programação e frameworks de machine learning.
+Não adianta você estudar os conceitos acima e não poder colocar em prática usando uma linguagem de programação. Eu diria que Machine Learning, ao menos na indústria, é 80% usando códigos e 20% aprendendo conceitos teóricos (preciso dizer o quão fundamental são esses conceitos, para que você não pare no tempo?). Assim, você vai precisar de uma ferramenta computacional para poder obter e testar seus modelos em machine learning, afinal, fazer isto manualmente é impraticável. Você precisa entender os conceitos, o que é importantíssimo, mas não significa que vai implementar todos os cálculos na unha. Você vai precisar de alguma linguagem de programação e frameworks de machine learning.
 
-Se você ainda não programa em nenhuma linguagem, ou pelo menos em nenhuma das que vou listar aqui, então tente começar por aquelas mais valorizadas no mercado.
-
-As linguagens de programação mais utilizadas pela comunidade e mais exigidas pelas empresas são:
+Se você ainda não programa em nenhuma linguagem, ou pelo menos em nenhuma das que vou listar aqui, então tente começar por aquelas mais valorizadas no mercado. As linguagens de programação mais utilizadas pela comunidade e mais exigidas pelas empresas são:
 
 * **Python**
 
@@ -94,7 +94,7 @@ As linguagens de programação mais utilizadas pela comunidade e mais exigidas p
 
 * Scala
 
-> *“ Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens”*
+> *"Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens"*
 
 Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Quase não se vê anúncios de vagas exigindo conhecimentos em Matlab, C++, Java ou Scala para atuar na área. Se você pretende atuar no mercado como profissional de Data Science ou Machine Learning, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. Uma grande maioria das *toolboxes* disponíveis para machine learning — ao menos as que são baseadas em linguagens open source — que existem hoje estão implementadas nestas duas linguagens; a maior parte dos cursos online ou dos livros voltados para este tema se baseiam nestas duas ferramentas. Então, é fundamental que você tente se aprofundar no uso destas linguagens de programação.
 
@@ -111,7 +111,7 @@ São ferramentas já bastante consolidadas na área e muito usadas em prototipa�
 
 ### Quais livros ou cursos online você me recomenda para estudar machine learning?
 
-Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar e também alguns cursos online que, apesar de eu ainda não ter feito nenhum deles, sei que são cursos muito bem conceituados e recomendados pela comunidade. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
+Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar e também alguns cursos online que, apesar de eu ainda não ter feito nenhum deles, sei que são cursos bem recomendados pela comunidade. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
 
 {:.note}
 ***ATENÇÃO**: Aos 07:54, eu na verdade estou querendo me referir ao **k-Nearest Neighbors** (o K-NN). Há uma grande diferença em relação ao K-Means, o qual tenta fornecer um agrupamento de dados, com separações bem definidas, baseado na similaridade entre estes dados. Falo mais sobre o K-means [nesse post](https://luisfredgs.github.io/machine-learning/clustering-analysis-an-introduction-to-unsupervised-learning). Peço desculpas pelo equívoco, pois só notei depois de rever o vídeo, logo após ser publicado no canal. Todos os links aos quais me refiro durante a apresentação dos slides estão presentes na descrição do vídeo.*
@@ -124,7 +124,9 @@ Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi grava
 
 As APIs cognitivas da Google (Google Cloud Machine Learning), Microsoft (Azure Machine Learning) e IBM (IBM Watson) existem para facilitar a vida de quem não quer ter o trabalho de estudar tudo o que foi dito nos parágrafos anteriores para poder criar sistemas de inteligência artificial. De fato, se você tiver o conhecimento em programação necessário para utilizar os *endpoits* destas APIs, poderá criar sistemas inteligentes usando modelos prontos e sem se preocupar com teoria. Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente estes serviços cobram um valor específico a partir de um determinado volume de requisições. Entretanto, aprender a teoria continua sendo importante se você quiser extrair o máximo do potencial destas APIs e modelar sistemas mais robustos.
 
-Não deixe de comentar aí na parte de baixo desta página, caso você tenha ficado com qualquer dúvida ou se tem alguma sugestão para novos posts ou vídeos no canal.
+### Considerações finais
+
+Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado (que nem o meu), o interessante é tentar se virar com o que tiver ao seu alcançe. De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações não vai precisar mais do que o Google e Youtube para avançar. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) pra te ajudar com boas técnicas de modelagem, etc. Enfim, desejo a você todo o sucesso e bons estudos!
 
 ## Leia também
 
