@@ -173,7 +173,7 @@ img + em {
 }
 
 .main-content p,
-.main-content ul li,
+.main-content ul li
 {
     color: #666666;
     font-size: 20px;
@@ -448,7 +448,7 @@ blockquote p {
 }
 
 .image em{
-  text-align: justify; !important;
+  text-align: justify !important;
   font-style: normal;
 }
 
