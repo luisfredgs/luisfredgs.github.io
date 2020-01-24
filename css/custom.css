@@ -407,7 +407,9 @@ blockquote p {
     letter-spacing: .2px !important;
 }
 
-.note em, .note strong{
+.note em, 
+.note a, 
+.note strong{
   color: #fff !important;
   letter-spacing: .2px !important;
 }
