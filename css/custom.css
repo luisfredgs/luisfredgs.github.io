@@ -190,6 +190,10 @@ img + em {
     border-bottom: 2px solid #fc0;
 }
 
+h2.home-post-title a{
+  border-bottom: none !important;
+}
+
 .main-content blockquote{
   color: #242424 !important;
 }
