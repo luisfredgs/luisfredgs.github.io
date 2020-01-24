@@ -107,7 +107,9 @@ Além disso, existem alguns frameworks e libraries que são muito requisitados n
 * [Numpy](https://numpy.org/)
 * [Scipy](https://www.scipy.org/)
 
-São ferramentas já bastante consolidadas na área e muito usadas em prototipação e produção. Vale a pena investir tempo em entender seu funcionamento. Além disso, vale você tentar investir no uso de ferramentas como [Jupyter Notebooks](https://jupyter.org/). Caso você tenha pressa, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis pra você já sair montado no cavalo celado, como a maioria dos pacotes python para machine learning já instalados, inclusive as ferramentas citadas acima.
+São ferramentas já bastante consolidadas na área e muito usadas na indústria também. Numpy, por exemplo, possui recursos completos para aplicações de [álgebra linear](https://people.duke.edu/~ccc14/pcfb/numpympl/LinearAlgebra.html); **Pytorch** e **Tensorflow** são excelentes bibliotecas especialmente voltadas para a construção de arquiteturas neurais, amplamente utilizados na academia e indústria; **Scikit-learn** se tornou o toolbox padrão quando o assunto é modelagem usando algoritmos robustos e tradicionais; **Pandas** é o queridinho durante as análises exploratórias, onde é indispensável o uso de dataframes. Vale a pena investir tempo em entender seu funcionamento. Mas não se contente com apenas essas ferramentas, pois há outras inúmeras disponíveis.
+
+Além disso, não podemos esquecer de alguns ambientes voltados para prototipação e testes de modelos, tais como os [Jupyter Notebooks](https://jupyter.org/). Além disso, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis para você já sair brincando sem precisar instalar nada, já que a maioria dos pacotes python para machine learning já instalados, inclusive as ferramentas citadas acima.
 
 ### Quais livros ou cursos online você me recomenda para estudar machine learning?
 
