@@ -7,8 +7,9 @@ category: machine-learning
 tags: [machine-learning]
 permalink: /machine-learning/dicas-para-aprender-machine-learning
 ---
-
+{:.image}
 ![](/assets/img/linear_algebra.png)
+Fonte: Deep Learning with PyTorch - Eli Stevens
 
 O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. contudo, ao contrário do que provavelmente já te fizeram crer, você não precisa ser nenhum PhD para aprender machine learning, muito embora isso fosse ajudar bastante na sua jornada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 
@@ -73,7 +74,7 @@ Um exemplo clássico de aplicação da probabilidade em machine learning é o fi
 
 Muita gente não fala, muitos cursos de machine learning que você encontra por aí não mencionam isso. Mas, um passo crucial para a aceitação e implantação de um modelo de machine learning em produção é a validação dele. Você precisará planejar com cuidado uma série de experimentos com o seu modelo, testá-lo em diferentes situações e validá-lo estatisticamente. O modelo X é melhor do que o modelo Y? O quanto ele é melhor? Para responder a essas questões, você terá que se apoiar em importantes ferramentas da estatística inferencial, tais como os **testes de hipótese**. Qualquer livro de estatística vai te ensinar como conduzir tais testes, fora inúmeros vídeos que se encontram no Youtube.
 
-## Quais linguagens de programação são mais usadas em Machine Learning
+## Linguagens de programação e outras ferramentas
 
 Você vai precisar de uma ferramenta computacional para poder obter e testar seus modelos em machine learning, afinal, fazer isto manualmente é impraticável. Você precisa entender os conceitos, o que é importantíssimo, mas não significa que vai implementar todos os cálculos na unha. Você vai precisar de alguma linguagem de programação e frameworks de machine learning.
 
@@ -99,13 +100,14 @@ Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores 
 
 Além disso, existem alguns frameworks e libraries que são muito requisitados nas vagas que costumo encontrar no Linkedin, por exemplo. No ecossistema da linguagem Python, posso citar alguns:
 
-* Tensorflow
-* Scikit-learn
-* Pandas
-* Numpy
-* Scipy
+* [Tensorflow](tensorflow.org)
+* [Pytorch](https://pytorch.org/)
+* [Scikit-learn](https://scikit-learn.org/stable/)
+* [Pandas](https://pandas.pydata.org/pandas-docs/stable/)
+* [Numpy](https://numpy.org/)
+* [Scipy](https://www.scipy.org/)
 
-São ferramentas já bastante consolidadas na área e muito usadas em prototipação e produção. Vale a pena investir tempo em entender seu funcionamento.
+São ferramentas já bastante consolidadas na área e muito usadas em prototipação e produção. Vale a pena investir tempo em entender seu funcionamento. Além disso, vale você tentar investir no uso de ferramentas como [Jupyter Notebooks](https://jupyter.org/). Caso você tenha pressa, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis pra você já sair montado no cavalo celado, como a maioria dos pacotes python para machine learning já instalados, inclusive as ferramentas citadas acima.
 
 ### Quais livros ou cursos online você me recomenda para estudar machine learning?
 
