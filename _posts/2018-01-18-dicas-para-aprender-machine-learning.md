@@ -72,7 +72,7 @@ Um exemplo clássico de aplicação da probabilidade em machine learning é o fi
 
 ## Estatística inferencial
 
-Muita gente não fala, muitos cursos de machine learning que você encontra por aí não mencionam isso. Mas, um passo crucial para a aceitação e implantação de um modelo de machine learning em produção é a validação dele. Você precisará planejar com cuidado uma série de experimentos com o seu modelo, testá-lo em diferentes situações e validá-lo estatisticamente. O modelo X é melhor do que o modelo Y? O quanto ele é melhor? Para responder a essas questões, você terá que se apoiar em importantes ferramentas da estatística inferencial, tais como os **testes de hipótese**. Qualquer livro de estatística vai te ensinar como conduzir tais testes, fora inúmeros vídeos que se encontram no Youtube.
+Muita gente não fala, muitos cursos de machine learning que você encontra por aí não mencionam isso. Mas, um passo crucial para a aceitação e implantação de um modelo de machine learning em produção é a validação dele. Como saber se um modelo é bom o suficiente para sair da fase de "laboratório"? Você precisará planejar com cuidado uma série de experimentos com a sua nova soluçãoo, testá-la em diferentes situações e validá-la estatisticamente. O modelo X é melhor do que o modelo Y? O quanto ele é melhor? O quanto custaria um erro de predição? Para responder a essas questões, você terá que se apoiar em importantes ferramentas da estatística inferencial, tais como os **testes de hipótese**. Qualquer livro de estatística vai te ensinar como conduzir tais testes, fora inúmeros vídeos que se encontram no Youtube.
 
 ## Linguagens de programação e outras ferramentas
 
