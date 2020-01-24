@@ -9,7 +9,7 @@ permalink: /machine-learning/dicas-para-aprender-machine-learning
 ---
 {:.image}
 ![](/assets/img/linear_algebra.png)
-Fonte: Deep Learning with PyTorch - Eli Stevens
+Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
 O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. contudo, ao contrário do que provavelmente já te fizeram crer, você não precisa ser nenhum PhD para aprender machine learning, muito embora isso fosse ajudar bastante na sua jornada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 
@@ -94,7 +94,7 @@ As linguagens de programação mais utilizadas pela comunidade e mais exigidas p
 
 * Scala
 
-*“ Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens”*
+> *“ Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens”*
 
 Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Quase não se vê anúncios de vagas exigindo conhecimentos em Matlab, C++, Java ou Scala para atuar na área. Se você pretende atuar no mercado como profissional de Data Science ou Machine Learning, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. Uma grande maioria das *toolboxes* disponíveis para machine learning — ao menos as que são baseadas em linguagens open source — que existem hoje estão implementadas nestas duas linguagens; a maior parte dos cursos online ou dos livros voltados para este tema se baseiam nestas duas ferramentas. Então, é fundamental que você tente se aprofundar no uso destas linguagens de programação.
 
