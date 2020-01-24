@@ -11,7 +11,7 @@ permalink: /machine-learning/dicas-para-aprender-machine-learning
 ![](/assets/img/linear_algebra.png)
 Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
-O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. contudo, ao contrário do que provavelmente já te fizeram crer, você não precisa ser nenhum PhD para aprender machine learning, muito embora isso fosse ajudar bastante na sua jornada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
+O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação. Contudo, ao contrário do que provavelmente já te fizeram crer em algum momento, você não precisa ser nenhum PhD para aprender machine learning, muito embora está em tal posição venha a te oferecer algumas vantagens. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
 
 No final deste texto, você saberá sobre:
 
@@ -135,3 +135,5 @@ Não deixe de comentar aí na parte de baixo desta página, caso você tenha fic
 * [Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?]({% post_url 2017-08-22-reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes %})
 
 * [Classificando textos com Machine Learning]({% post_url 2018-05-07-classificando-textos-com-machine-learning %})
+
+* [Machine Learning: A matemática da aprendisagem supervisionada](https://luisfredgs.github.io/machine-learning/machine-learning-a-matematica-da-aprendizagem-supervisionada)
