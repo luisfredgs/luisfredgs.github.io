@@ -339,6 +339,7 @@ blockquote p {
 
 .socialbuttons ul li a {
   text-decoration: none;
+  border-bottom: none;
 }
 
 .socialbuttons ul li svg {
