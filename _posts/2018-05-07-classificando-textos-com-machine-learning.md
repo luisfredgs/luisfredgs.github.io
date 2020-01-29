@@ -146,7 +146,7 @@ O código acima irá exibir cada texto apresentado ao modelo por meio do array, 
 {:.image}
 ![Predição obtida por meio do modelo classificador de textos](https://cdn-images-1.medium.com/max/2000/1*Ypu6vhfHfcrc_8XoT4ngXA.png)*Predição obtida por meio do modelo classificador de textos*
 
-Para mais detalhes e maiores explicações, veja o vídeo que está no início deste post. Aproveita e participa do[ grupo que criei no Slack](https://join.slack.com/t/falandosobreia/shared_invite/enQtMzI4NjkzMjI1NjgyLTZlN2VhN2VkMzc2MjYxNDYzOWZkNWEzZWQ5MmM5NDA2NWFmYzFlNTVjMmUxMzQyMGYwOTk4Y2JhNTI0ZjNmYzg), para tratar de assuntos diversos envolvendo machine learning e inteligência artificial.
+Para mais detalhes e maiores explicações, veja o vídeo que está no início deste post. Aproveita e participa do[ grupo que criei no Telegram](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw), para tratar de assuntos diversos envolvendo machine learning e inteligência artificial.
 
 E se você quiser saber um pouco mais sobre machine learning, veja o vídeo da live que apresentei recentemente, onde comentei sobre alguns aspectos teóricos desta que está sendo a profissão mais cobiçada da atualidade:
 
