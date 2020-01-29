@@ -185,6 +185,20 @@ img + em {
     text-align: justify;
 }
 
+.main-content ul li:before {
+  display: inline-block;
+  margin-right: 10px;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: -34px;
+  vertical-align: middle;
+  background: url(../img/divider.png) no-repeat right center;
+  background-size: cover;
+}
+
 .main-content p a,
 .main-content ul li a{
     /*text-decoration: underline;*/
