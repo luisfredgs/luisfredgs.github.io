@@ -556,6 +556,6 @@ blockquote p {
   background: none;
 }
 
-#home ul{
-  line-height: 2em;
+#home ul li{  
+  line-height: 1.8em;
 }
