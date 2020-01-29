@@ -1,7 +1,3 @@
-#home ul li:before{
-  background: none;
-}
-
 ::-moz-selection {
     background: #000000;
     color: #ffffff;
@@ -552,4 +548,8 @@ blockquote p {
 .contact-btn:hover{
   text-decoration: none;
   background-color: #111;
+}
+
+#home ul li:before{
+  background: none;
 }
