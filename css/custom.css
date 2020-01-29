@@ -172,6 +172,10 @@ img + em {
     color: #333;
 }
 
+.main-content ul{
+  list-style: none;
+}
+
 .main-content p,
 .main-content ul li
 {
