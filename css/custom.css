@@ -143,9 +143,9 @@ ul.posts li h2{
     margin-top: 0.5rem !important;
 }
 
-ul.posts p{
-    /*font-family: 'Montserrat', sans-serif;*/    
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ul.posts p{    
+    /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'Segoe UI', Helvetica, Arial;
     color: #6f6f6f;    
 }
 
@@ -175,9 +175,11 @@ img + em {
 .main-content p,
 .main-content ul li
 {
-    color: #666666;
+    /* color: #666666; */
+    color: #1a1e24;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;    
+    /* font-family: 'Raleway', sans-serif;*/
+    font-family: 'Segoe UI', Helvetica, Arial;
     line-height: 1.72;
     letter-spacing: -.003em;
     text-align: justify;
