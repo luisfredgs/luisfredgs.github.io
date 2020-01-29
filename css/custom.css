@@ -177,7 +177,7 @@ img + em {
 {
     /* color: #666666; */
     color: #1a1e24;
-    font-size: 20px;
+    font-size: 19px;
     /* font-family: 'Raleway', sans-serif;*/
     font-family: 'Segoe UI', Helvetica, Arial;
     line-height: 1.72;
@@ -495,7 +495,7 @@ blockquote p {
 }
 
 .btn {
-
+    font-weight: 700;
     color: #000000;
     /*background-color: #ffffff;*/
     background-color: #ffeb3b;
