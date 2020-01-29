@@ -177,6 +177,11 @@ img + em {
   list-style: none;
 }
 
+.main-content ol{
+  line-height: 2.5em;
+  color: #1a1e24;
+}
+
 .main-content p,
 .main-content ul li
 {
