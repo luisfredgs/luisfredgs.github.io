@@ -202,7 +202,8 @@ img + em {
   width: 20px;
   height: 20px;
   position: absolute;
-  margin-top: 4px;
+  /* margin-top: 4px; */
+  margin-top: 15px;
   margin-left: -34px;
   vertical-align: middle;
   background: url(../img/divider.png) no-repeat right center;
