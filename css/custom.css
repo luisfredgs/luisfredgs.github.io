@@ -1,3 +1,7 @@
+#home ul li:before{
+  background: none;
+}
+
 ::-moz-selection {
     background: #000000;
     color: #ffffff;
