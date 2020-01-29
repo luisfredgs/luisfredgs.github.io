@@ -50,7 +50,7 @@ Para obter algumas respostas latentes nos dados, realizei uma análise descritiv
 
 O vídeo acima é apenas um preview do código desenvolvido em um notebook na plataforma Kaggle. Todos os detalhes sobre a análise desses dados, bem como os códigos em Python utilizados, podem ser encontrados [neste link](https://www.kaggle.com/luisfredgs/prf-an-lise-explorat-ria-classificador). Não se esqueça de dá um "up vote" no notebook para incentivar a produção de novos materiais similares.
 
-Comenta aí em baixo, se você encontrou qualquer erro na metodologia ou no código, ou se ficou com alguma dúvida. Estou aqui para ajudar!
+Comenta aí em baixo, se você encontrou qualquer erro na metodologia ou no código, ou se ficou com alguma dúvida.
 
 ## Leia também
 
