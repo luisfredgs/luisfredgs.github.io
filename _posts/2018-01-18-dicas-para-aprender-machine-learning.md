@@ -11,7 +11,7 @@ permalink: /machine-learning/dicas-para-aprender-machine-learning
 ![](/assets/img/linear_algebra.png)
 Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
-O que é preciso para começar a aprender Machine Learning? Eu diria que o principal é que você seja curioso, em primeiro lugar. Depois, alguma afinidade com matemática e programação para te ajudar a avançar nos estudos. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está *[**há um vídeo no final**]*.
+O que é preciso para começar a aprender Machine Learning? Certamente você não precisa ser nenhum PhD. Tampouco precisará gastar um monte de dinheiro com cursos na área. Eu diria que o principal é que você seja curioso, em primeiro lugar. Alguma afinidade com matemática e programação te ajudará a avançar nos estudos, mas não é nada que você não consiga dá conta! No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
 
 No final deste texto, você saberá sobre:
 
@@ -27,9 +27,9 @@ No final deste texto, você saberá sobre:
 
 Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
-O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. 
+O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, ou não.
 
-Com isso, um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes funções (soluções) até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
+Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
 
 Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
 
