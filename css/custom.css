@@ -555,3 +555,7 @@ blockquote p {
 #home ul li:before{
   background: none;
 }
+
+#home ul{
+  line-height: 2em;
+}
