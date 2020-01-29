@@ -146,7 +146,8 @@ ul.posts li h2{
 ul.posts p{    
     /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-family: 'Segoe UI', Helvetica, Arial;
-    color: #6f6f6f;    
+    color: #1a1e24;    
+    font-size: 20px;
 }
 
 
