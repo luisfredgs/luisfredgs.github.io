@@ -224,7 +224,9 @@ h2.home-post-title a{
 }
 
 .main-content p strong{
-    color: #333;
+    color: #555;
+    line-height: 2.5em;
+
 }
 
 .main-content div.archive-group a:hover{
