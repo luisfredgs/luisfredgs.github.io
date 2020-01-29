@@ -175,6 +175,7 @@ img + em {
 
 .main-content ul{
   list-style: none;
+  line-height: 2.5em;
 }
 
 .main-content ol{
@@ -190,7 +191,7 @@ img + em {
     font-size: 20px;
     /* font-family: 'Raleway', sans-serif;*/
     font-family: 'Segoe UI', Helvetica, Arial;
-    line-height: 1.72;
+    /* line-height: 1.72; */
     letter-spacing: -.003em;
     text-align: justify;
 }
