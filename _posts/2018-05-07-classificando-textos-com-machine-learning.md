@@ -56,6 +56,7 @@ twenty_train = fetch_20newsgroups(subset='train',categories=categories, shuffle=
 Dados textuais representam valores discretos, e nosso classificador “só entende números”. Nós precisamos converter os dados brutos, que estão em formato de texto, para uma formato numérico. Isto deve acontecer antes de podermos passar os dados para o nosso classificador.
 
 É preciso levar em conta, ainda, que algumas palavras no corpus de treino serão muito presentes, como é o caso de preposições e artigos. Estas palavras tendem a se repetir em todos os documentos e não costumam carregar informação muito significativa para o que precisamos aqui. Nós utilizaremos a medidade TF-IDF para limitar a importância destas palavras que se repetem muito ao longo dos documentos, de maneira que elas não causem mais influência do que o necessário. TF-IDF significa ***frequência do termo–inverso da frequência nos documentos*** e se baseia na seguinte formula.
+
 {:.image}
 ![](https://cdn-images-1.medium.com/max/2608/1*V9ac4hLVyms79jl65Ym_Bw.png)
 
@@ -64,7 +65,9 @@ vectorizer = TfidfVectorizer()
 X_train_tfidf_vectorize = vectorizer.fit_transform(twenty_train.data)
 {% endhighlight %}
 
-Abaixo, nós iniciamos o processo de treino do nosso classificador, o que corresponderia a ajustar o estimador aos dados que nós temos. Iremos usar o ***MLPClassifier***, mas deixei o ***SGDClassifier***comentado, caso queira testar este estimador também. O ***MLPClassifier*** é, na verdade, uma rede neural Feed-Foward.
+
+Abaixo, nós iniciamos o processo de treino do nosso classificador, o que corresponderia a ajustar o estimador aos dados que nós temos. Iremos usar o **MLPClassifier**, mas deixei o **SGDClassifier** comentado, caso queira testar este estimador também. O **MLPClassifier** é, na verdade, uma rede neural Feed-Foward.
+
 
 {% highlight python %}
 # Aqui nós treinamos o classificador
@@ -74,7 +77,7 @@ clf.fit(X_train_tfidf_vectorize, twenty_train.target)
 {% endhighlight %}
 
 
-O comando ***clf.fit()*** é responsável por treinar o nosso modelo.
+O comando **clf.fit()** é responsável por treinar o nosso modelo.
 
 ## Avaliando a performance
 
