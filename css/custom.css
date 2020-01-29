@@ -158,9 +158,10 @@ img + em {
 }
 
 .main-content p em{
-  /*font-size: 18px;*/
-  color: #666666;
+  /* font-size: 19px; */
+  color: #1a1e24;
   text-align: justify;
+  font-family: 'Segoe UI', Helvetica, Arial;
   /*font-size: 70%;*/
 }
 
