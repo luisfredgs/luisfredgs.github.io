@@ -79,16 +79,15 @@ Não! Você não vai precisar calcular integrais e derivadas de uma maneira dire
 
 ## Teoria da probabilidade
 
-A incerteza é um conceito chave em inteligência artificial e reconhecimento de padrões. É neste ponto que surge a necessidade de uma ferramenta para quantificar e representar a incerteza. Por tal motivo, a probabilidade é uma ferramenta de grande interesse na área de  inteligência artificial. Em ML você vai lidar basicamente com a aleatoriedade e, portanto, um entendimento básico em teoria da probabilidade (principalmente a interpretação Bayesiana) é desejável para que você possa trabalhar com os algoritmos e gerar modelos preditivos.
-> *“Em ML você vai lidar basicamente com a aleatoriedade e, portanto, um entendimento básico em estatística e probabilidade (principalmente a interpretação Bayesiana) é desejável.”*
+A incerteza é um conceito chave em inteligência artificial e reconhecimento de padrões. É neste ponto que surge a necessidade de uma ferramenta para quantificar e representar a incerteza. Por tal motivo, a probabilidade é uma ferramenta de grande interesse em ML. Um entendimento básico em teoria da probabilidade é desejável para que você possa trabalhar com os algoritmos e gerar modelos preditivos.
 
 Um exemplo clássico de aplicação da probabilidade em machine learning é o filtro de spam. Qual a probabilidade de um determinado e-mail ser um SPAM? Qual a probabilidade de um cliente ser um bom pagador ou um inadimplente? Frequentemente, a saída do seu modelo será uma distribuição de probabilidades que corresponda às categorias que você está tratando na variável resposta.
 
 ## Estatística inferencial
 
-Muita gente não menciona isso. Mas, se você treinou um modelo, viu que acurácia dele está boa e o aceitou como solução definitiva, provavelmente sua solução está incompleta. Um passo crucial para a aceitação e implantação de um modelo de machine learning em produção é a validação dele. Como saber se um modelo é bom o suficiente para sair da fase de "laboratório"? Quantos modelos você treinou (com diferentes parâmetros)?
+Muita gente não menciona isso. Mas, se você treinou um modelo, viu que acurácia dele estava boa e o aceitou como solução definitiva, provavelmente sua solução está incompleta. Um passo crucial para a aceitação e implantação de um modelo de machine learning em produção é a validação dele. Como saber se um modelo é bom o suficiente para sair da fase de "laboratório"? Quantos modelos você treinou (com diferentes parâmetros)?
 
-Você precisará planejar com cuidado uma série de experimentos, treinar diferentes modelo, testá-los e validá-los estatisticamente (não é só olhar para a acurácia). O modelo X é melhor do que o modelo Y? O quanto ele é melhor? O quanto custaria um erro de predição? Para responder a essas questões, você terá que se apoiar em importantes ferramentas da estatística inferencial, tais como os **testes de hipótese**. Qualquer livro de estatística vai te ensinar como conduzir tais testes, fora inúmeros vídeos que se encontram no Youtube. É questão aplicar esses testes no problema em que você está trabalhando.
+Você precisará planejar com cuidado uma série de experimentos, treinar diferentes modelos, testá-los e validá-los estatisticamente (não é só olhar para a acurácia depois de o modelo ter sido treinado). O modelo X é melhor do que o modelo Y? O quanto ele é melhor? O quanto custaria um erro de predição? Para responder a essas questões, você terá que se apoiar em importantes ferramentas da estatística inferencial, tais como os **testes de hipótese**. Qualquer livro de estatística vai te ensinar como conduzir tais testes, fora inúmeros vídeos que se encontram no Youtube. É questão aplicar esses testes no problema em que você está trabalhando.
 
 ## Linguagens de programação e outras ferramentas
 
@@ -148,7 +147,7 @@ Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente este
 
 Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado (que nem o meu), o interessante é tentar se virar com o que tiver ao seu alcançe. 
 
-De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) pra te ajudar com boas técnicas de modelagem, etc. Enfim, basta correr atrás.
+De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) para te ajudar com boas técnicas de modelagem, etc. Enfim, dedique-se.
 
 ## Leia também
 
