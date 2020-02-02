@@ -29,6 +29,8 @@ Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei 
 
 O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, ou não.
 
+> *Na maior parte do tempo, Machine Learning representa a necessidade de fazer previsões com base no conhecimento obtido a partir de dados.*
+
 Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
 
 Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
