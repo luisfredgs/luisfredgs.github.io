@@ -35,9 +35,11 @@ Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra 
 
 Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente em apenas saber programação. Vamos lá....
 
-## Porque a álgebra linear é um pré-requisito tão importante para o Machine Learning?
+## Porque a álgebra linear é tão importante para o Machine Learning?
 
-A álgebra linear é uma área da matemática que é largamente utilizada em diversos ramos da engenharia e da ciência. Uma boa compreensão da álgebra linear é essencial se você pretende trabalhar com algoritmos de ML. Não é meu objetivo aprofundar o assunto de álgebra linear neste post, mas se eu puder resumir em poucas palavras no que você deveria se concentrar, a princípio eu diria (a ordem faz diferença): **Escalares**, **Vetores**, **Matrizes** e **Tensores**. Além disso, é importantíssimo que você compreenda os seguintes tópicos:
+A álgebra linear é uma área da matemática que é largamente utilizada em diversos ramos da engenharia e da ciência. Uma boa compreensão da álgebra linear será imensamente útil se você pretende trabalhar com ML, principalmente na parte de modelagem. Você até pode praticar machine learning sem ter um domínio sequer razoável de álgebra linear, mas algumas coisas não farão muito sentido para você nestas condições.
+
+Não é meu objetivo aprofundar o assunto de álgebra linear neste post, mas se eu puder resumir em poucas palavras no que você deveria se concentrar, a princípio eu diria (a ordem faz diferença): **Escalares**, **Vetores**, **Matrizes** e **Tensores**. Além disso, é importante que você compreenda os seguintes tópicos:
 
 * Multiplicação entre matrizes e vetores
 
@@ -49,7 +51,11 @@ A álgebra linear é uma área da matemática que é largamente utilizada em div
 
 * Autovalores e Autovetores
 
-Há outros tópicos, é claro, mas estes são os mais importantes. Em machine learning, fazemos um uso intensivo de operações envolvendo tais estruturas, sem as quais seria muito difícil trabalhar.
+* Aprenda as notações, como as estruturas são representadas
+
+Aprender sobre as notações será bastante útil se você pretende trabalhar na área de pesquisa, ou se pretende ler papers para pegar algumas ideias. Há outros tópicos, é claro, mas estes são os mais importantes. 
+
+Em machine learning, fazemos um uso intensivo de operações envolvendo as estruturas acima mencionadas, sem as quais seria muito difícil trabalhar. É claro que muitas bibliotecas de código abstraem toda a parte complexa dessas operações. Muito provavelmente você vai aprender álgebra linear enquanto estuda e pratica machine learning, aprendendo na prática quais tópicos são verdadeiramente relevantes e quais não são.
 
 ## Cálculo diferencial
 
