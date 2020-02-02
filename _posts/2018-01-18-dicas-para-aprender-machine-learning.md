@@ -65,9 +65,9 @@ A diferenciação é uma das mais importantes ferramentas na ciência, como na f
 
 > *“ a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda”*
 
-É interessante, portanto, que você compreenda estes tópicos:
+Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será uma grande vantagem se você tiver um conhecimento pelo menos razoável de:
 
-* Derivadas, bem como as derivadas parciais e regra da cadéia
+* Derivadas, bem como as derivadas parciais e regra da cadéia (a derivada fornece a inclinação de uma função $$f(x)$$ num ponto $$x$$, sendo usada pelos algoritmos de otimização para encontrar o "melhor caminho" até um mínimo local, ou um máximo global)
 
 * Derivação com múltiplas variáveis
 
@@ -75,7 +75,7 @@ A diferenciação é uma das mais importantes ferramentas na ciência, como na f
 
 * Cálculo de vetor e função gradiente
 
-Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Então, conhecimento, nessas horas, é poder!
+Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso! Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
 
 ## Teoria da probabilidade
 
