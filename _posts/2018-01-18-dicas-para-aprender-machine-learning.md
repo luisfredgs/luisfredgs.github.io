@@ -8,8 +8,8 @@ tags: [machine-learning]
 permalink: /machine-learning/dicas-para-aprender-machine-learning
 ---
 {:.image}
-![](/assets/img/linear_algebra.png)
-Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
+![](/assets/img/dicas-para-aprender-machine-learning)
+Créditos da imagem: Unsplash
 
 O que é preciso para começar a aprender Machine Learning? Certamente você não precisa ser nenhum PhD. Tampouco precisará gastar um monte de dinheiro com cursos na área. Eu diria que o principal é que você seja curioso, em primeiro lugar. Alguma afinidade com matemática e programação te ajudará a avançar nos estudos, mas não é nada que você não consiga dá conta! No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
 
@@ -38,6 +38,10 @@ Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra 
 Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente em apenas saber programação. Vamos lá....
 
 ## Porque a álgebra linear é tão importante para o Machine Learning?
+
+{:.image}
+![](/assets/img/linear_algebra.png)
+Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
 A álgebra linear é uma área da matemática que é largamente utilizada em diversos ramos da engenharia e da ciência. Uma boa compreensão da álgebra linear será imensamente útil se você pretende trabalhar com ML, principalmente na parte de modelagem. Você até pode praticar machine learning sem ter um domínio sequer razoável de álgebra linear, mas algumas coisas não farão muito sentido para você nestas condições.
 
