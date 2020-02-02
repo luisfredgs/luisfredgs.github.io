@@ -145,7 +145,7 @@ Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente este
 
 ### Considerações finais
 
-Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado (que nem o meu), o interessante é tentar se virar com o que tiver ao seu alcançe. 
+Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado, o interessante é tentar se virar com o que tiver ao seu alcançe. 
 
 De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) para te ajudar com boas técnicas de modelagem, etc. Enfim, dedique-se.
 
