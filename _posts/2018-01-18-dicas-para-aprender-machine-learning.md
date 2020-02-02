@@ -13,6 +13,8 @@ Créditos da imagem: Deep Learning with PyTorch - Eli Stevens
 
 O que é preciso para começar a aprender Machine Learning? Certamente você não precisa ser nenhum PhD. Tampouco precisará gastar um monte de dinheiro com cursos na área. Eu diria que o principal é que você seja curioso, em primeiro lugar. Alguma afinidade com matemática e programação te ajudará a avançar nos estudos, mas não é nada que você não consiga dá conta! No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
 
+Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
+
 No final deste texto, você saberá sobre:
 
 1. Quais são os pré-requisitos para aprender Machine Learning;
@@ -24,8 +26,6 @@ No final deste texto, você saberá sobre:
 1. Quais ferramentas computacionais são mais usadas?
 
 1. Preciso mesmo aprender tudo isso?
-
-Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
 O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, ou não.
 
