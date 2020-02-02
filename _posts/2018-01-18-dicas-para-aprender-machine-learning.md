@@ -108,7 +108,9 @@ Se você ainda não programa em nenhuma linguagem, ou pelo menos em nenhuma das 
 
 > *"Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens"*
 
-Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Quase não se vê anúncios de vagas exigindo conhecimentos em Matlab, C++, Java ou Scala para atuar na área. Se você pretende atuar no mercado como profissional de Data Science ou Machine Learning, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. Uma grande maioria das *toolboxes* disponíveis para machine learning — ao menos as que são baseadas em linguagens open source — que existem hoje estão implementadas nestas duas linguagens; a maior parte dos cursos online ou dos livros voltados para este tema se baseiam nestas duas ferramentas. Então, é fundamental que você tente se aprofundar no uso destas linguagens de programação.
+Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Quase não se vê anúncios de vagas exigindo conhecimentos em Matlab, C++, Java ou Scala para atuar na área. Se você pretende atuar no mercado como profissional de Data Science ou Machine Learning, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. 
+
+Uma grande maioria das *toolboxes* disponíveis para machine learning — ao menos as que são baseadas em linguagens open source — que existem hoje estão implementadas nestas duas linguagens; a maior parte dos cursos online ou dos livros voltados para este tema se baseiam nestas duas ferramentas. Então, é fundamental que você tente se aprofundar no uso destas linguagens de programação.
 
 Além disso, existem alguns frameworks e libraries que são muito requisitados nas vagas que costumo encontrar no Linkedin, por exemplo. No ecossistema da linguagem Python, posso citar alguns:
 
@@ -136,11 +138,15 @@ Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi grava
 
 ### E se eu não quiser aprender tudo isso para poder usar machine Learning?
 
-As APIs cognitivas da Google (Google Cloud Machine Learning), Microsoft (Azure Machine Learning) e IBM (IBM Watson) existem para facilitar a vida de quem não quer ter o trabalho de estudar tudo o que foi dito nos parágrafos anteriores para poder criar sistemas de inteligência artificial. De fato, se você tiver o conhecimento em programação necessário para utilizar os *endpoits* destas APIs, poderá criar sistemas inteligentes usando modelos prontos e sem se preocupar com teoria. Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente estes serviços cobram um valor específico a partir de um determinado volume de requisições. Entretanto, aprender a teoria continua sendo importante se você quiser extrair o máximo do potencial destas APIs e modelar sistemas mais robustos.
+As APIs cognitivas da Google (Google Cloud Machine Learning), Microsoft (Azure Machine Learning) e IBM (IBM Watson) existem para facilitar a vida de quem não quer ter o trabalho de estudar tudo o que foi dito nos parágrafos anteriores para poder criar sistemas de inteligência artificial. De fato, se você tiver o conhecimento em programação necessário para utilizar os *endpoits* destas APIs, poderá criar sistemas inteligentes usando modelos prontos e sem se preocupar com teoria. 
+
+Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente estes serviços cobram um valor específico a partir de um determinado volume de requisições. Entretanto, aprender a teoria continua sendo importante se você quiser extrair o máximo do potencial destas APIs e modelar sistemas mais robustos.
 
 ### Considerações finais
 
-Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado (que nem o meu), o interessante é tentar se virar com o que tiver ao seu alcançe. De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) pra te ajudar com boas técnicas de modelagem, etc. Enfim, basta correr atrás.
+Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado (que nem o meu), o interessante é tentar se virar com o que tiver ao seu alcançe. 
+
+De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) pra te ajudar com boas técnicas de modelagem, etc. Enfim, basta correr atrás.
 
 ## Leia também
 
