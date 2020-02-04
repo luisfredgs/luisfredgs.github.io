@@ -38,7 +38,9 @@ Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecen
 
 Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
 
-Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente em apenas saber programação. Vamos lá....
+Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente apenas em saber programar. 
+
+Pensando nisso, listarei aqui alguns conceitos que vão te ajudar bastante a praticar Machine Learning sem ter muita dificuldade. Vamos lá....
 
 ## Porque a álgebra linear é tão importante para o Machine Learning?
 
