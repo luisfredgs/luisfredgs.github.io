@@ -188,12 +188,14 @@ img + em {
 .main-content ul li
 {
     /* color: #666666; */
-    color: #1a1e24;
+    color: rgba(0, 0, 0, 0.84);
     font-size: 20px;
+    font-weight: 400;
     /* font-family: 'Raleway', sans-serif;*/
     font-family: 'Segoe UI', Helvetica, Arial;
+    letter-spacing: -0.084px;
     /* line-height: 1.72; */
-    line-height: 1.8em;
+    line-height: 33px;
     /* letter-spacing: -.003em; */
     text-align: justify;
 }
