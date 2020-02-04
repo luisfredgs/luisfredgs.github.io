@@ -34,9 +34,13 @@ A ideia é que esse conhecimento a priori esteja contido em massas de dados reun
 
 > *Na maior parte do tempo, Machine Learning representa a necessidade de fazer previsões com base no conhecimento obtido a partir de dados.*
 
-Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
+Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. 
 
-Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
+Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
+
+Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. 
+
+É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
 
 Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente apenas em saber programar. 
 
@@ -70,7 +74,9 @@ Em machine learning, fazemos um uso intensivo de operações envolvendo as estru
 
 ## Cálculo diferencial
 
-A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido pelos neurônios na camada de saída.
+A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. 
+
+Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido pelos neurônios na camada de saída.
 
 > *a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda*
 
@@ -84,7 +90,9 @@ Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será 
 
 * Cálculo de vetor e função gradiente
 
-Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso! Como já foi dito, tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
+Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso! Como já foi dito, tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. 
+
+A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
 
 ## Teoria da probabilidade
 
@@ -131,13 +139,13 @@ Além disso, existem alguns frameworks e libraries que são muito requisitados n
 * [Numpy](https://numpy.org/)
 * [Scipy](https://www.scipy.org/)
 
-São ferramentas já bastante consolidadas na área e muito usadas na indústria também. Numpy, por exemplo, possui recursos completos para aplicações de [álgebra linear](https://people.duke.edu/~ccc14/pcfb/numpympl/LinearAlgebra.html); **Pytorch** e **Tensorflow** são excelentes bibliotecas especialmente voltadas para a construção de arquiteturas neurais, amplamente utilizados na academia e indústria; **Scikit-learn** se tornou o toolbox padrão quando o assunto é modelagem usando algoritmos robustos e tradicionais; **Pandas** é o queridinho durante as análises exploratórias, onde é indispensável o uso de dataframes. Vale a pena investir tempo em entender seu funcionamento. Mas não se contente com apenas essas ferramentas, pois há outras inúmeras disponíveis.
+São ferramentas já bastante consolidadas e muito usadas na indústria também. Numpy, por exemplo, possui recursos completos para aplicações de [álgebra linear](https://people.duke.edu/~ccc14/pcfb/numpympl/LinearAlgebra.html); **Pytorch** e **Tensorflow** são bibliotecas especialmente voltadas para a construção de arquiteturas neurais, com o Tensorflow dominando as aplicações em ambientes de produção (até agora); **Scikit-learn** se tornou o toolbox padrão quando o assunto é modelagem usando algoritmos robustos, sem ênfase ao deep learning; **Pandas** é o queridinho durante as análises exploratórias, onde é indispensável o uso de dataframes. Enfim, vale a pena investir tempo em entender o funcionamento dessas ferramentas. Mas não se contente com apenas essas ferramentas, pois há outras inúmeras disponíveis.
 
 Além disso, não podemos esquecer de alguns ambientes voltados para prototipágem e testes de modelos, tais como os [Jupyter Notebooks](https://jupyter.org/). Além disso, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis para você já sair brincando sem precisar instalar nada, já que a maioria dos pacotes python para machine learning estão previamente instalados, inclusive as ferramentas citadas acima (você também pode instalar outras libraries facilmente usando o comando "!pip install").
 
 ### Quais livros ou cursos online você me recomenda para estudar machine learning?
 
-Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar e também alguns cursos online que, apesar de eu ainda não ter feito nenhum deles, sei que são cursos bem recomendados pela comunidade. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
+Por responder essa pergunta, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
 
 {:.note}
 ***ATENÇÃO**: Aos 07:54, eu na verdade estou querendo me referir ao **k-Nearest Neighbors** (o K-NN). Há uma grande diferença em relação ao K-Means, o qual tenta fornecer um agrupamento de dados, com separações bem definidas, baseado na similaridade entre estes dados. Falo mais sobre o K-means [nesse post](https://luisfredgs.github.io/machine-learning/clustering-analysis-an-introduction-to-unsupervised-learning). Peço desculpas pelo equívoco, pois só notei depois de rever o vídeo, logo após ser publicado no canal. Todos os links aos quais me refiro durante a apresentação dos slides estão presentes na descrição do vídeo.*
