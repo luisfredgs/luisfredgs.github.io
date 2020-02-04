@@ -14,7 +14,7 @@ O que é preciso para começar a aprender Machine Learning? Uma coisa é certa, 
 
 E não pense que Machine Learning é difícil ou restrito ao pessoal das áreas de ciências exatas, pois essa concepção é extremamente equivocada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
 
-Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
+Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema de aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
 No final deste texto, você saberá sobre:
 
