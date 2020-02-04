@@ -16,21 +16,21 @@ E não pense que Machine Learning é difícil ou restrito ao pessoal das áreas 
 
 Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema de aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
-No final deste texto, você saberá sobre:
+No final deste post, espera-se que você saiba:
 
-1. Quais são os pré-requisitos para aprender Machine Learning;
+1. Do que precisa para aprender e praticar Machine Learning sem ter muita dificuldade;
 
-1. Quais livros poderá usar para aprender sobre o assunto;
+2. Quais livros poderá usar para aprender sobre o assunto;
 
-1. Qual linguagem de programação preciso aprender?
+3. Qual linguagem de programação preciso aprender?
 
-1. Quais ferramentas computacionais são mais usadas?
+4. Quais ferramentas computacionais são mais usadas?
 
-1. Preciso mesmo aprender tudo isso?
+5. Preciso mesmo aprender tudo isso?
 
-O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. 
+O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas, com a intenção de suportar a tomada de decisões baseado em previsões ou insights sobre ações futuras. 
 
-A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, ou não.
+A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, nos HD's da empresa para a qual você trabalha, vindas de aplicativos móveis, de sensores, câmeras, enfim.
 
 > *Na maior parte do tempo, Machine Learning representa a necessidade de fazer previsões com base no conhecimento obtido a partir de dados.*
 
