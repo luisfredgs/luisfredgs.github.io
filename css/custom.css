@@ -201,7 +201,8 @@ img + em {
     text-align: justify;
 }
 
-.main-content ul li:before {
+.main-content ul li:before,
+ul.list li:before {
   display: inline-block;
   margin-right: 10px;
   content: " ";
