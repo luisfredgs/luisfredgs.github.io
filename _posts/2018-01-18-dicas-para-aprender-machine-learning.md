@@ -82,7 +82,7 @@ Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza 
 
 {:.image}
 ![](/assets/img/gradient_descent_2d.png)
-O *gradiente descendente* da função de perda é computado com base nas derivadas parciais da função de perda respectivamente a cada valor peso, sendo utilizado para atualizar os pesos da rede até obter um conjunto de valores que minimize o valor da função.
+O gradiente descendente da função de perda é computado com base nas derivadas parciais da função de perda respectivamente a cada valor peso, sendo utilizado para atualizar os pesos da rede até obter um conjunto de valores que minimize o valor da função.
 
 
 Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será uma grande vantagem se você tiver um conhecimento pelo menos razoável de:
