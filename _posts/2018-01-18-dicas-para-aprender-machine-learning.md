@@ -80,12 +80,6 @@ Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza 
 
 > *a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda*
 
-{:.image}
-![](/assets/img/gradient_descent_2d.png)
-O gradiente descendente da função de perda é computado com base nas derivadas parciais da função de perda respectivamente a cada valor peso, sendo utilizado para atualizar os pesos da rede até obter um conjunto de valores que minimize o valor da função.
-
-A figura acima ilustra o uso da derivada por algoritmos de otimização. A visão em 2D é apenas uma simplificação para facilitar o entendimento, visto que, na verdade, a função percorre uma superfície, e a derivada parcial fornece a inclinação da função em cada ponto. Essa inclinação na verdade é uma espécie de "apontamento", que orienta os pesos a "caminharem" na direção de valores que permitam minimizar (ou maximizar) o valor da função custo gradativamente, em pequenos passos. Esse é o papel da derivada em um otimizador.
-
 Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será uma grande vantagem se você tiver um conhecimento pelo menos razoável de:
 
 * Derivadas, bem como as derivadas parciais e regra da cadéia (a derivada fornece a inclinação de uma função $$f(x)$$ num ponto $$x$$, sendo usada pelos algoritmos de otimização para encontrar o "melhor caminho" até um mínimo local, ou um máximo global)
@@ -96,7 +90,13 @@ Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será 
 
 * Cálculo de vetor e função gradiente
 
-Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso! Como já foi dito, tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. 
+{:.image}
+![](/assets/img/gradient_descent_2d.png)
+O gradiente descendente da função de perda é computado com base nas derivadas parciais da função de perda respectivamente a cada valor peso, sendo utilizado para atualizar os pesos da rede até obter um conjunto de valores que minimize o valor da função.
+
+A figura acima ilustra o uso da derivada por algoritmos de otimização. A visão em 2D é apenas uma simplificação para facilitar o entendimento, visto que, na verdade, a função percorre uma superfície, e a derivada parcial fornece a inclinação da função em cada ponto. Essa inclinação na verdade é uma espécie de "apontamento", que orienta os pesos a "caminharem" na direção de valores que permitam minimizar (ou maximizar) o valor da função custo gradativamente, em pequenos passos. Esse é o papel da derivada em um otimizador, componente importante de muitos algoritmos de machine learning.
+
+Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso, a menos que goste de sofrer :-D. Como já foi dito, tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. 
 
 A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
 
