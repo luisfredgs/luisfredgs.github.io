@@ -130,7 +130,7 @@ Se você ainda não programa em nenhuma linguagem, ou pelo menos em nenhuma das 
 
 * Scala
 
-> *"Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens"*
+> *Se você pretende atuar no mercado como profissional destas áreas, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens*
 
 Hoje em dia, **Python** e **R** são as mais utilizadas, seja por pesquisadores ou por empresas na área de Data Science e IA. Quase não se vê anúncios de vagas exigindo conhecimentos em Matlab, C++, Java ou Scala para atuar na área. Se você pretende atuar no mercado como profissional de Data Science ou Machine Learning, então tente buscar conhecimento principalmente em Python ou R, se possível nas duas linguagens. 
 
