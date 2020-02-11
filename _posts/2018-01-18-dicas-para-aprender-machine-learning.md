@@ -10,31 +10,41 @@ permalink: /machine-learning/dicas-para-aprender-machine-learning
 {:.image}
 ![](/assets/img/dicas-para-aprender-machine-learning.jpg)
 
-O que é preciso para começar a aprender Machine Learning? Certamente você não precisa ser nenhum PhD. Tampouco precisará gastar um monte de dinheiro com cursos na área. Eu diria que o principal é que você seja curioso, em primeiro lugar. Alguma afinidade com matemática e programação te ajudará a avançar nos estudos, mas não é nada que você não consiga dá conta! No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
+O que é preciso para começar a aprender Machine Learning? Uma coisa é certa, você não precisa ser nenhum PhD. Entretando, você precisa ser pelo menos curioso e dedicado. Além disso, ter alguma afinidade com matemática e programação é algo bastante útil, mas não é nada que você não consiga dá conta! 
 
-Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
+E não pense que Machine Learning é difícil ou restrito ao pessoal das áreas de ciências exatas, pois essa concepção é extremamente equivocada. No mais, leia o restante deste post para descobrir o quão perto de aprender machine learning você pode está. **[Post com vídeo]**.
 
-No final deste texto, você saberá sobre:
+Antes de prosseguir, aproveita que já veio aqui e participa do grupo que criei no Telegram, para promover discussões sobre o tema de aprendizagem de máquina e tirar dúvidas: [https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw](https://t.me/joinchat/Omx7D1hGjM2K_8YfwwntYw)
 
-1. Quais são os pré-requisitos para aprender Machine Learning;
+No final deste post, espera-se que você saiba:
 
-1. Quais livros poderá usar para aprender sobre o assunto;
+1. Do que precisa para aprender e praticar Machine Learning sem ter muita dificuldade;
 
-1. Qual linguagem de programação preciso aprender?
+2. Quais livros poderá usar para aprender sobre o assunto;
 
-1. Quais ferramentas computacionais são mais usadas?
+3. Qual linguagem de programação preciso aprender?
 
-1. Preciso mesmo aprender tudo isso?
+4. Quais ferramentas computacionais são mais usadas?
 
-O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas com a intenção de automatizar certas tarefas úteis ao processo de tomada de decisão. A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, ou não.
+5. Preciso mesmo aprender tudo isso?
+
+O uso habitual de machine learning é sustentado pela necessidade de modelar, matematicamente, problemas do mundo real utilizando o conhecimento a priori em torno de tais problemas, com a intenção de suportar a tomada de decisões baseado em previsões ou insights sobre ações futuras. 
+
+A ideia é que esse conhecimento a priori esteja contido em massas de dados reunidas ao longo do tempo. Essas massas de dados podem está disponíveis publicamente na internet, nos HD's da empresa para a qual você trabalha, vindas de aplicativos móveis, de sensores, câmeras, enfim.
 
 > *Na maior parte do tempo, Machine Learning representa a necessidade de fazer previsões com base no conhecimento obtido a partir de dados.*
 
-Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
+Um algoritmo é normalmente exposto a esse conhecimento, explorando e reconhecendo padrões exaustivamente, com a intenção de obter uma função matemática específica (num amplo espaço de funções possíveis), que seja capaz de usar esses padrões para fazer extrapolações com base em parâmetros que ela nunca viu. 
 
-Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
+Essa função é normalmente obtida por meio de um processo de otimização, que testa diferentes soluções até chegar numa que seja robusta o suficiente para fazer boas generalizações com base no conhecimento extraído dos dados pelo tal algorítmo. 
 
-Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente em apenas saber programação. Vamos lá....
+Durante esse processo, vários conceitos matemáticos são utilizados: Álgebra linear, Diferenciação, probabilidade, etc. Contudo, esses conceitos são quase sempre abstraídos pelo uso de bibliotecas e frameworks de machine learning que foram desenvolvidos especialmente para o caso. 
+
+É sempre bom lembrar, entretanto, que o conhecimento desses conceitos matemáticos vai te colocar numa posição vantajosa, uma vez que as bibliotecas de machine learning não fazem tudo sozinhas. 
+
+Às vezes, você precisará expandir os recursos dessas bibliotecas, criando seus próprios modelos e funcionalidades para atender a uma ou outra situação específica. Nessas horas, principalmente, é útil saber como as coisas funcionam para além dos limites da escrita do código. Então, saia da média e não se contente apenas em saber programar. 
+
+Pensando nisso, listarei aqui alguns conceitos que vão te ajudar bastante a praticar Machine Learning sem ter muita dificuldade. Vamos lá....
 
 ## Porque a álgebra linear é tão importante para o Machine Learning?
 
@@ -64,9 +74,11 @@ Em machine learning, fazemos um uso intensivo de operações envolvendo os tópi
 
 ## Cálculo diferencial
 
-A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido pelos neurônios na camada de saída.
+A diferenciação é uma das mais importantes ferramentas na ciência, como na física, por exemplo, quando estamos tentando modelar a dinâmica de um determinado sistema. Basicamente, as diferenciações relacionam a taxa de variação de uma quantidade específica à outras propriedades presentes no sistema. 
 
-> *“ a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda”*
+Para citar um exemplo, a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede de acordo com alguma regra específica. Um exemplo mais concreto dentro do mesmo contexto seria o algoritmo de retropropagação do erro (backpropagation) que, por meio do *gradiente descendente* da função de perda, utiliza derivadas parciais para atualizar os pesos da rede com base no sinal de erro produzido pelos neurônios na camada de saída.
+
+> *a dinâmica de um modelo neural em deep learning utiliza diferenciação (derivação parcial) para atualizar os pesos da rede a partir do gradiente descendente da função de perda*
 
 Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será uma grande vantagem se você tiver um conhecimento pelo menos razoável de:
 
@@ -78,7 +90,15 @@ Você pode começar seus estudos em ML sem se ater muito a isso. Contudo, será 
 
 * Cálculo de vetor e função gradiente
 
-Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso! Tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
+{:.image}
+![](/assets/img/gradient_descent_2d.png)
+O gradiente descendente da função de perda é computado com base nas derivadas parciais da função de perda respectivamente a cada valor peso, sendo utilizado para atualizar os pesos da rede até obter um conjunto de valores que minimize o valor da função.
+
+A figura acima ilustra o uso da derivada por algoritmos de otimização. A visão em 2D é apenas uma simplificação para facilitar o entendimento, visto que, na verdade, a função percorre uma superfície, e a derivada parcial fornece a inclinação da função em cada ponto. Essa inclinação na verdade é uma espécie de "apontamento", que orienta os pesos a "caminharem" na direção de valores que permitam minimizar (ou maximizar) o valor da função custo gradativamente, em pequenos passos. Esse é o papel da derivada em um otimizador, componente importante de muitos algoritmos de machine learning.
+
+Não! Você não vai precisar calcular integrais e derivadas de uma maneira direta para que seus modelos funcionem. Não faça isso, a menos que goste de sofrer :-D. Como já foi dito, tudo isso é abstraído por pacotes de ferramentas que foram desenvolvidas especialmente para o caso. Tudo o que você tem que fazer é usar algumas linhas de código corretamente. 
+
+A mensagem que precisa ser entendida aqui é: Você precisa ao menos saber o que está acontecendo enquanto seu modelo de machine learning está sendo treinado. Esse entendimento influencia na escolha dos hiperparâmetros que vão alterar a dinâmica da aprendizagem do seu modelo, por exemplo. Isso influencia diretamente na qualidade dos modelos. Além disso, ter esse entendimento é útil em situações nas quais você está interessado em desenvolver um novo algoritmo de otimização para solucionar um problema específico. Então, conhecimento, nessas horas, é poder!
 
 ## Teoria da probabilidade
 
@@ -125,13 +145,13 @@ Além disso, existem alguns frameworks e libraries que são muito requisitados n
 * [Numpy](https://numpy.org/)
 * [Scipy](https://www.scipy.org/)
 
-São ferramentas já bastante consolidadas na área e muito usadas na indústria também. Numpy, por exemplo, possui recursos completos para aplicações de [álgebra linear](https://people.duke.edu/~ccc14/pcfb/numpympl/LinearAlgebra.html); **Pytorch** e **Tensorflow** são excelentes bibliotecas especialmente voltadas para a construção de arquiteturas neurais, amplamente utilizados na academia e indústria; **Scikit-learn** se tornou o toolbox padrão quando o assunto é modelagem usando algoritmos robustos e tradicionais; **Pandas** é o queridinho durante as análises exploratórias, onde é indispensável o uso de dataframes. Vale a pena investir tempo em entender seu funcionamento. Mas não se contente com apenas essas ferramentas, pois há outras inúmeras disponíveis.
+São ferramentas já bastante consolidadas e muito usadas na indústria também. Numpy, por exemplo, possui recursos completos para aplicações de [álgebra linear](https://people.duke.edu/~ccc14/pcfb/numpympl/LinearAlgebra.html); **Pytorch** e **Tensorflow** são bibliotecas especialmente voltadas para a construção de arquiteturas neurais, com o Tensorflow dominando as aplicações em ambientes de produção (até agora); **Scikit-learn** se tornou o toolbox padrão quando o assunto é modelagem usando algoritmos robustos, sem ênfase ao deep learning; **Pandas** é o queridinho durante as análises exploratórias, onde é indispensável o uso de dataframes. Enfim, vale a pena investir tempo em entender o funcionamento dessas ferramentas. Mas não se contente com apenas essas ferramentas, pois há outras inúmeras disponíveis.
 
-Além disso, não podemos esquecer de alguns ambientes voltados para prototipação e testes de modelos, tais como os [Jupyter Notebooks](https://jupyter.org/). Além disso, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis para você já sair brincando sem precisar instalar nada, já que a maioria dos pacotes python para machine learning estão previamente instalados, inclusive as ferramentas citadas acima (vocÊ também pode instalar outras libraries faiclmente usando o comando "!pip install <pacote>").
+Além disso, não podemos esquecer de alguns ambientes voltados para prototipágem e testes de modelos, tais como os [Jupyter Notebooks](https://jupyter.org/). Além disso, a Google te oferece o [Google Colab](https://colab.research.google.com/) com GPU grátis para você já sair brincando sem precisar instalar nada, já que a maioria dos pacotes python para machine learning estão previamente instalados, inclusive as ferramentas citadas acima (você também pode instalar outras libraries facilmente usando o comando "!pip install").
 
 ### Quais livros ou cursos online você me recomenda para estudar machine learning?
 
-Esta é uma pergunta que eu recebo com muita frequência. Por isso, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar e também alguns cursos online que, apesar de eu ainda não ter feito nenhum deles, sei que são cursos bem recomendados pela comunidade. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
+Por responder essa pergunta, decidi gravar o vídeo abaixo, onde eu indico alguns dos livros que utilizo para estudar. No vídeo eu também apresento um resumo dos pré-requisitos que mencionei nos parágrafos anteriores, bem como algumas dicas sobre onde buscar as informações mais atualizadas sobre o tema.
 
 {:.note}
 ***ATENÇÃO**: Aos 07:54, eu na verdade estou querendo me referir ao **k-Nearest Neighbors** (o K-NN). Há uma grande diferença em relação ao K-Means, o qual tenta fornecer um agrupamento de dados, com separações bem definidas, baseado na similaridade entre estes dados. Falo mais sobre o K-means [nesse post](https://luisfredgs.github.io/machine-learning/clustering-analysis-an-introduction-to-unsupervised-learning). Peço desculpas pelo equívoco, pois só notei depois de rever o vídeo, logo após ser publicado no canal. Todos os links aos quais me refiro durante a apresentação dos slides estão presentes na descrição do vídeo.*

@@ -205,7 +205,7 @@ Perceba que, como estes pesos já foram treinados, nós setamos a opção **trai
 
 Postei todo o código [no github](https://github.com/luisfredgs/language-modeling-tensorflow-keras) com algumas instruções para que você possa reproduzir os resultados no Google Colab ou na sua máquina.
 
-Dúvidas? Comentários? Sugestôes? Escrevam aí em baixo, na área de comentários! :-)
+Dúvidas? Comentários? Sugestões? Escrevam aí em baixo, na área de comentários! :-)
 
 ## Leia também
 

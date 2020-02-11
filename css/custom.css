@@ -101,7 +101,7 @@ a{
 
 
 .avatar {
-    background-image: url(../img/logo.png);
+    background-image: url(../img/avatar_2.png);    
     background-repeat: no-repeat;
     background-position: top center;
     width: 350px;
@@ -159,9 +159,10 @@ img + em {
 
 .main-content p em{
   /* font-size: 19px; */
-  color: #1a1e24;
+  color: #666666;
   text-align: justify;
   font-family: 'Segoe UI', Helvetica, Arial;
+  line-height: 1.5em
   /*font-size: 70%;*/
 }
 
@@ -188,25 +189,29 @@ img + em {
 .main-content ul li
 {
     /* color: #666666; */
-    color: #1a1e24;
+    color: rgba(0, 0, 0, 0.84);
     font-size: 20px;
+    font-weight: 200;
     /* font-family: 'Raleway', sans-serif;*/
     font-family: 'Segoe UI', Helvetica, Arial;
     font-weight: 400;
+    letter-spacing: -0.084px !important;
     /* line-height: 1.72; */
+    line-height: 33px;
     /* letter-spacing: -.003em; */
     text-align: justify;
 }
 
-.main-content ul li:before {
+.main-content ul li:before,
+ul.list li:before {
   display: inline-block;
   margin-right: 10px;
   content: " ";
   width: 20px;
   height: 20px;
   position: absolute;
-  /* margin-top: 4px; */
-  margin-top: 15px;
+  margin-top: 4px;
+  /* margin-top: 15px; */
   margin-left: -34px;
   vertical-align: middle;
   background: url(../img/divider.png) no-repeat right center;
@@ -559,4 +564,8 @@ blockquote p {
 
 #home ul li{  
   line-height: 1.8em;
+}
+
+.socialbuttons ul li:before {
+  background: none;
 }
