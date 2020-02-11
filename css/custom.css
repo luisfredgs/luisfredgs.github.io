@@ -223,7 +223,12 @@ ul.list li:before {
     /*text-decoration: underline;*/
     text-decoration: none;
     border-bottom: none;
+    border-bottom: 2px solid #fc0;    
     color: #000000;
+}
+
+.main-content ul li a{  
+  border-bottom: none;
 }
 
 .main-content ul li a:hover{
