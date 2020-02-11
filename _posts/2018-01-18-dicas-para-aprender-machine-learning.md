@@ -60,7 +60,7 @@ Não é meu objetivo aprofundar o assunto de álgebra linear neste post, mas se 
 
 Aprender sobre as notações será bastante útil se você pretende trabalhar na área de pesquisa, ou se pretende ler papers para pegar algumas ideias. Há outros tópicos, é claro, mas estes são os mais importantes. 
 
-Em machine learning, fazemos um uso intensivo de operações envolvendo as estruturas acima mencionadas, sem as quais seria muito difícil trabalhar. É claro que muitas bibliotecas de código abstraem toda a parte complexa dessas operações. Muito provavelmente você vai aprender álgebra linear enquanto estuda e pratica machine learning, aprendendo na prática quais tópicos são verdadeiramente relevantes e quais não são.
+Em machine learning, fazemos um uso intensivo de operações envolvendo os tópicos acima mencionados, sem os quais seria muito difícil trabalhar. É claro que as bibliotecas de código abstraem toda a parte complexa dessas operações, para que você apenas veja o resultado final. Muito provavelmente você vai aprender álgebra linear enquanto estuda e pratica machine learning, aprendendo na prática quais tópicos são verdadeiramente relevantes e quais não são.
 
 ## Cálculo diferencial
 
