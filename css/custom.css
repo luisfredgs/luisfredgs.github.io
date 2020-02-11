@@ -477,10 +477,11 @@ blockquote p {
     color: #000;
 }*/
 
-.image {
-  text-align: center !important;
+.image {  
   text-align: justify !important;
-  font-size: 80% !important;
+  font-size: 95% !important;
+  line-height: 1.8em !important;
+  color: #666666 !important;
 }
 
 .image img{
@@ -493,6 +494,7 @@ blockquote p {
 .image em{
   text-align: justify !important;
   font-style: normal;
+
 }
 
 .center {
