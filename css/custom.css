@@ -222,7 +222,11 @@ ul.list li:before {
 .main-content ul li a{
     /*text-decoration: underline;*/
     text-decoration: none;
-    border-bottom: 2px solid #fc0;
+    border-bottom: none;
+}
+
+.main-content ul li a:hover{
+  border-bottom: 2px solid #fc0;
 }
 
 h2.home-post-title a{
