@@ -210,7 +210,7 @@ ul.list li:before {
   width: 20px;
   height: 20px;
   position: absolute;
-  margin-top: 4px;
+  margin-top: 8px;
   /* margin-top: 15px; */
   margin-left: -34px;
   vertical-align: middle;
