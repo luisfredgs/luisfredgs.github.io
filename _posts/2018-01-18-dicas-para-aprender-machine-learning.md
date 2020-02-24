@@ -182,4 +182,4 @@ De fato, se você souber o que é preciso aprender e quais são as ferramentas q
 
 * [Classificando textos com Machine Learning]({% post_url 2018-05-07-classificando-textos-com-machine-learning %})
 
-* [Machine Learning: A matemática da aprendisagem supervisionada](https://luisfredgs.github.io/machine-learning/machine-learning-a-matematica-da-aprendizagem-supervisionada)
+* [Machine Learning: A matemática da aprendizagem supervisionada](https://luisfredgs.github.io/machine-learning/machine-learning-a-matematica-da-aprendizagem-supervisionada)
