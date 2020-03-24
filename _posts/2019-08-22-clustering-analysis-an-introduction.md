@@ -6,7 +6,7 @@ date:   2019-08-25 23:50:00
 categories: [unsupervised, machine-learning]
 tags: [unsupervised, machine-learning]
 permalink: "/machine-learning/clustering-analysis-an-introduction-to-unsupervised-learning"
-thumbnail: "/assets/img/clustering-analysis-an-introduction.png"
+thumbnail: "/assets/img/clustering-analysis-an-introduction.jpg"
 status: 1
 ---
 {:.image}
