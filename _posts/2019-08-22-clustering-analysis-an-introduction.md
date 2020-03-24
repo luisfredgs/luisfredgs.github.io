@@ -17,7 +17,7 @@ status: 1
 in the data. In some sense, we would like the individuals within a group to be close
 or similar to one another, but dissimilar from individuals in other groups.*
 
-In contrast to supervised learning (i.e classification), unsupervised learning fits a model to observations assuming there is no dependent random variable, output, or response. None of the observations is treated differently from the others. An informal way to say this is that there is no $Y$. For this reason, sometimes classification data that includes the $Y$ as the class is called labeled data but clustering data is called unlabeled.
+In contrast to supervised learning (i.e classification), unsupervised learning fits a model to observations assuming there is no dependent random variable, output, or response. None of the observations is treated differently from the others. An informal way to say this is that there is no $Y$. For this reason, sometimes classification data that includes the $Y$ as the class is called labeled data but clustering data is not necessarily called unlabeled.
 
 Clustering is fundamentally a collection of methods of data exploration. One often uses a method to see if natural groupings are present in the data. If groupings do emerge, these may be named and their properties summarized. The results of a cluster analysis may produce an identifiable structure that can be used to generate hypotheses (to be tested on a separate data set) to account for the observed data.
 
