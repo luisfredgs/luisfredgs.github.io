@@ -10,7 +10,7 @@ thumbnail: "/assets/img/clustering-analysis-an-introduction.jpg"
 status: 1
 ---
 {:.image}
-![Clustring Analysis - An introduction to unsupervised learning](/assets/img/clustering-analysis-an-introduction.png)
+![Clustring Analysis - An introduction to unsupervised learning](/assets/img/clustering-analysis-an-introduction.jpg)
 
 {:.intro}
 *Cluster analysis is the grouping of individuals in a population in order to discover structure
