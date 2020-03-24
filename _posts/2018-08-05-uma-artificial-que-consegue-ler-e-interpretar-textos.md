@@ -6,6 +6,7 @@ date:   2018-08-05 11:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/uma-inteligencia-artificial-que-consegue-ler-e-interpretar-textos
+status: 1
 ---
 
 Uma inteligência artificial capaz de compreender textos, do mesmo jeito que um ser humano faz, é algo bem mais tangível hoje do que foi em um passado não muito distante. Graças à evolução das técnicas de machine learning ao longo do tempo, hoje é possível ver este tipo de conceito aplicado em algumas ferramentas tecnológicas que usamos com frequência. 

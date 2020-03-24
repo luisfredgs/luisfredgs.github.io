@@ -6,6 +6,7 @@ date:   2017-12-21 11:50:00
 categories: [computer-vision, deep-learning]
 tags: [computer-vision, deep-learning]
 permalink: /deep-learning/reconhecimento-de-escrita-manual-com-redes-neurais-convolucionais
+status: 1
 ---
 
 {:.image}

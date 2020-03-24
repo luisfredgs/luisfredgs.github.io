@@ -6,6 +6,7 @@ date:   2018-10-22 11:50:00
 categories: [machine-learning]
 tags: [machine-learning, livros]
 permalink: /livros/7-livros-essenciais-para-aprender-machine-learning
+status: 1
 ---
 
 {:.center}

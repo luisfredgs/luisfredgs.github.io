@@ -6,6 +6,7 @@ date:   2017-11-27 11:50:00
 categories: [machine-learning]
 tags: [machine-learning]
 permalink: /machine-learning/machine-learning-a-matematica-da-aprendizagem-supervisionada
+status: 1
 ---
 
 <small>*Atualização mais recente: 23/06/2019*</small>

@@ -6,6 +6,7 @@ date:   2018-05-07 11:50:00
 categories: [nlp, machine-learning]
 tags: [nlp, machine-learning]
 permalink: /machine-learning/classificando-textos-com-machine-learning
+status: 1
 ---
 
 <div class="video-container">

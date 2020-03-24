@@ -7,6 +7,7 @@ categories: [computer-vision, deep-learning]
 tags: [computer-vision, deep-learning]
 permalink: /deep-learning/neural-style-transfer-uma-introducao
 thumbnail: "/assets/img/neural-style-transfer-cover.jpg"
+status: 1
 ---
 
 {:.image}

@@ -6,6 +6,7 @@ date:   2018-12-24 11:50:00
 categories: [experimentos, deep-learning]
 tags: [experimentos, deep-learning]
 permalink: /experimentos/uma-assistente-virtual-na-raspberry-pi-usando-deep-learning
+status: 1
 ---
 
 ![](/assets/img/uma-assistente-virtual-na-raspberry-pi-usando-deep-learning.png)

@@ -6,6 +6,7 @@ date:   2018-12-23 17:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: "/deep-learning/analise-de-sentimentos-usando-redes-neurais"
+status: 1
 ---
 {:.image}
 ![](/assets/img/analise-de-sentimentos-usando-redes-neurais.png)

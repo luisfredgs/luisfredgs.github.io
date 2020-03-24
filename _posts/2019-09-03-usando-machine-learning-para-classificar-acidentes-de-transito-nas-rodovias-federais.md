@@ -7,6 +7,7 @@ categories: [data-science, machine-learning]
 tags: [data-science, machine-learning]
 permalink: "/machine-learning/classificando-acidentes-de-transito"
 thumbnail: "/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg"
+status: 0
 ---
 {:.image}
 ![](/assets/img/usando-machine-learning-para-classificar-acidentes-de-transito.jpg)

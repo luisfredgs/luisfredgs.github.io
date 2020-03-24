@@ -11,6 +11,7 @@ title: "Luís Fred | Inteligência Artificial, Machine Learning e mais"
 
       
       {% for post in paginator.posts %}      
+      {% if post.status == 1 %}
         <li>
           {% if post.thumbnail %}
             <div class="thumbnail">
@@ -22,6 +23,7 @@ title: "Luís Fred | Inteligência Artificial, Machine Learning e mais"
           <p>{{ post.resume }}</p>        
           <!-- <span class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="btn-read">Acessar</a></span> -->
         </li>
+        {% endif %}
       {% endfor %}
     </ul>
 

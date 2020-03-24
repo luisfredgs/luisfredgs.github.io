@@ -6,6 +6,7 @@ date:   2018-12-24 11:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes
+status: 1
 ---
 
 {:.image}
