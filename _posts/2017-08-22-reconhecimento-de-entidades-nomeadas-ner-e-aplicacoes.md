@@ -94,7 +94,7 @@ Obviamente, há custos envolvidos no uso destas ferramentas, cujos valores são 
 ## Veja também:
 
 {:.image}
-[![curso](/assets/img/curso-processamento-de-linguagem-natural)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
+[![curso nlp](/assets/img/curso-processamento-de-linguagem-natural.png)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
 1. [Processamento de Linguagem Natural, do zero à produção](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
