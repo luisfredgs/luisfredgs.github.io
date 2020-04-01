@@ -93,6 +93,9 @@ Obviamente, há custos envolvidos no uso destas ferramentas, cujos valores são 
 
 ## Veja também:
 
+{:.image}
+[![curso](/assets/img/curso-processamento-de-linguagem-natural)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
+
 1. [Processamento de Linguagem Natural, do zero à produção](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
 2. [Neural Architectures for Named Entity Recognition](http://neural%20architectures%20for%20named%20entity%20recognition/)
