@@ -120,14 +120,16 @@ No vídeo abaixo é possível conferir os resultados das alterações mais recen
 
 Atualmente a POLIANA executa um conjunto de ações muito específicas, baseadas na inferência que ela consegue obter em relação às intenções do usuário durante cada solicitação. As respostas dela estão restritas a algumas dezenas de possibilidades. Acontece que eu sempre quis mudar isto. Por este motivo, estou fazendo mais algumas alterações e testando o uso de modelos baseados em [Sequence2Sequence]({% post_url 2018-04-10-o-que-e-sequence-to-sequence-em-deep-learning %}). Isto permite que a assistente mantenha uma conversa ainda mais natural, ao ampliar o seu escopo de conversação. Contudo, é possível que leve um tempo até chegar a um nível de maturidade razoável que justifique a adoção definitiva de seq2seq. Enfim, tem muita coisa nova para experimentar.
 
-## Referências
+## Veja também
 
-Parte do conhecimento necessário para criar uma assistente virtual nos moldes da POLIANA pode ser consultada aqui mesmo no blog. Por meio dos links abaixo.
+Parte do conhecimento necessário para criar uma assistente virtual nos moldes do projeto acima pode ser consultada aqui mesmo no blog. Por meio dos links abaixo.
 
 1. [7 livros essenciais para aprender machine learning]({% post_url 2018-10-22-7-livros-essenciais-para-aprender-machine-learning %})
 
-1. [Análise de sentimentos com redes neurais recorrentes LSTM]({% post_url 2018-12-23-analise-de-sentimentos-com-redes-neurais-recorrentes-lstm %})
+2. [Processamento de Linguagem Natural, do zero à produção](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
-1. [Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?]({% post_url 2017-08-22-reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes %})
+3. [Análise de sentimentos com redes neurais recorrentes LSTM]({% post_url 2018-12-23-analise-de-sentimentos-com-redes-neurais-recorrentes-lstm %})
 
-1. [Classificando textos com Machine Learning]({% post_url 2018-05-07-classificando-textos-com-machine-learning %})
+4. [Reconhecimento de Entidades Nomeadas (NER) — O que é? Quais são as aplicações?]({% post_url 2017-08-22-reconhecimento-de-entidades-nomeadas-ner-e-aplicacoes %})
+
+5. [Classificando textos com Machine Learning]({% post_url 2018-05-07-classificando-textos-com-machine-learning %})
