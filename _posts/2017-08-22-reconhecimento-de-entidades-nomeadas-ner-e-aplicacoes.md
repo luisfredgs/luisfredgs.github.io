@@ -91,10 +91,10 @@ Diversas pesquisas acadêmicas no campo de NER têm sido conduzidas ao longo dos
 
 Obviamente, há custos envolvidos no uso destas ferramentas, cujos valores são normalmente cobrados com base no volume de requisições mensais feitos às APIs (alguns cobram valores com base em horas). Dependendo da sua necessidade, estes custos podem ser facilmente diluídos, em virtude dos benefícios que podem ser obtidos. De todo modo, você sempre terá a opção criar a sua própria API, totalmente voltada para a sua necessidade — se você possui o conhecimento, ou equipe habilitada para tal — , ou investir na assinatura de serviços terceirizados. Esta última alternativa é bastante atraente, pois você não terá custos com manutenção de infraestrutura, ou de software. Só é preciso avaliar as opções.
 
-## Veja também:
-
 {:.image}
 [![curso nlp](/assets/img/curso-processamento-de-linguagem-natural.png)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
+
+## Veja também:
 
 1. [Processamento de Linguagem Natural, do zero à produção](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
