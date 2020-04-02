@@ -58,3 +58,6 @@ Os livros que você verá no vídeo abaixo foram adquiridos com base em um levan
 * **Deep Learning** — *Ian Goodfellow*: [http://amzn.to/2DKUfjd](http://amzn.to/2DKUfjd)
 
 * **Hands–On Machine Learning with Scikit–Learn and TensorFlow** *— Aurelien Geron*: [http://amzn.to/2DsDpbm](http://amzn.to/2DsDpbm)
+
+{:.image}
+[![curso nlp](/assets/img/curso-processamento-de-linguagem-natural.png)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
