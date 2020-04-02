@@ -7,7 +7,7 @@ categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow
 thumbnail: "/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png"
-status: 1
+status: 0
 ---
 
 {:.image}
