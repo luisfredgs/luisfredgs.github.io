@@ -6,7 +6,7 @@ date:   2018-04-10 11:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/o-que-e-sequence-to-sequence-em-deep-learning
-status: 1
+status: 0
 ---
 
 {:.image}

@@ -6,7 +6,7 @@ date:   2017-11-27 11:50:00
 categories: [deep-learning]
 tags: [deep-learning]
 permalink: /deep-learning/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir
-status: 1
+status: 0
 ---
 {:.image}
 ![](/assets/img/como-o-youtube-usa-o-deep-learning-para-saber-qual-e-o-proximo-video-que-voce-quer-assistir.png)

@@ -6,7 +6,7 @@ date:   2018-01-18 11:50:00
 category: machine-learning
 tags: [machine-learning]
 permalink: /machine-learning/dicas-para-aprender-machine-learning
-status: 1
+status: 0
 ---
 {:.image}
 ![](/assets/img/dicas-para-aprender-machine-learning.jpg)
