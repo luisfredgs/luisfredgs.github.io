@@ -2,12 +2,12 @@
 layout: post
 title:  "Deep learning e Modelagem de Linguagem — Teoria e prática"
 resume: "A Modelagem de Linguagem é um dos componentes mais importantes em processamento de linguagem natural, crucial em tarefas como tradução neural de textos."
-date:   2018-12-26 11:50:00
+date:   2022-12-26 11:50:00
 categories: [nlp, deep-learning]
 tags: [nlp, deep-learning]
 permalink: /deep-learning/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow
 thumbnail: "/assets/img/deep-learning-e-modelagem-de-linguagem-aprenda-na-pratica-com-tensorflow.png"
-status: 1
+status: 0
 ---
 
 {:.image}

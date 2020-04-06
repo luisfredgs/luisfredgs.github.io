@@ -169,9 +169,7 @@ Apenas tenha em mente que este uso tem um custo envolvido, pois normalmente este
 
 ### Considerações finais
 
-Ao contrário do que os posts nas redes sociais provavelmente te fizeram crer em algum momento, você não tem que gastar rios de dinheiro pagando cursos caros para aprender Machine Learning. Se você tem pressa e dinheiro para investir, ótimo, é até aconselhável que o faça. Mas, se o seu orçamento for apertado, o interessante é tentar se virar com o que tiver ao seu alcançe. 
-
-De fato, se você souber o que é preciso aprender e quais são as ferramentas que vai precisar durante a sua jornada, em muitas situações o Google e Youtube já são de enorme ajuda. Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) para te ajudar com boas técnicas de modelagem, etc. Enfim, dedique-se.
+Tem muito material interessante no Youtube, posts no [Medium](https://medium.com), códigos no Github, competições na [Kaggle](https://kaggle.com) para te ajudar com boas técnicas. O caminho mais rápido é estudar direcionado, algo que alguns treinamentos e cursos online proporcionam. Caso prefira estudar por meio de cursos on-line, não deixe de conferir [meu novo curso na Udemy](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871), onde ensino como criar modelos para processamento de linguagem natural com Tensorflow e Scikit-learn para uso em ambientes de produção.
 
 ## Leia também
 

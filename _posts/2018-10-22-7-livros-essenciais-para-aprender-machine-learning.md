@@ -47,14 +47,17 @@ Os livros que você verá no vídeo abaixo foram adquiridos com base em um levan
 
 ### Onde encontrar estes livros?
 
-* **Álgebra Linear com Aplicações** — *Howard Anton*: [http://amzn.to/2G7NBUY](http://amzn.to/2G7NBUY)
+1. **Álgebra Linear com Aplicações** — *Howard Anton*: [http://amzn.to/2G7NBUY](http://amzn.to/2G7NBUY)
 
-* **The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition** — *Trevor Hastie* : [http://amzn.to/2DJY2gR](http://amzn.to/2DJY2gR)
+2. **The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition** — *Trevor Hastie* : [http://amzn.to/2DJY2gR](http://amzn.to/2DJY2gR)
 
-* **Pattern Recognition and Machine Learning** — *Christopher M. Bishop*: [http://amzn.to/2Dtjedd](http://amzn.to/2Dtjedd)
+3. **Pattern Recognition and Machine Learning** — *Christopher M. Bishop*: [http://amzn.to/2Dtjedd](http://amzn.to/2Dtjedd)
 
-* **Redes Neurais** — *Simon Haykin*: [http://amzn.to/2DgLo7M](http://amzn.to/2DgLo7M)
+4. **Redes Neurais** — *Simon Haykin*: [http://amzn.to/2DgLo7M](http://amzn.to/2DgLo7M)
 
-* **Deep Learning** — *Ian Goodfellow*: [http://amzn.to/2DKUfjd](http://amzn.to/2DKUfjd)
+5. **Deep Learning** — *Ian Goodfellow*: [http://amzn.to/2DKUfjd](http://amzn.to/2DKUfjd)
 
-* **Hands–On Machine Learning with Scikit–Learn and TensorFlow** *— Aurelien Geron*: [http://amzn.to/2DsDpbm](http://amzn.to/2DsDpbm)
+6. **Hands–On Machine Learning with Scikit–Learn and TensorFlow** *— Aurelien Geron*: [http://amzn.to/2DsDpbm](http://amzn.to/2DsDpbm)
+
+{:.image}
+[![curso nlp](/assets/img/curso-processamento-de-linguagem-natural.png)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)

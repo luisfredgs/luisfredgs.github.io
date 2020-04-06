@@ -91,10 +91,15 @@ Diversas pesquisas acadêmicas no campo de NER têm sido conduzidas ao longo dos
 
 Obviamente, há custos envolvidos no uso destas ferramentas, cujos valores são normalmente cobrados com base no volume de requisições mensais feitos às APIs (alguns cobram valores com base em horas). Dependendo da sua necessidade, estes custos podem ser facilmente diluídos, em virtude dos benefícios que podem ser obtidos. De todo modo, você sempre terá a opção criar a sua própria API, totalmente voltada para a sua necessidade — se você possui o conhecimento, ou equipe habilitada para tal — , ou investir na assinatura de serviços terceirizados. Esta última alternativa é bastante atraente, pois você não terá custos com manutenção de infraestrutura, ou de software. Só é preciso avaliar as opções.
 
-## Referências:
+{:.image}
+[![curso nlp](/assets/img/curso-processamento-de-linguagem-natural.png)](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
-[Neural Architectures for Named Entity Recognition](http://neural%20architectures%20for%20named%20entity%20recognition/)
+## Veja também:
 
-[Named Entity Recognition (LSTM + CRF) — Tensorflow](https://github.com/guillaumegenthial/sequence_tagging)
+1. [Processamento de Linguagem Natural, do zero à produção](https://www.udemy.com/course/processamento-de-linguagem-natural-do-zero-a-producao/?referralCode=58A9E255EE0A65ACF871)
 
-[How do I use IBM Watson to extract entity information from news articles?](https://www.oreilly.com/ideas/how-do-i-use-ibm-watson-to-extract-entity-information-from-news-articles)
+2. [Neural Architectures for Named Entity Recognition](http://neural%20architectures%20for%20named%20entity%20recognition/)
+
+3. [Named Entity Recognition (LSTM + CRF) — Tensorflow](https://github.com/guillaumegenthial/sequence_tagging)
+
+4. [How do I use IBM Watson to extract entity information from news articles?](https://www.oreilly.com/ideas/how-do-i-use-ibm-watson-to-extract-entity-information-from-news-articles)
