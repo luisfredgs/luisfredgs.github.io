@@ -67,7 +67,7 @@
               style="width: 1080px; height: 1000px; margin: 0 auto;" frameborder="0" scrolling="no"></iframe>
             </div>
             <div class="col-md-12">                            
-              <a href="explore-tf-idf.html" class="btn btn-lg btn-primary hover-top explore-bert">Clustering with TF-IDF</a>
+              <a href="exprore.html" class="btn btn-lg btn-primary hover-top explore-bert">Clustering using Bert</a>
               <a href="index.html" class="btn btn-lg btn-primary hover-top">Home</a>
             </div>
           </div>
@@ -98,7 +98,22 @@
     <script src="vendors/plyr/plyr.polyfilled.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>    
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      $( document ).ready(function() {
+          $(".explore-alternative").click(function(e){
+            e.preventDefault();
+            $('iframe').attr("src", 'covid-19-clustering--tf-idf-umap.html');
+          });
+
+
+          $(".explore-bert").click(function(e){
+            e.preventDefault();
+            $('iframe').attr("src", 'covid-19-clustering-bert-umap.html');
+          });
+
+      });
+    </script>
   </body>
 
 </html>
