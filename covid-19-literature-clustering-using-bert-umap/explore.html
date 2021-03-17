@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Exploring COVID-19 Literature using Bert</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/virus.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/virus.png">    
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/virus.png">    
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="vendors/plyr/plyr.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+    <style type="text/css">
+      iframe {
+        border: solid 1px #3984F3;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <!-- <nav class="navbar navbar-expand-lg fixed-top py-3 backdrop" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#"><span class="text-primary fs-4 ps-2">Interactive visualization</span></a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-600" href="#plotbert">Clustering</a></li>
+          </div>
+        </div>
+      </nav> -->
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="plotbert" style="padding-top: 15px;">
+
+        <div class="container">
+          <div class="row flex-md-center">
+            <div class="col-md-12">              
+              <iframe src="covid-19-clustering-bert-umap.html" 
+              style="width: 1080px; height: 1000px; margin: 0 auto;" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="col-md-12">                            
+              <a href="covid-19-clustering--tf-idf-umap.html" class="btn btn-lg btn-primary hover-top explore-bert">Reload clustering Bert</a>
+              <a href="covid-19-clustering--tf-idf-umap.html" class="btn btn-lg btn-primary hover-top explore-alternative">Explore a TF-IDF alternative</a>
+              <a href="index.html" class="btn btn-lg btn-primary hover-top">Home</a>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/plyr/plyr.polyfilled.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.in.js"></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      $( document ).ready(function() {
+          $(".explore-alternative").click(function(e){
+            e.preventDefault();
+            $('iframe').attr("src", 'covid-19-clustering--tf-idf-umap.html');
+          });
+
+
+          $(".explore-bert").click(function(e){
+            e.preventDefault();
+            $('iframe').attr("src", 'covid-19-clustering-bert-umap.html');
+          });
+
+      });
+    </script>
+  </body>
+
+</html>
